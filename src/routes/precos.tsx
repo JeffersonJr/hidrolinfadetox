@@ -53,7 +53,7 @@ const packs = [
 function PriceRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex items-baseline gap-4 border-b border-dashed border-border py-4">
-      <span className="text-sm text-foreground/85 md:text-base">{label}</span>
+      <span className="text-sm text-foreground md:text-base">{label}</span>
       <span className="flex-1 border-b border-dotted border-border/60" aria-hidden />
       <span className="font-serif text-lg text-primary md:text-xl">{value}</span>
     </div>

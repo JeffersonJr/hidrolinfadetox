@@ -145,7 +145,7 @@ function HomePage() {
                 "Workshops e formações para profissionais",
                 "Protocolos personalizados e resultados visíveis",
               ].map((b) => (
-                <li key={b} className="flex items-start gap-3 text-sm text-foreground/80">
+                <li key={b} className="flex items-start gap-3 text-sm text-foreground">
                   <Check className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5} />
                   {b}
                 </li>

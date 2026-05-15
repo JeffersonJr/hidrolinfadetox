@@ -112,7 +112,7 @@ function AboutPage() {
               ].map((b) => (
                 <div key={b} className="flex items-start gap-3 text-sm">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.5} />
-                  <span className="text-foreground/80">{b}</span>
+                  <span className="text-foreground">{b}</span>
                 </div>
               ))}
             </div>
@@ -203,7 +203,7 @@ function AboutPage() {
                 </div>
               </div>
             ))}
-            <div className="grid gap-3 pt-2 text-sm text-foreground/80">
+            <div className="grid gap-3 pt-2 text-sm text-foreground">
               {[
                 "Membro ativo da comunidade de estética avançada em Portugal",
                 "Atendimentos personalizados em clínica própria e parceiras",

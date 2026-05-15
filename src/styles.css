@@ -40,31 +40,31 @@
 
 :root {
   --radius: 0.25rem;
-  /* Champagne / cream / gold palette */
+  /* Champagne / cream / gold palette - Optimized for Contrast */
   --background: oklch(0.985 0.008 75);
-  --foreground: oklch(0.28 0.025 50);
+  --foreground: oklch(0.18 0.025 50); /* Darkened for AA contrast */
   --card: oklch(0.99 0.005 75);
-  --card-foreground: oklch(0.28 0.025 50);
+  --card-foreground: oklch(0.18 0.025 50);
   --popover: oklch(0.99 0.005 75);
-  --popover-foreground: oklch(0.28 0.025 50);
-  --primary: oklch(0.32 0.03 50);
+  --popover-foreground: oklch(0.18 0.025 50);
+  --primary: oklch(0.15 0.03 50); /* Much darker for emphasis and contrast */
   --primary-foreground: oklch(0.985 0.008 75);
-  --secondary: oklch(0.95 0.015 75);
-  --secondary-foreground: oklch(0.32 0.03 50);
-  --muted: oklch(0.95 0.012 75);
-  --muted-foreground: oklch(0.5 0.025 55);
-  --accent: oklch(0.72 0.08 75);
-  --accent-foreground: oklch(0.28 0.025 50);
+  --secondary: oklch(0.94 0.02 75);
+  --secondary-foreground: oklch(0.15 0.03 50);
+  --muted: oklch(0.94 0.015 75);
+  --muted-foreground: oklch(0.32 0.025 55); /* Darkened for AA contrast */
+  --accent: oklch(0.45 0.08 75); /* Darkened gold for accent */
+  --accent-foreground: oklch(0.985 0.008 75);
   --destructive: oklch(0.55 0.18 25);
   --destructive-foreground: oklch(0.985 0.008 75);
-  --border: oklch(0.9 0.015 75);
-  --input: oklch(0.92 0.012 75);
-  --ring: oklch(0.72 0.08 75);
+  --border: oklch(0.88 0.02 75);
+  --input: oklch(0.9 0.02 75);
+  --ring: oklch(0.45 0.08 75);
 
-  --gold: oklch(0.68 0.09 75);
-  --gold-soft: oklch(0.82 0.05 75);
+  --gold: oklch(0.42 0.08 75); /* Deep gold for better legibility on light bg */
+  --gold-soft: oklch(0.8 0.05 75);
   --cream: oklch(0.97 0.012 80);
-  --sand: oklch(0.9 0.025 75);
+  --sand: oklch(0.88 0.03 75);
 }
 
 @layer base {

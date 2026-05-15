@@ -26,7 +26,7 @@ export function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className="text-sm font-light tracking-wide text-foreground/80 transition-colors hover:text-gold"
+              className="text-sm font-normal tracking-wide text-foreground transition-colors hover:text-gold"
               activeProps={{ className: "text-gold" }}
               activeOptions={{ exact: item.to === "/" }}
             >
@@ -55,7 +55,7 @@ export function SiteHeader() {
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="text-base text-foreground/80"
+                className="text-base font-medium text-foreground"
               >
                 {item.label}
               </Link>

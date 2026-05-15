@@ -45,7 +45,7 @@ function ServicesPage() {
               <p className="mt-6 text-base leading-relaxed text-muted-foreground">{s.description}</p>
               <ul className="mt-8 space-y-3">
                 {s.benefits.map((b) => (
-                  <li key={b} className="flex items-start gap-3 text-sm text-foreground/80">
+                  <li key={b} className="flex items-start gap-3 text-sm text-foreground">
                     <Check className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5} />
                     {b}
                   </li>
