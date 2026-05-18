@@ -44,26 +44,26 @@ export function ContactMenu({
         <ChevronDown className="h-3.5 w-3.5 opacity-60" strokeWidth={1.5} />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
-        <DropdownMenuItem asChild>
+        <DropdownMenuItem asChild className="group">
           <a href={TEL_HREF} className="flex items-center gap-3">
-            <Phone className="h-4 w-4 text-gold" strokeWidth={1.5} />
+            <Phone className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
             <div className="flex flex-col">
-              <span className="text-sm">Chamada telefónica</span>
-              <span className="text-[11px] text-muted-foreground">{PHONE_DISPLAY}</span>
+              <span className="text-sm transition-colors group-focus:text-accent-foreground">Chamada telefónica</span>
+              <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">{PHONE_DISPLAY}</span>
             </div>
           </a>
         </DropdownMenuItem>
-        <DropdownMenuItem asChild>
+        <DropdownMenuItem asChild className="group">
           <a
             href={WA_HREF}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3"
           >
-            <MessageCircle className="h-4 w-4 text-gold" strokeWidth={1.5} />
+            <MessageCircle className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
             <div className="flex flex-col">
-              <span className="text-sm">WhatsApp</span>
-              <span className="text-[11px] text-muted-foreground">Mensagem instantânea</span>
+              <span className="text-sm transition-colors group-focus:text-accent-foreground">WhatsApp</span>
+              <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">Mensagem instantânea</span>
             </div>
           </a>
         </DropdownMenuItem>

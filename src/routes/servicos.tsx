@@ -1,13 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { services } from "@/lib/services";
 import { Check } from "lucide-react";
+import { ContactMenu } from "@/components/site/ContactMenu";
 
 export const Route = createFileRoute("/servicos")({
   head: () => ({
     meta: [
-      { title: "Serviços · Thatiana Cardoso" },
+      { title: "Serviços · Hidrolinfa Detox" },
       { name: "description", content: "HIFU facial e corporal, drenagem linfática, ventosaterapia, massagens e mais — tratamentos de estética e bem-estar." },
     ],
   }),
@@ -51,6 +52,16 @@ function ServicesPage() {
                   </li>
                 ))}
               </ul>
+              <div className="mt-10 flex flex-wrap items-center gap-4 border-t border-border/50 pt-8">
+                <Link
+                  to="/servicos/$slug"
+                  params={{ slug: s.slug }}
+                  className="inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary"
+                >
+                  Saber mais detalhes
+                </Link>
+                <ContactMenu variant="outline" label="Agendar agora" />
+              </div>
             </div>
           </article>
         ))}

@@ -10,8 +10,8 @@ export function SiteFooter() {
       <div className="container-narrow grid gap-12 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
           <Link to="/" className="inline-block">
-            <img src={logoVertical} alt="Hidrolinfa Detox" className="h-16 w-auto dark:hidden" />
-            <img src={logoVerticalWhite} alt="Hidrolinfa Detox" className="hidden h-16 w-auto dark:block" />
+            <img src={logoVertical} alt="Hidrolinfa Detox" className="h-24 w-auto dark:hidden" />
+            <img src={logoVerticalWhite} alt="Hidrolinfa Detox" className="hidden h-24 w-auto dark:block" />
           </Link>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
             Tratamentos estéticos e terapêuticos de excelência em Portugal e Europa.

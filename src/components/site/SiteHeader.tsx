@@ -20,8 +20,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container-narrow flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center">
-          <img src={logoHorizontal} alt="Hidrolinfa Detox" className="h-8 w-auto dark:hidden" />
-          <img src={logoHorizontalWhite} alt="Hidrolinfa Detox" className="hidden h-8 w-auto dark:block" />
+          <img src={logoHorizontal} alt="Hidrolinfa Detox" className="h-12 w-auto dark:hidden" />
+          <img src={logoHorizontalWhite} alt="Hidrolinfa Detox" className="hidden h-12 w-auto dark:block" />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex">
@@ -39,7 +39,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:block">
-          <ContactMenu variant="header" />
+          <ContactMenu variant="outline" label="Agendar" />
         </div>
 
         <button

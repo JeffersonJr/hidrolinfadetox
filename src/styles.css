@@ -47,8 +47,8 @@
   --card-foreground: oklch(0.18 0.025 50);
   --popover: oklch(0.99 0.005 75);
   --popover-foreground: oklch(0.18 0.025 50);
-  --primary: oklch(0.15 0.03 50); /* Much darker for emphasis and contrast */
-  --primary-foreground: oklch(0.985 0.008 75);
+  --primary: oklch(0.15 0.01 50); /* Darker for emphasis and better contrast */
+  --primary-foreground: oklch(1 0 0); /* Pure white text on primary buttons */
   --secondary: oklch(0.94 0.02 75);
   --secondary-foreground: oklch(0.15 0.03 50);
   --muted: oklch(0.94 0.015 75);

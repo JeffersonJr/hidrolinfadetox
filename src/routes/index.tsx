@@ -158,6 +158,44 @@ function HomePage() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="py-24 md:py-32">
+        <div className="container-narrow">
+          <SectionHeading
+            eyebrow="Depoimentos"
+            title={<>O que dizem os nossos <em className="text-gold">clientes</em></>}
+            description="Experiências reais de quem confiou em nós para cuidar do seu bem-estar e da sua auto-estima."
+          />
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            {[
+              {
+                text: "Profissionalismo incrível. Fiz o tratamento de HIFU e os resultados foram visíveis logo na primeira sessão. Recomendo de olhos fechados!",
+                name: "Maria Santos",
+                service: "HIFU Facial",
+              },
+              {
+                text: "A drenagem linfática com a Thatiana é um momento único. Sinto-me sempre muito mais leve e desinchada após cada sessão.",
+                name: "Ana Pereira",
+                service: "Drenagem Linfática",
+              },
+              {
+                text: "As sessões de ventosaterapia aliviaram imenso as minhas dores nas costas e tensão acumulada. O espaço é muito relaxante.",
+                name: "João Martins",
+                service: "Ventosaterapia",
+              },
+            ].map((t, i) => (
+              <div key={i} className="flex flex-col border border-border/60 bg-cream p-8">
+                <p className="flex-1 text-sm italic leading-relaxed text-muted-foreground">"{t.text}"</p>
+                <div className="mt-8 border-t border-border/50 pt-4">
+                  <p className="font-serif text-lg text-primary">{t.name}</p>
+                  <p className="text-xs uppercase tracking-widest text-gold">{t.service}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 md:py-32">
         <div className="container-narrow">
