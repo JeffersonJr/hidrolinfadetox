@@ -1,13 +1,18 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MessageCircle, Mail, MapPin, Instagram } from "lucide-react";
 
+import logoVertical from "../../assets/logo vertical.svg";
+import logoVerticalWhite from "../../assets/logo vertical white.svg";
+
 export function SiteFooter() {
   return (
     <footer className="mt-32 border-t border-border bg-cream">
       <div className="container-narrow grid gap-12 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
-          <p className="font-serif text-2xl text-primary">Thatiana Cardoso</p>
-          <p className="mt-1 text-[10px] uppercase tracking-[0.3em] text-gold">Estética &amp; Bem-Estar</p>
+          <Link to="/" className="inline-block">
+            <img src={logoVertical} alt="Hidrolinfa Detox" className="h-16 w-auto dark:hidden" />
+            <img src={logoVerticalWhite} alt="Hidrolinfa Detox" className="hidden h-16 w-auto dark:block" />
+          </Link>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
             Tratamentos estéticos e terapêuticos de excelência em Portugal e Europa.
             Uma experiência clean, elegante e personalizada para o seu bem-estar.
@@ -37,7 +42,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border">
         <div className="container-narrow flex flex-col items-center justify-between gap-2 py-6 text-xs text-muted-foreground md:flex-row">
-          <p>© {new Date().getFullYear()} Thatiana Cardoso. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Hidrolinfa Detox. Todos os direitos reservados.</p>
           <p>Atendimento em Portugal e Europa</p>
         </div>
       </div>

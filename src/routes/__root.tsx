@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import favIcon from "../assets/fav.png";
 
 function NotFoundComponent() {
   return (
@@ -72,20 +73,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Thatiana Carsoso | Elegance is a professional website showcasing services and expertise." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Thatiana Carsoso | Elegance is a professional website showcasing services and expertise." },
+      { title: "Hidrolinfa Detox" },
+      { name: "description", content: "Hidrolinfa Detox - Tratamentos estéticos e terapêuticos de excelência em Portugal e Europa." },
+      { name: "author", content: "Hidrolinfa Detox" },
+      { property: "og:title", content: "Hidrolinfa Detox" },
+      { property: "og:description", content: "Hidrolinfa Detox - Tratamentos estéticos e terapêuticos de excelência em Portugal e Europa." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Thatiana Carsoso | Elegance is a professional website showcasing services and expertise." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/330d84c6-c77b-4283-9636-52b96038ab57/id-preview-8372a63c--f18dfbb8-f5ce-4a19-bdae-a5dea0a22612.lovable.app-1778796431001.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/330d84c6-c77b-4283-9636-52b96038ab57/id-preview-8372a63c--f18dfbb8-f5ce-4a19-bdae-a5dea0a22612.lovable.app-1778796431001.png" },
+      { name: "twitter:title", content: "Hidrolinfa Detox" },
+      { name: "twitter:description", content: "Hidrolinfa Detox - Tratamentos estéticos e terapêuticos de excelência em Portugal e Europa." },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: favIcon,
+      },
       {
         rel: "stylesheet",
         href: appCss,

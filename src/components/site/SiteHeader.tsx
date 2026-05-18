@@ -11,14 +11,17 @@ const nav = [
   { to: "/contactos", label: "Contactos" },
 ] as const;
 
+import logoHorizontal from "../../assets/logo horizontal.svg";
+import logoHorizontalWhite from "../../assets/logo horizontal white.svg";
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container-narrow flex h-20 items-center justify-between">
-        <Link to="/" className="flex flex-col leading-none">
-          <span className="font-serif text-2xl tracking-wide text-primary">Thatiana Cardoso</span>
-          <span className="mt-0.5 text-[10px] uppercase tracking-[0.3em] text-gold">Estética &amp; Bem-Estar</span>
+        <Link to="/" className="flex items-center">
+          <img src={logoHorizontal} alt="Hidrolinfa Detox" className="h-8 w-auto dark:hidden" />
+          <img src={logoHorizontalWhite} alt="Hidrolinfa Detox" className="hidden h-8 w-auto dark:block" />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex">
