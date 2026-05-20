@@ -18,7 +18,7 @@ export const Route = createFileRoute("/servicos")({
 function ServicesPage() {
   return (
     <Layout>
-      <section className="container-narrow py-20 md:py-28">
+      <section className="container-narrow py-20 md:py-24">
         <SectionHeading
           eyebrow="Serviços"
           align="center"
@@ -27,7 +27,24 @@ function ServicesPage() {
         />
       </section>
 
-      <section className="container-narrow space-y-24 pb-24 md:space-y-32 md:pb-32">
+      {/* DIFFERENTIALS */}
+      <section className="border-y border-border/50 bg-cream py-12 md:py-16">
+        <div className="container-narrow grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+          {[
+            { title: "Alta Tecnologia", text: "Equipamentos avançados" },
+            { title: "Personalização", text: "Protocolos adaptados a si" },
+            { title: "Conforto Absoluto", text: "Ambiente relaxante" },
+            { title: "Acompanhamento", text: "Foco nos resultados" },
+          ].map((item, i) => (
+            <div key={i} className="flex flex-col items-center text-center px-4">
+              <h3 className="font-serif text-lg text-primary">{item.title}</h3>
+              <p className="mt-3 text-[10px] uppercase tracking-widest text-muted-foreground">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-narrow space-y-24 py-24 md:space-y-32 md:py-32">
         {services.map((s, i) => (
           <article
             key={s.slug}
@@ -56,7 +73,7 @@ function ServicesPage() {
                 <Link
                   to="/servicos/$slug"
                   params={{ slug: s.slug }}
-                  className="inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary"
+                  className="inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary"
                 >
                   Saber mais detalhes
                 </Link>
@@ -65,6 +82,27 @@ function ServicesPage() {
             </div>
           </article>
         ))}
+      </section>
+
+      {/* EVALUATION CTA */}
+      <section className="border-t border-border/50 bg-cream py-24 md:py-32">
+        <div className="container-narrow">
+          <div className="mx-auto flex max-w-4xl flex-col items-center border border-border/60 bg-background px-6 py-16 text-center md:px-16 md:py-20">
+            <p className="text-[10px] uppercase tracking-[0.4em] text-gold">Avaliação Personalizada</p>
+            <h2 className="mt-6 font-serif text-3xl leading-tight text-primary md:text-5xl">
+              Não sabe qual o <em className="text-gold">tratamento</em> ideal para si?
+            </h2>
+            <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              Agende uma consulta de avaliação. Analisamos as suas necessidades específicas e desenhamos um plano de tratamento 100% à medida, focado nos seus objetivos.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <ContactMenu variant="primary" label="Agendar Avaliação" />
+              <Link to="/contactos" className="inline-flex items-center gap-3 border border-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                Tirar dúvidas
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
     </Layout>
   );

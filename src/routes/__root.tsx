@@ -10,22 +10,27 @@ import {
 
 import appCss from "../styles.css?url";
 import favIcon from "../assets/fav.png";
+import { Leaf, ArrowRight } from "lucide-react";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+    <div className="flex min-h-screen items-center justify-center bg-cream px-4">
+      <div className="max-w-lg text-center flex flex-col items-center">
+        <Leaf className="h-16 w-16 text-gold mb-6" strokeWidth={1} />
+        <h1 className="font-serif text-6xl text-primary md:text-8xl">404</h1>
+        <h2 className="mt-6 font-serif text-3xl font-medium text-primary">
+          Respire fundo, <em className="text-gold">está tudo bem</em>.
+        </h2>
+        <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+          A página que procurava desvaneceu-se, mas a sua paz interior não tem de ir junto. Sinta-se à vontade para regressar e reencontrar o seu equilíbrio.
         </p>
-        <div className="mt-6">
+        <div className="mt-10">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="group inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary"
           >
-            Go home
+            Regressar zen à Home
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
           </Link>
         </div>
       </div>

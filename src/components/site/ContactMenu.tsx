@@ -26,9 +26,9 @@ export function ContactMenu({
       case "header":
         return "inline-flex items-center gap-2 text-sm text-primary hover:text-gold";
       case "primary":
-        return "inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary";
+        return "inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary";
       case "outline":
-        return "inline-flex items-center gap-3 border border-primary px-7 py-4 text-xs uppercase tracking-[0.25em] text-primary transition-all hover:bg-primary hover:text-primary-foreground";
+        return "inline-flex items-center gap-3 border border-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition-all hover:bg-primary hover:text-primary-foreground";
       case "link":
         return "inline-flex items-center gap-2 text-sm tracking-wide text-primary hover:text-gold";
       default:

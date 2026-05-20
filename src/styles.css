@@ -42,17 +42,17 @@
   --radius: 0.25rem;
   /* Champagne / cream / gold palette - Optimized for Contrast */
   --background: oklch(0.985 0.008 75);
-  --foreground: oklch(0.18 0.025 50); /* Darkened for AA contrast */
+  --foreground: oklch(0.12 0.02 50); /* Darkened for higher contrast */
   --card: oklch(0.99 0.005 75);
-  --card-foreground: oklch(0.18 0.025 50);
+  --card-foreground: oklch(0.12 0.02 50);
   --popover: oklch(0.99 0.005 75);
-  --popover-foreground: oklch(0.18 0.025 50);
+  --popover-foreground: oklch(0.12 0.02 50);
   --primary: oklch(0.15 0.01 50); /* Darker for emphasis and better contrast */
   --primary-foreground: oklch(1 0 0); /* Pure white text on primary buttons */
   --secondary: oklch(0.94 0.02 75);
   --secondary-foreground: oklch(0.15 0.03 50);
   --muted: oklch(0.94 0.015 75);
-  --muted-foreground: oklch(0.32 0.025 55); /* Darkened for AA contrast */
+  --muted-foreground: oklch(0.25 0.02 55); /* Darkened for better AA contrast */
   --accent: oklch(0.45 0.08 75); /* Darkened gold for accent */
   --accent-foreground: oklch(0.985 0.008 75);
   --destructive: oklch(0.55 0.18 25);
@@ -61,7 +61,7 @@
   --input: oklch(0.9 0.02 75);
   --ring: oklch(0.45 0.08 75);
 
-  --gold: oklch(0.42 0.08 75); /* Deep gold for better legibility on light bg */
+  --gold: oklch(0.35 0.09 75); /* Deepened gold for much better legibility on light bg */
   --gold-soft: oklch(0.8 0.05 75);
   --cream: oklch(0.97 0.012 80);
   --sand: oklch(0.88 0.03 75);
@@ -74,12 +74,12 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-weight: 300;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-serif);
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: -0.01em;
   }
 }

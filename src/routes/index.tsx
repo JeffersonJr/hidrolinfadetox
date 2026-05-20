@@ -42,7 +42,7 @@ function HomePage() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
                 to="/servicos"
-                className="group inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary"
+                className="group inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary"
               >
                 Conheça os tratamentos
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
@@ -154,6 +154,44 @@ function HomePage() {
             <Link to="/sobre" className="mt-10 inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-primary hover:text-gold">
               Conhecer a minha história <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
             </Link>
+
+            <div className="mt-12 grid grid-cols-2 gap-6 border-t border-border/50 pt-8 sm:grid-cols-3">
+              {[
+                { n: "+10", l: "Anos de experiência" },
+                { n: "+1k", l: "Clientes satisfeitas" },
+                { n: "3", l: "Espaços de atendimento" },
+              ].map((s, i) => (
+                <div key={i}>
+                  <p className="font-serif text-3xl text-gold">{s.n}</p>
+                  <p className="mt-1 text-[10px] uppercase tracking-widest text-muted-foreground">{s.l}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* METHOD / PROCESS */}
+      <section className="py-24 md:py-32">
+        <div className="container-narrow">
+          <SectionHeading
+            eyebrow="O nosso método"
+            title={<>Um caminho <em className="text-gold">seguro</em> para os seus resultados.</>}
+            description="Acreditamos que cada pessoa é única. O nosso processo garante que cada tratamento é perfeitamente adaptado a si."
+          />
+          <div className="mt-16 grid gap-10 md:grid-cols-3 relative">
+            <div className="hidden md:block absolute top-8 left-[15%] right-[15%] h-px bg-border/50" />
+            {[
+              { step: "01", title: "Avaliação Inicial", text: "Uma conversa detalhada para entender as suas necessidades, historial clínico e objetivos." },
+              { step: "02", title: "Plano à Medida", text: "Desenho de um protocolo de tratamentos personalizado, combinando as melhores técnicas para si." },
+              { step: "03", title: "Acompanhamento", text: "Monitorização contínua dos resultados e ajustes no plano para garantir a máxima eficácia e satisfação." },
+            ].map((p, i) => (
+              <div key={i} className="relative flex flex-col items-start bg-background md:px-6 md:-mx-6">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-cream font-serif text-2xl text-gold border border-border/50 shadow-sm">{p.step}</span>
+                <h3 className="mt-6 font-serif text-xl text-primary">{p.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -196,6 +234,54 @@ function HomePage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="bg-cream py-24 md:py-32 border-y border-border/50">
+        <div className="container-narrow">
+          <div className="flex flex-col md:flex-row md:justify-between md:gap-16">
+            <div className="md:w-1/3">
+              <SectionHeading
+                eyebrow="FAQ"
+                title={<>Dúvidas <em className="text-gold">frequentes</em></>}
+              />
+              <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+                Encontre aqui as respostas às questões mais comuns sobre os nossos tratamentos e processos. Se não encontrar o que procura, não hesite em contactar-nos.
+              </p>
+              <div className="mt-8">
+                <ContactMenu variant="link" label="Falar connosco" />
+              </div>
+            </div>
+            
+            <div className="mt-12 md:mt-0 md:w-2/3">
+              <div className="grid gap-6">
+                {[
+                  {
+                    q: "Os tratamentos são dolorosos?",
+                    a: "A grande maioria dos nossos protocolos são indolores ou provocam apenas um ligeiro desconforto temporário. Priorizamos sempre o seu bem-estar durante cada sessão.",
+                  },
+                  {
+                    q: "Quantas sessões são necessárias para ver resultados?",
+                    a: "Depende muito do tratamento e do organismo de cada pessoa. Alguns tratamentos como a Drenagem Linfática oferecem resultados imediatos, enquanto outros requerem um plano de 3 a 6 sessões.",
+                  },
+                  {
+                    q: "Existe algum tempo de recuperação?",
+                    a: "A maioria dos nossos tratamentos não-invasivos não exige tempo de recuperação (downtime). Pode retomar as suas atividades diárias normais logo após a sessão.",
+                  },
+                  {
+                    q: "Os produtos utilizados são seguros?",
+                    a: "Sim, utilizamos apenas produtos de alta qualidade, certificados e testados dermatologicamente, adequados até para as peles mais sensíveis.",
+                  },
+                ].map((faq, i) => (
+                  <div key={i} className="border-b border-border/60 pb-6 last:border-0 last:pb-0">
+                    <h4 className="font-serif text-lg text-primary">{faq.q}</h4>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 md:py-32">
         <div className="container-narrow">
@@ -209,7 +295,7 @@ function HomePage() {
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <ContactMenu variant="primary" />
-              <Link to="/contactos" className="inline-flex items-center gap-3 border border-primary px-7 py-4 text-xs uppercase tracking-[0.25em] text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+              <Link to="/contactos" className="inline-flex items-center gap-3 border border-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition-all hover:bg-primary hover:text-primary-foreground">
                 Formulário de contacto
               </Link>
             </div>

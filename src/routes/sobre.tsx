@@ -179,7 +179,7 @@ function AboutPage() {
             “Acredito que a verdadeira estética está no equilíbrio entre cuidar de quem se é
             por dentro e revelar a melhor versão por fora.”
           </p>
-          <p className="mt-8 text-[10px] uppercase tracking-[0.4em] text-gold">Thatiana Cardoso</p>
+          <p className="mt-8 text-[24px] uppercase tracking-[0.4em] text-secondary">Thatiana Cardoso</p>
         </div>
       </section>
 

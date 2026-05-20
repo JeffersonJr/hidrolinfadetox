@@ -36,13 +36,13 @@ function ContactPage() {
               { icon: Instagram, label: "Instagram", value: "@thatianacardoso", href: "https://instagram.com" },
             ].map((c, i) => (
               <div key={i} className="flex items-start gap-4 border-b border-border pb-6">
-                <c.icon className="mt-1 h-5 w-5 text-gold" strokeWidth={1.5} />
+                <c.icon className="mt-1 h-5 w-5 text-gold" strokeWidth={2} />
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-gold">{c.label}</p>
+                  <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-gold">{c.label}</p>
                   {c.href ? (
-                    <a href={c.href} className="mt-1 block font-serif text-2xl text-primary hover:text-gold">{c.value}</a>
+                    <a href={c.href} className="mt-1 block font-serif text-2xl font-medium text-primary hover:text-gold">{c.value}</a>
                   ) : (
-                    <p className="mt-1 font-serif text-2xl text-primary">{c.value}</p>
+                    <p className="mt-1 font-serif text-2xl font-medium text-primary">{c.value}</p>
                   )}
                 </div>
               </div>
@@ -63,17 +63,17 @@ function ContactPage() {
                 { name: "phone", label: "Telefone", type: "tel" },
               ].map((f) => (
                 <div key={f.name}>
-                  <label className="block text-[10px] uppercase tracking-[0.3em] text-gold">{f.label}</label>
-                  <input required type={f.type} name={f.name} className="mt-2 w-full border-b border-border bg-transparent py-3 text-sm text-foreground outline-none focus:border-gold" />
+                  <label className="block text-[10px] font-medium uppercase tracking-[0.3em] text-gold">{f.label}</label>
+                  <input required type={f.type} name={f.name} className="mt-2 w-full border-b border-border bg-transparent py-3 text-sm font-medium text-foreground outline-none focus:border-gold" placeholder={`Insira o seu ${f.label.toLowerCase()}`} />
                 </div>
               ))}
               <div>
-                <label className="block text-[10px] uppercase tracking-[0.3em] text-gold">Mensagem</label>
-                <textarea required name="message" rows={4} className="mt-2 w-full border-b border-border bg-transparent py-3 text-sm text-foreground outline-none focus:border-gold resize-none" />
+                <label className="block text-[10px] font-medium uppercase tracking-[0.3em] text-gold">Mensagem</label>
+                <textarea required name="message" rows={4} className="mt-2 w-full border-b border-border bg-transparent py-3 text-sm font-medium text-foreground outline-none focus:border-gold resize-none" placeholder="Como posso ajudar?" />
               </div>
             </div>
 
-            <button type="submit" className="mt-10 inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary">
+            <button type="submit" className="mt-10 inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary">
               {sent ? "Mensagem enviada" : "Enviar mensagem"} <Send className="h-4 w-4" strokeWidth={1.5} />
             </button>
             {sent && <p className="mt-4 text-xs text-gold">Obrigada! Entrarei em contacto em breve.</p>}
