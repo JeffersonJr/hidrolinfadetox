@@ -7,6 +7,7 @@ import portrait from "@/assets/portrait.jpg";
 import { services } from "@/lib/services";
 import { ContactMenu } from "@/components/site/ContactMenu";
 import { useTranslation, Translate } from "@/hooks/useTranslation";
+import { PromoModal } from "@/components/site/PromoModal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,6 +28,7 @@ function HomePage() {
 
   return (
     <Layout>
+      <PromoModal />
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="container-narrow grid gap-14 py-20 md:grid-cols-2 md:gap-16 md:py-28">

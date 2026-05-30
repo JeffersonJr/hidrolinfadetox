@@ -68,8 +68,18 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border">
-        <div className="container-narrow flex flex-col items-center justify-between gap-2 py-6 text-xs text-muted-foreground md:flex-row">
+        <div className="container-narrow flex flex-col items-center justify-between gap-4 py-6 text-xs text-muted-foreground md:flex-row">
           <p>© {new Date().getFullYear()} Hidrolinfa Detox. {t("Todos os direitos reservados.")}</p>
+          
+          <div className="flex flex-wrap gap-4 md:gap-6">
+            <Link to={"/privacidade" as any} className="hover:text-gold transition-colors">
+              {t("Política de Privacidade")}
+            </Link>
+            <Link to={"/cookies" as any} className="hover:text-gold transition-colors">
+              {t("Política de Cookies")}
+            </Link>
+          </div>
+          
           <p>{t("Atendimento em Portugal e Europa")}</p>
         </div>
       </div>

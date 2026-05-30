@@ -12,6 +12,7 @@ import appCss from "../styles.css?url";
 import favIcon from "../assets/fav.png";
 import { Leaf, ArrowRight } from "lucide-react";
 import { TranslationProvider } from "../hooks/useTranslation";
+import { CookieConsent } from "../components/site/CookieConsent";
 
 function NotFoundComponent() {
   return (
@@ -128,6 +129,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <TranslationProvider>
         <Outlet />
+        <CookieConsent />
       </TranslationProvider>
     </QueryClientProvider>
   );
