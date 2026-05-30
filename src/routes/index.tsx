@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ArrowRight, Check, Sparkles, Leaf, HeartHandshake } from "lucide-react";
-import heroImg from "@/assets/hero-spa.jpg";
+import heroImg from "@/assets/img hero.png";
 import portrait from "@/assets/portrait.jpg";
 import { services } from "@/lib/services";
 import { ContactMenu } from "@/components/site/ContactMenu";

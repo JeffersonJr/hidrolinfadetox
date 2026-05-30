@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MessageCircle, Mail, MapPin, Instagram } from "lucide-react";
 
-import logoVertical from "../../assets/logo vertical.svg";
-import logoVerticalWhite from "../../assets/logo vertical white.svg";
+import logoVertical from "../../assets/logo.svg";
+import logoVerticalWhite from "../../assets/logo.svg";
 
 export function SiteFooter() {
   return (
@@ -32,8 +32,24 @@ export function SiteFooter() {
         <div>
           <h4 className="text-xs uppercase tracking-[0.25em] text-gold">Contacto</h4>
           <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/><a href="tel:+351961551592" className="hover:text-gold">+351 961 551 592</a></li>
-            <li className="flex items-start gap-2"><MessageCircle className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/><a href="https://wa.me/351961551592" target="_blank" rel="noopener noreferrer" className="hover:text-gold">WhatsApp</a></li>
+            <li className="flex items-start gap-2">
+              <MessageCircle className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/>
+              <a href="https://wa.me/351961551592" target="_blank" rel="noopener noreferrer" className="hover:text-gold">
+                +351 961 551 592 (WhatsApp)
+              </a>
+            </li>
+            <li className="flex items-start gap-2">
+              <Phone className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/>
+              <a href="tel:+351915943309" className="hover:text-gold">
+                +351 915 943 309
+              </a>
+            </li>
+            <li className="flex items-start gap-2">
+              <Phone className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/>
+              <a href="tel:+351215982843" className="hover:text-gold">
+                +351 215 982 843
+              </a>
+            </li>
             <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/><span>Lisboa · Amadora · Caldas da Rainha</span></li>
             <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/><span>contato@hidrolinfadetox.com</span></li>
             <li className="flex items-start gap-2"><Instagram className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/> @thatianacardoso</li>

@@ -11,8 +11,8 @@ const nav = [
   { to: "/contactos", label: "Contactos" },
 ] as const;
 
-import logoHorizontal from "../../assets/logo horizontal.svg";
-import logoHorizontalWhite from "../../assets/logo horizontal white.svg";
+import logoHorizontal from "../../assets/logo-1.svg";
+import logoHorizontalWhite from "../../assets/logo-3.svg";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -63,11 +63,14 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <a href="tel:+351961551592" className="mt-2 flex items-center gap-2 text-sm text-gold">
-              <Phone className="h-4 w-4" strokeWidth={1.5} /> Ligar +351 961 551 592
+            <a href="https://wa.me/351961551592" target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center gap-2 text-sm text-gold">
+              <MessageCircle className="h-4 w-4" strokeWidth={1.5} /> WhatsApp +351 961 551 592
             </a>
-            <a href="https://wa.me/351961551592" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gold">
-              <MessageCircle className="h-4 w-4" strokeWidth={1.5} /> WhatsApp
+            <a href="tel:+351915943309" className="flex items-center gap-2 text-sm text-gold">
+              <Phone className="h-4 w-4" strokeWidth={1.5} /> Telemóvel +351 915 943 309
+            </a>
+            <a href="tel:+351215982843" className="flex items-center gap-2 text-sm text-gold">
+              <Phone className="h-4 w-4" strokeWidth={1.5} /> Fixo +351 215 982 843
             </a>
           </div>
         </div>

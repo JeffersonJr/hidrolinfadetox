@@ -7,7 +7,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const PHONE_DISPLAY = "+351 961 551 592";
-const TEL_HREF = "tel:+351961551592";
+const PHONE_FIXED = "+351 215 982 843";
+const PHONE_MOBILE = "+351 915 943 309";
+
+const TEL_FIXED_HREF = "tel:+351215982843";
+const TEL_MOBILE_HREF = "tel:+351915943309";
 const WA_HREF = "https://wa.me/351961551592";
 
 type Variant = "header" | "ghost" | "primary" | "outline" | "link";
@@ -43,27 +47,33 @@ export function ContactMenu({
         {label ?? PHONE_DISPLAY}
         <ChevronDown className="h-3.5 w-3.5 opacity-60" strokeWidth={1.5} />
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-56">
+      <DropdownMenuContent align="end" className="w-60">
         <DropdownMenuItem asChild className="group">
-          <a href={TEL_HREF} className="flex items-center gap-3">
-            <Phone className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
+          <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+            <MessageCircle className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
             <div className="flex flex-col">
-              <span className="text-sm transition-colors group-focus:text-accent-foreground">Chamada telefónica</span>
+              <span className="text-sm font-medium transition-colors group-focus:text-accent-foreground">WhatsApp</span>
               <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">{PHONE_DISPLAY}</span>
             </div>
           </a>
         </DropdownMenuItem>
+        
         <DropdownMenuItem asChild className="group">
-          <a
-            href={WA_HREF}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3"
-          >
-            <MessageCircle className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
+          <a href={TEL_MOBILE_HREF} className="flex items-center gap-3">
+            <Phone className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
             <div className="flex flex-col">
-              <span className="text-sm transition-colors group-focus:text-accent-foreground">WhatsApp</span>
-              <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">Mensagem instantânea</span>
+              <span className="text-sm transition-colors group-focus:text-accent-foreground">Telemóvel</span>
+              <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">{PHONE_MOBILE}</span>
+            </div>
+          </a>
+        </DropdownMenuItem>
+
+        <DropdownMenuItem asChild className="group">
+          <a href={TEL_FIXED_HREF} className="flex items-center gap-3">
+            <Phone className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
+            <div className="flex flex-col">
+              <span className="text-sm transition-colors group-focus:text-accent-foreground">Telefone Fixo</span>
+              <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">{PHONE_FIXED}</span>
             </div>
           </a>
         </DropdownMenuItem>

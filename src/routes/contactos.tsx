@@ -29,8 +29,9 @@ function ContactPage() {
         <div className="mt-20 grid gap-16 md:grid-cols-2">
           <div className="space-y-8">
             {[
-              { icon: Phone, label: "Telefone", value: "+351 961 551 592", href: "tel:+351961551592" },
-              { icon: MessageCircle, label: "WhatsApp", value: "Enviar mensagem", href: "https://wa.me/351961551592" },
+              { icon: MessageCircle, label: "WhatsApp", value: "+351 961 551 592", href: "https://wa.me/351961551592" },
+              { icon: Phone, label: "Telemóvel", value: "+351 915 943 309", href: "tel:+351915943309" },
+              { icon: Phone, label: "Telefone Fixo", value: "+351 215 982 843", href: "tel:+351215982843" },
               { icon: Mail, label: "Email", value: "contato@hidrolinfadetox.com", href: "mailto:contato@hidrolinfadetox.com" },
               { icon: MapPin, label: "Localização", value: "Lisboa · Amadora · Caldas da Rainha" },
               { icon: Instagram, label: "Instagram", value: "@thatianacardoso", href: "https://instagram.com" },
