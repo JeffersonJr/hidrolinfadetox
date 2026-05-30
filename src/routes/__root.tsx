@@ -11,6 +11,7 @@ import {
 import appCss from "../styles.css?url";
 import favIcon from "../assets/fav.png";
 import { Leaf, ArrowRight } from "lucide-react";
+import { TranslationProvider } from "../hooks/useTranslation";
 
 function NotFoundComponent() {
   return (
@@ -125,7 +126,9 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <TranslationProvider>
+        <Outlet />
+      </TranslationProvider>
     </QueryClientProvider>
   );
 }

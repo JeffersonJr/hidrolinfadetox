@@ -6,6 +6,7 @@ import heroImg from "@/assets/img hero.png";
 import portrait from "@/assets/portrait.jpg";
 import { services } from "@/lib/services";
 import { ContactMenu } from "@/components/site/ContactMenu";
+import { useTranslation, Translate } from "@/hooks/useTranslation";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,6 +23,8 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
+  const { t } = useTranslation();
+
   return (
     <Layout>
       {/* HERO */}
@@ -29,25 +32,23 @@ function HomePage() {
         <div className="container-narrow grid gap-14 py-20 md:grid-cols-2 md:gap-16 md:py-28">
           <div className="flex flex-col justify-center">
             <p className="text-[10px] uppercase tracking-[0.4em] text-gold">
-              Lisboa · Caldas da Rainha · Europa
+              {t("Lisboa · Caldas da Rainha · Europa")}
             </p>
             <h1 className="mt-6 font-serif text-5xl leading-[1.05] text-primary md:text-6xl lg:text-7xl">
-              Beleza que nasce do <em className="text-gold">cuidado</em> e do equilíbrio.
+              <Translate>Beleza que nasce do cuidado e do equilíbrio.</Translate>
             </h1>
             <p className="mt-7 max-w-md text-base leading-relaxed text-muted-foreground">
-              Sou Thatiana Cardoso, especialista em estética avançada e terapias
-              integrativas. Um espaço dedicado a revelar a sua melhor versão, com
-              protocolos exclusivos e atendimento personalizado.
+              {t("Sou Thatiana Cardoso, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.")}
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
                 to="/servicos"
                 className="group inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary"
               >
-                Conheça os tratamentos
+                {t("Conheça os tratamentos")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
               </Link>
-              <ContactMenu variant="link" label="Marcar consulta" />
+              <ContactMenu variant="link" label={t("Marcar consulta")} />
             </div>
           </div>
 
@@ -74,8 +75,8 @@ function HomePage() {
           ].map((p) => (
             <div key={p.title} className="flex flex-col items-start">
               <p.icon className="h-6 w-6 text-gold" strokeWidth={1.25} />
-              <h3 className="mt-5 font-serif text-2xl text-primary">{p.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+              <h3 className="mt-5 font-serif text-2xl text-primary">{t(p.title)}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(p.text)}</p>
             </div>
           ))}
         </div>
@@ -86,12 +87,12 @@ function HomePage() {
         <div className="container-narrow">
           <div className="flex items-end justify-between gap-10">
             <SectionHeading
-              eyebrow="Tratamentos"
-              title={<>Protocolos pensados para <em className="text-gold">si</em>.</>}
-              description="Cada tratamento é desenhado para responder às suas necessidades específicas, com técnicas e equipamentos de excelência."
+              eyebrow={t("Tratamentos")}
+              title={<><Translate>Protocolos pensados para si.</Translate></>}
+              description={t("Cada tratamento é desenhado para responder às suas necessidades específicas, com técnicas e equipamentos de excelência.")}
             />
             <Link to="/servicos" className="hidden text-sm tracking-wide text-primary hover:text-gold md:inline-flex md:items-center md:gap-2">
-              Ver todos <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+              {t("Ver todos")} <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
             </Link>
           </div>
 
@@ -108,10 +109,10 @@ function HomePage() {
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="mt-6 font-serif text-2xl text-primary">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.short}</p>
+                <h3 className="mt-6 font-serif text-2xl text-primary">{t(s.title)}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t(s.short)}</p>
                 <Link to="/servicos" hash={s.slug} className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold">
-                  Saber mais <ArrowRight className="h-3.5 w-3.5" strokeWidth={1.5} />
+                  {t("Saber mais")} <ArrowRight className="h-3.5 w-3.5" strokeWidth={1.5} />
                 </Link>
               </article>
             ))}
@@ -130,13 +131,11 @@ function HomePage() {
           </div>
           <div className="md:col-span-3">
             <SectionHeading
-              eyebrow="Sobre"
-              title={<>Uma trajectória dedicada à <em className="text-gold">arte</em> do cuidar.</>}
+              eyebrow={t("Sobre")}
+              title={<><Translate>Uma trajectória dedicada à arte do cuidar.</Translate></>}
             />
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              Com formação em estética avançada e terapias integrativas, atuo em
-              Portugal e em diversos países da Europa, levando técnicas atualizadas
-              e um olhar atento a cada cliente.
+              {t("Com formação em estética avançada e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.")}
             </p>
             <ul className="mt-8 space-y-3">
               {[
@@ -147,12 +146,12 @@ function HomePage() {
               ].map((b) => (
                 <li key={b} className="flex items-start gap-3 text-sm text-foreground">
                   <Check className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5} />
-                  {b}
+                  {t(b)}
                 </li>
               ))}
             </ul>
             <Link to="/sobre" className="mt-10 inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-primary hover:text-gold">
-              Conhecer a minha história <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+              {t("Conhecer a minha história")} <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
             </Link>
 
             <div className="mt-12 grid grid-cols-2 gap-6 border-t border-border/50 pt-8 sm:grid-cols-3">
@@ -163,10 +162,53 @@ function HomePage() {
               ].map((s, i) => (
                 <div key={i}>
                   <p className="font-serif text-3xl text-gold">{s.n}</p>
-                  <p className="mt-1 text-[10px] uppercase tracking-widest text-muted-foreground">{s.l}</p>
+                  <p className="mt-1 text-[10px] uppercase tracking-widest text-muted-foreground">{t(s.l)}</p>
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PRESENÇA NA EUROPA (FLAGS) */}
+      <section className="bg-background py-24 md:py-32 border-b border-border/50">
+        <div className="container-narrow">
+          <SectionHeading
+            eyebrow={t("Atendimento Internacional")}
+            title={<>{t("Presença na")} <em className="text-gold">{t("Europa")}</em></>}
+            description={t("Levamos o melhor da estética avançada e bem-estar a várias cidades e países europeus. Conheça a nossa cobertura e agende a sua consulta.")}
+          />
+          
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: "Portugal", flag: "https://flagcdn.com/w160/pt.png", desc: "Lisboa, Porto, Algarve e Caldas da Rainha. Tratamentos faciais e corporais com acompanhamento premium." },
+              { name: "França", flag: "https://flagcdn.com/w160/fr.png", desc: "Paris e Lyon. Consultas exclusivas de estética avançada e rejuvenescimento." },
+              { name: "Espanha", flag: "https://flagcdn.com/w160/es.png", desc: "Madrid e Barcelona. Drenagem linfática integrativa e protocolos pós-operatórios." },
+              { name: "Bélgica", flag: "https://flagcdn.com/w160/be.png", desc: "Bruxelas. Terapias de desintoxicação e equilíbrio corporal completo." },
+              { name: "Croácia", flag: "https://flagcdn.com/w160/hr.png", desc: "Zagreb. Protocolos exclusivos de estimulação e revitalização da pele." },
+              { name: "Países Baixos", flag: "https://flagcdn.com/w160/nl.png", desc: "Amsterdã. Programas personalizados de Hidrolinfa e desintoxicação iónica." },
+              { name: "Itália", flag: "https://flagcdn.com/w160/it.png", desc: "Roma e Milão. Tratamentos corporais esculpidos e terapias de relaxamento profundas." },
+              { name: "Alemanha", flag: "https://flagcdn.com/w160/de.png", desc: "Berlim e Munique. Tecnologia de ponta para resultados estéticos de excelência." },
+              { name: "Reino Unido", flag: "https://flagcdn.com/w160/gb.png", desc: "Londres. Consultas personalizadas e acompanhamento dedicado de alta performance." }
+            ].map((c) => (
+              <div 
+                key={c.name} 
+                className="group relative flex flex-col items-start border border-border/60 bg-cream p-6 transition-all duration-300 hover:border-gold hover:shadow-lg hover:-translate-y-1"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="overflow-hidden rounded-md border border-border/40 shadow-sm transition-transform duration-300 group-hover:scale-105">
+                    <img 
+                      src={c.flag} 
+                      alt={c.name} 
+                      className="h-10 w-15 object-cover" 
+                      loading="lazy"
+                    />
+                  </div>
+                  <h4 className="font-serif text-lg text-primary">{t(c.name)}</h4>
+                </div>
+                <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{t(c.desc)}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -175,9 +217,9 @@ function HomePage() {
       <section className="py-24 md:py-32">
         <div className="container-narrow">
           <SectionHeading
-            eyebrow="O nosso método"
-            title={<>Um caminho <em className="text-gold">seguro</em> para os seus resultados.</>}
-            description="Acreditamos que cada pessoa é única. O nosso processo garante que cada tratamento é perfeitamente adaptado a si."
+            eyebrow={t("O nosso método")}
+            title={<><Translate>Um caminho seguro para os seus resultados.</Translate></>}
+            description={t("Acreditamos que cada pessoa é única. O nosso processo garante que cada tratamento é perfeitamente adaptado a si.")}
           />
           <div className="mt-16 grid gap-10 md:grid-cols-3 relative">
             <div className="hidden md:block absolute top-8 left-[15%] right-[15%] h-px bg-border/50" />
@@ -188,8 +230,8 @@ function HomePage() {
             ].map((p, i) => (
               <div key={i} className="relative flex flex-col items-start bg-background md:px-6 md:-mx-6">
                 <span className="flex h-16 w-16 items-center justify-center rounded-full bg-cream font-serif text-2xl text-gold border border-border/50 shadow-sm">{p.step}</span>
-                <h3 className="mt-6 font-serif text-xl text-primary">{p.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
+                <h3 className="mt-6 font-serif text-xl text-primary">{t(p.title)}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(p.text)}</p>
               </div>
             ))}
           </div>
@@ -200,9 +242,9 @@ function HomePage() {
       <section className="py-24 md:py-32">
         <div className="container-narrow">
           <SectionHeading
-            eyebrow="Depoimentos"
-            title={<>O que dizem os nossos <em className="text-gold">clientes</em></>}
-            description="Experiências reais de quem confiou em nós para cuidar do seu bem-estar e da sua auto-estima."
+            eyebrow={t("Depoimentos")}
+            title={<>{t("O que dizem os nossos")} <em className="text-gold">{t("clientes")}</em></>}
+            description={t("Experiências reais de quem confiou em nós para cuidar do seu bem-estar e da sua auto-estima.")}
           />
           <div className="mt-16 grid gap-8 md:grid-cols-3">
             {[
@@ -221,12 +263,12 @@ function HomePage() {
                 name: "João Martins",
                 service: "Ventosaterapia",
               },
-            ].map((t, i) => (
+            ].map((tItem, i) => (
               <div key={i} className="flex flex-col border border-border/60 bg-cream p-8">
-                <p className="flex-1 text-sm italic leading-relaxed text-muted-foreground">"{t.text}"</p>
+                <p className="flex-1 text-sm italic leading-relaxed text-muted-foreground">"{t(tItem.text)}"</p>
                 <div className="mt-8 border-t border-border/50 pt-4">
-                  <p className="font-serif text-lg text-primary">{t.name}</p>
-                  <p className="text-xs uppercase tracking-widest text-gold">{t.service}</p>
+                  <p className="font-serif text-lg text-primary">{tItem.name}</p>
+                  <p className="text-xs uppercase tracking-widest text-gold">{t(tItem.service)}</p>
                 </div>
               </div>
             ))}
@@ -241,13 +283,13 @@ function HomePage() {
             <div className="md:w-1/3">
               <SectionHeading
                 eyebrow="FAQ"
-                title={<>Dúvidas <em className="text-gold">frequentes</em></>}
+                title={<>{t("Dúvidas")} <em className="text-gold">{t("frequentes")}</em></>}
               />
               <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-                Encontre aqui as respostas às questões mais comuns sobre os nossos tratamentos e processos. Se não encontrar o que procura, não hesite em contactar-nos.
+                {t("Encontre aqui as respostas às questões mais comuns sobre os nossos tratamentos e processos. Se não encontrar o que procura, não hesite em contactar-nos.")}
               </p>
               <div className="mt-8">
-                <ContactMenu variant="link" label="Falar connosco" />
+                <ContactMenu variant="link" label={t("Falar connosco")} />
               </div>
             </div>
             
@@ -256,7 +298,7 @@ function HomePage() {
                 {[
                   {
                     q: "Os tratamentos são dolorosos?",
-                    a: "A grande maioria dos nossos protocolos são indolores ou provocam apenas um ligeiro desconforto temporário. Priorizamos sempre o seu bem-estar durante cada sessão.",
+                    a: "A grande maioria dos nossos protocols são indolores ou provocam apenas um ligeiro desconforto temporário. Priorizamos sempre o seu bem-estar durante cada sessão.",
                   },
                   {
                     q: "Quantas sessões são necessárias para ver resultados?",
@@ -272,8 +314,8 @@ function HomePage() {
                   },
                 ].map((faq, i) => (
                   <div key={i} className="border-b border-border/60 pb-6 last:border-0 last:pb-0">
-                    <h4 className="font-serif text-lg text-primary">{faq.q}</h4>
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{faq.a}</p>
+                    <h4 className="font-serif text-lg text-primary">{t(faq.q)}</h4>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(faq.a)}</p>
                   </div>
                 ))}
               </div>
@@ -286,17 +328,17 @@ function HomePage() {
       <section className="py-24 md:py-32">
         <div className="container-narrow">
           <div className="border border-border bg-background px-8 py-16 text-center md:px-16 md:py-20">
-            <p className="text-[10px] uppercase tracking-[0.4em] text-gold">Agende a sua consulta</p>
+            <p className="text-[10px] uppercase tracking-[0.4em] text-gold">{t("Agende a sua consulta")}</p>
             <h2 className="mx-auto mt-6 max-w-3xl font-serif text-4xl leading-tight text-primary md:text-5xl">
-              Comece hoje a sua jornada de <em className="text-gold">bem-estar</em>.
+              <Translate>Comece hoje a sua jornada de bem-estar.</Translate>
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              Avaliação personalizada e plano de tratamento desenhado especificamente para si.
+              {t("Avaliação personalizada e plano de tratamento desenhado especificamente para si.")}
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <ContactMenu variant="primary" />
+              <ContactMenu variant="primary" label={t("Marcar consulta")} />
               <Link to="/contactos" className="inline-flex items-center gap-3 border border-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition-all hover:bg-primary hover:text-primary-foreground">
-                Formulário de contacto
+                {t("Formulário de contacto")}
               </Link>
             </div>
           </div>
