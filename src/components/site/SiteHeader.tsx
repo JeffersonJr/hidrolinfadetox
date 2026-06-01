@@ -86,7 +86,7 @@ export function SiteHeader() {
                         alt={lang}
                         className="h-3 w-4.5 object-cover rounded-sm shadow-sm"
                       />
-                      <span>{lang === 'pt' ? 'Português' : lang === 'en' ? 'English (UK)' : lang === 'es' ? 'Español' : lang === 'fr' ? 'Français' : 'Italiano'}</span>
+                      <span>{lang === 'pt' ? 'Português' : lang === 'en' ? 'English' : lang === 'es' ? 'Español' : lang === 'fr' ? 'Français' : 'Italiano'}</span>
                     </button>
                   ))}
                 </div>
@@ -142,7 +142,7 @@ export function SiteHeader() {
                 ))}
               </div>
             </div>
-            
+
             <a href="https://wa.me/351961551592" target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center gap-2 text-sm text-gold">
               <MessageCircle className="h-4 w-4" strokeWidth={1.5} /> WhatsApp +351 961 551 592
             </a>

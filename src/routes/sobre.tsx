@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Check, GraduationCap, Award, Sparkles, Heart, Globe2, Quote } from "lucide-react";
-import portrait from "@/assets/portrait.jpg";
+import portrait from "@/assets/portrait.png";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
