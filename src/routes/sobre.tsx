@@ -7,8 +7,8 @@ import portrait from "@/assets/portrait.jpg";
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre · Thatiana Cardoso" },
-      { name: "description", content: "Conheça Thatiana Cardoso — especialista em estética avançada e terapias integrativas em Portugal e Europa." },
+      { title: "Sobre · Tatiana Penteado" },
+      { name: "description", content: "Conheça Tatiana Penteado — especialista em estética avançada e terapias integrativas em Portugal e Europa." },
     ],
   }),
   component: AboutPage,
@@ -42,7 +42,7 @@ const timeline = [
   },
   {
     year: "Hoje",
-    title: "Método Thatiana Cardoso",
+    title: "Método Tatiana Penteado",
     text: "Protocolos exclusivos que unem ciência, sensibilidade e resultados visíveis em cada cliente.",
   },
 ];
@@ -69,7 +69,7 @@ function AboutPage() {
               <div className="absolute -inset-4 -z-10 bg-gold-soft/30" />
               <img
                 src={portrait}
-                alt="Thatiana Cardoso"
+                alt="Tatiana Penteado"
                 width={1080}
                 height={1440}
                 className="h-full w-full object-cover"
@@ -179,7 +179,7 @@ function AboutPage() {
             “Acredito que a verdadeira estética está no equilíbrio entre cuidar de quem se é
             por dentro e revelar a melhor versão por fora.”
           </p>
-          <p className="mt-8 text-[24px] uppercase tracking-[0.4em] text-secondary">Thatiana Cardoso</p>
+          <p className="mt-8 text-[24px] uppercase tracking-[0.4em] text-secondary">Tatiana Penteado</p>
         </div>
       </section>
 

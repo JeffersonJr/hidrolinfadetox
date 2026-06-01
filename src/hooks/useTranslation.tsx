@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-export type Language = "pt" | "en" | "es";
+export type Language = "pt" | "en" | "es" | "fr" | "it";
 
 interface TranslationContextType {
   language: Language;
@@ -31,8 +31,8 @@ const localDictionary: Record<Language, Record<string, string>> = {
 
     // Home Page Hero
     "Lisboa · Caldas da Rainha · Europa": "Lisboa · Caldas da Rainha · Europa",
-    "Beleza que nasce do cuidado e do equilíbrio.": "Beleza que nasce do cuidado e do equilíbrio.",
-    "Sou Thatiana Cardoso, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Sou Thatiana Cardoso, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.",
+    "O equilíbrio começa de dentro para fora": "O equilíbrio começa de dentro para fora",
+    "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.",
     "Conheça os tratamentos": "Conheça os tratamentos",
 
     // Home Page Pillars
@@ -126,8 +126,8 @@ const localDictionary: Record<Language, Record<string, string>> = {
 
     // Home Page Hero
     "Lisboa · Caldas da Rainha · Europa": "Lisbon · Caldas da Rainha · Europe",
-    "Beleza que nasce do cuidado e do equilíbrio.": "Beauty born from care and balance.",
-    "Sou Thatiana Cardoso, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos and atendimento personalizado.": "I am Thatiana Cardoso, a specialist in advanced aesthetics and integrative therapies. A space dedicated to revealing your best version, with exclusive protocols and personalized care.",
+    "O equilíbrio começa de dentro para fora": "Balance begins from the inside out",
+    "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "I am Tatiana Penteado, a specialist in advanced aesthetics and integrative therapies. A space dedicated to revealing your best version, with exclusive protocols and personalized care.",
     "Conheça os tratamentos": "Discover Treatments",
 
     // Home Page Pillars
@@ -221,8 +221,8 @@ const localDictionary: Record<Language, Record<string, string>> = {
 
     // Home Page Hero
     "Lisboa · Caldas da Rainha · Europa": "Lisboa · Caldas da Rainha · Europa",
-    "Beleza que nasce do cuidado e do equilíbrio.": "Belleza que nace del cuidado y del equilibrio.",
-    "Sou Thatiana Cardoso, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Soy Thatiana Cardoso, especialista en estética avanzada y terapias integrativas. Un espacio dedicado a revelar tu mejor versión, con protocolos exclusivos y atención personalizada.",
+    "O equilíbrio começa de dentro para fora": "El equilibrio comienza de adentro hacia afuera",
+    "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Soy Tatiana Penteado, especialista en estética avanzada y terapias integrativas. Un espacio dedicado a revelar tu mejor versión, con protocolos exclusivos y atención personalizada.",
     "Conheça os tratamentos": "Conoce los tratamientos",
 
     // Home Page Pillars
@@ -294,6 +294,196 @@ const localDictionary: Record<Language, Record<string, string>> = {
     "Roma e Milão. Tratamentos corporais esculpidos e terapias de relaxamento profundas.": "Roma y Milán. Tratamientos corporales esculpidos y terapias de relajación profunda.",
     "Berlim e Munique. Tecnologia de ponta para resultados estéticos de excelência.": "Berlín y Múnich. Tecnología de punta para resultados estéticos de excelencia.",
     "Londres. Consultas personalizadas e acompanhamento dedicado de alta performance.": "Londres. Consultas personalizadas y acompañamiento dedicado de alto rendimiento."
+  },
+  fr: {
+    // Header & Footer & Nav
+    "Início": "Accueil",
+    "Sobre": "À propos",
+    "Serviços": "Services",
+    "Preços": "Tarifs",
+    "Contactos": "Contacts",
+    "Agendar": "Réserver",
+    "Marcar consulta": "Prendre RDV",
+    "Falar connosco": "Nous contacter",
+    "Formulário de contacto": "Formulaire de contact",
+    "Telemóvel": "Téléphone portable",
+    "Fixo": "Téléphone fixe",
+    "Direitos Reservados": "Droits réservés",
+    "Todos os direitos reservados.": "Tous droits réservés.",
+    "Agende a sua consulta": "Prenez votre rendez-vous",
+    "Comece hoje a sua jornada de bem-estar.": "Commencez dès aujourd'hui votre parcours de bien-être.",
+    "Avaliação personalizada e plano de tratamento desenhado especificamente para si.": "Évaluation personnalisée et plan de traitement conçu spécifiquement pour vous.",
+
+    // Home Page Hero
+    "Lisboa · Caldas da Rainha · Europa": "Lisbonne · Caldas da Rainha · Europe",
+    "O equilíbrio começa de dentro para fora": "L'équilibre commence de l'intérieur vers l'extérieur",
+    "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Je suis Tatiana Penteado, spécialiste en esthétique avancée et thérapies intégratives. Un espace dédié à révéler votre meilleure version, avec des protocoles exclusifs et un accueil personnalisé.",
+    "Conheça os tratamentos": "Découvrez les traitements",
+
+    // Home Page Pillars
+    "Estética avançada": "Esthétique avancée",
+    "Tecnologia de ponta com protocolos personalizados.": "Technologie de pointe avec protocoles personnalisés.",
+    "Terapias naturais": "Thérapies naturelles",
+    "Métodos integrativos para corpo e mente.": "Méthodes intégratives pour le corps et l'esprit.",
+    "Atendimento humano": "Approche humaine",
+    "Acompanhamento atento em cada sessão.": "Suivi attentif à chaque séance.",
+
+    // Services section
+    "Tratamentos": "Traitements",
+    "Protocolos pensados para si.": "Protocoles pensés pour vous.",
+    "Cada tratamento é desenhado para responder às suas necessidades específicas, com técnicas e equipamentos de excelência.": "Chaque traitement est conçu pour répondre à vos besoins spécifiques, avec des techniques et des équipements d'excellence.",
+    "Ver todos": "Voir tout",
+    "Saber mais": "En savoir plus",
+
+    // About section
+    "Uma trajectória dedicada à arte do cuidar.": "Un parcours dédié à l'art de prendre soin.",
+    "Com formação em estética avançada e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "Formée en esthétique avancée et en thérapies intégratives, j'exerce au Portugal et dans plusieurs pays d'Europe, apportant des techniques modernes et une attention particulière à chaque client.",
+    "Formação contínua em estética avançada": "Formation continue en esthétique avancée",
+    "Atendimento em Lisboa, Amadora e Caldas da Rainha": "Prestation de services à Lisbonne, Amadora et Caldas da Rainha",
+    "Workshops e formações para profissionais": "Ateliers et formations pour professionnels",
+    "Protocolos personalizados e resultados visíveis": "Protocoles personnalisés et résultats visibles",
+    "Conhecer a minha história": "Découvrir mon histoire",
+    "Anos de experiência": "Années d'expérience",
+    "Clientes satisfeitas": "Clientes satisfaites",
+    "Espaços de atendimento": "Lieux de consultation",
+
+    // Method section
+    "O nosso método": "Notre méthode",
+    "Um caminho seguro para os seus resultados.": "Un chemin sûr vers vos résultats.",
+    "Acreditamos que cada pessoa é única. O nosso processo garante que cada tratamento é perfeitamente adaptado a si.": "Nous croyons que chaque personne est unique. Notre processus garantit que chaque traitement est parfaitement adapté à vous.",
+    "Avaliação Inicial": "Évaluation initiale",
+    "Uma conversa detalhada para entender as suas necessidades, historial clínico e objetivos.": "Un entretien détaillé pour comprendre vos besoins, vos antécédents médicaux et vos objectifs.",
+    "Plano à Medida": "Plan sur mesure",
+    "Desenho de um protocolo de tratamentos personalizado, combinando as melhores técnicas para si.": "Conception d'un protocole de traitement personnalisé, combinant les meilleures techniques pour vous.",
+    "Acompanhamento": "Suivi personnalisé",
+    "Monitorização contínua dos resultados e ajustes no plano para garantir a máxima eficácia e satisfação.": "Suivi continu des résultats et ajustements du plan pour garantir une efficacité et une satisfaction maximales.",
+
+    // Testimonials
+    "Depoimentos": "Témoignages",
+    "O que dizem os nossos clientes": "Ce que disent nos clients",
+    "Experiências reais de quem confiou em nós para cuidar do seu bem-estar e da sua auto-estima.": "Expériences réelles de ceux qui nous ont fait confiance pour prendre soin de leur bien-être et de leur estime de soi.",
+
+    // FAQ
+    "Dúvidas frequentes": "Questions fréquentes",
+    "Encontre aqui as respostas às questões mais comuns sobre os nossos tratamentos e processos. Se não encontrar o que procura, não hesite em contactar-nos.": "Retrouvez ici les réponses aux questions les plus courantes sur nos traitements et nos processus. Si vous ne trouvez pas ce que vous cherchez, n'hésitez pas à nous contacter.",
+
+    // Europe Presence
+    "Presença na Europa": "Présence en Europe",
+    "Atendimento Internacional": "Service international",
+    "Levamos o melhor da estética avançada e bem-estar a várias cidades e países europeus. Conheça a nossa cobertura e agende a sua consulta.": "Nous apportons le meilleur de l'esthétique avancée et du bien-être dans plusieurs villes et pays européens. Découvrez notre couverture et prenez rendez-vous.",
+    "Portugal": "Portugal",
+    "França": "France",
+    "Espanha": "Espagne",
+    "Bélgica": "Belgique",
+    "Croácia": "Croatie",
+    "Países Baixos": "Pays-Bas",
+    "Itália": "Italie",
+    "Alemanha": "Allemagne",
+    "Reino Unido": "Royaume-Uni",
+    "Lisboa, Porto, Algarve e Caldas da Rainha. Tratamentos faciais e corporais com acompanhamento premium.": "Lisbonne, Porto, Algarve et Caldas da Rainha. Traitements du visage et du corps avec un suivi haut de gamme.",
+    "Paris e Lyon. Consultas exclusivas de estética avançada e rejuvenescimento.": "Paris et Lyon. Consultations exclusives d'esthétique avancée et de rajeunissement.",
+    "Madrid e Barcelona. Drenagem linfática integrativa e protocolos pós-operatórios.": "Madrid et Barcelone. Drainage lymphatique intégratif et protocoles post-opératoires.",
+    "Bruxelas. Terapias de desintoxicação e equilíbrio corporal completo.": "Bruxelles. Thérapies de détoxification et équilibre corporel complet.",
+    "Zagreb. Protocolos exclusivos de estimulação e revitalização da pele.": "Zagreb. Protocoles exclusifs de stimulation et de revitalisation de la peau.",
+    "Amsterdã. Programas personalizados de Hidrolinfa e desintoxicação iónica.": "Amsterdam. Programmes personnalisés d'Hydrolinphe et de détoxification ionique.",
+    "Roma e Milão. Tratamentos corporais esculpidos e terapias de relaxamento profundas.": "Rome et Milan. Traitements corporels sculptants et thérapies de relaxation profonde.",
+    "Berlim e Munique. Tecnologia de ponta para resultados estéticos de excelência.": "Berlin et Munich. Technologie de pointe pour des résultats esthétiques d'excellence.",
+    "Londres. Consultas personalizadas e acompanhamento dedicado de alta performance.": "Londres. Consultations personnalisées et suivi dédié de haute performance."
+  },
+  it: {
+    // Header & Footer & Nav
+    "Início": "Home",
+    "Sobre": "Chi Sono",
+    "Serviços": "Servizi",
+    "Preços": "Prezzi",
+    "Contactos": "Contatti",
+    "Agendar": "Prenota",
+    "Marcar consulta": "Prenota una consulenza",
+    "Falar connosco": "Contattaci",
+    "Formulário de contacto": "Modulo di contatto",
+    "Telemóvel": "Cellulare",
+    "Fixo": "Telefono fisso",
+    "Direitos Reservados": "Diritti riservati",
+    "Todos os direitos reservados.": "Tutti i diritti riservati.",
+    "Agende a sua consulta": "Prenota la tua consulenza",
+    "Comece hoje a sua jornada de bem-estar.": "Inizia oggi il tuo viaggio nel benessere.",
+    "Avaliação personalizada e plano de tratamento desenhado especificamente para si.": "Valutazione personalizzata e piano di tratamento studiato appositamente per te.",
+
+    // Home Page Hero
+    "Lisboa · Caldas da Rainha · Europa": "Lisbona · Caldas da Rainha · Europa",
+    "O equilíbrio começa de dentro para fora": "L'equilibrio inizia dall'interno verso l'esterno",
+    "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Sono Tatiana Penteado, specialista in estetica avanzata e terapie integrative. Uno spazio dedicato a rivelare la tua versione migliore, con protocolli esclusivi e attenzione personalizzata.",
+    "Conheça os tratamentos": "Scopri i trattamenti",
+
+    // Home Page Pillars
+    "Estética avançada": "Estetica avanzata",
+    "Tecnologia de ponta com protocolos personalizados.": "Tecnologia all'avanguardia con protocolli personalizzati.",
+    "Terapias naturais": "Terapie naturali",
+    "Métodos integrativos para corpo e mente.": "Metodi integrativi per corpo e mente.",
+    "Atendimento humano": "Approccio umano",
+    "Acompanhamento atento em cada sessão.": "Supporto attento in ogni seduta.",
+
+    // Services section
+    "Tratamentos": "Trattamenti",
+    "Protocolos pensados para si.": "Protocolli pensati per te.",
+    "Cada tratamento é desenhado para responder às suas necessidades específicas, com técnicas e equipamentos de excelência.": "Ogni trattamento è progettato per rispondere alle tue esigenze specifiche, con tecniche e attrezzature d'eccellenza.",
+    "Ver todos": "Vedi tutti",
+    "Saber mais": "Scopri di più",
+
+    // About section
+    "Uma trajectória dedicada à arte do cuidar.": "Un percorso dedicato all'arte del prendersi cura.",
+    "Com formação em estética avançada e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "Con una formazione in estetica avanzata e terapie integrative, opero in Portogallo e in diversi paesi europei, offrendo tecniche aggiornate e un'attenzione personalizzata a ogni cliente.",
+    "Formação contínua em estética avançada": "Formazione continua in estetica avanzata",
+    "Atendimento em Lisboa, Amadora e Caldas da Rainha": "Servizio a Lisbona, Amadora e Caldas da Rainha",
+    "Workshops e formações para profissionais": "Workshop e corsi di formazione per professionisti",
+    "Protocolos personalizados e resultados visíveis": "Protocolli personalizzati e risultati visibili",
+    "Conhecer a minha história": "Scopri la mia storia",
+    "Anos de experiência": "Anni di esperienza",
+    "Clientes satisfeitas": "Clienti soddisatte",
+    "Espaços de atendimento": "Sedi dei trattamenti",
+
+    // Method section
+    "O nosso método": "Il nostro metodo",
+    "Um caminho seguro para os seus resultados.": "Un percorso sicuro per i tuoi risultati.",
+    "Acreditamos que cada pessoa é única. O nosso processo garante que cada tratamento é perfeitamente adaptado a si.": "Crediamo che ogni persona sia unica. Il nostro processo garantisce che ogni trattamento sia perfettamente adattato a te.",
+    "Avaliação Inicial": "Valutazione iniziale",
+    "Uma conversa detalhada para entender as suas necessidades, historial clínico e objetivos.": "Un colloquio approfondito per comprendere le tue esigenze, la storia clinica e gli obiettivi.",
+    "Plano à Medida": "Piano su misura",
+    "Desenho de um protocolo de tratamentos personalizado, combinando as melhores técnicas para si.": "Progettazione di un protocollo di trattamenti personalizzato, combinando le migliori tecniche per te.",
+    "Acompanhamento": "Monitoraggio",
+    "Monitorização contínua dos resultados e ajustes no plano para garantir a máxima eficácia e satisfação.": "Monitoraggio continuo dei risultati e adeguamenti del piano per garantire la massima efficacia e soddisfazione.",
+
+    // Testimonials
+    "Depoimentos": "Testimonianze",
+    "O que dizem os nossos clientes": "Cosa dicono i nostri clienti",
+    "Experiências reais de quem confiou em nós para cuidar do seu bem-estar e da sua auto-estima.": "Esperienze reali di chi si è affidato a noi per prendersi cura del proprio benessere e dell'autostima.",
+
+    // FAQ
+    "Dúvidas frequentes": "Domande frequenti",
+    "Encontre aqui as respostas às questões mais comuns sobre os nossos tratamentos e processos. Se não encontrar o que procura, não hesite em contactar-nos.": "Trova qui le risposte alle domande più comuni sui nostri trattamenti e processi. Se non trovi quello che cerchi, non esitare a contattarci.",
+
+    // Europe Presence
+    "Presença na Europa": "Presenza in Europa",
+    "Atendimento Internacional": "Servizio internazionale",
+    "Levamos o melhor da estética avançada e bem-estar a várias cidades e países europeus. Conheça a nossa cobertura e agende a sua consulta.": "Portiamo il meglio dell'estetica avanzata e del benessere in varie città e paesi europei. Scopri la nostra copertura e prenota la tua consulenza.",
+    "Portugal": "Portogallo",
+    "França": "Francia",
+    "Espanha": "Spagna",
+    "Bélgica": "Belgio",
+    "Croácia": "Croazia",
+    "Países Baixos": "Paesi Bassi",
+    "Itália": "Italia",
+    "Alemanha": "Germania",
+    "Reino Unido": "Regno Unito",
+    "Lisboa, Porto, Algarve e Caldas da Rainha. Tratamentos faciais e corporais com acompanhamento premium.": "Lisbona, Porto, Algarve e Caldas da Rainha. Trattamenti viso e corpo con supporto premium.",
+    "Paris e Lyon. Consultas exclusivas de estética avançada e rejuvenescimento.": "Parigi e Lione. Consulenze esclusive di estetica avanzata e ringiovanimento.",
+    "Madrid e Barcelona. Drenagem linfática integrativa e protocolos pós-operatórios.": "Madrid e Barcellona. Drenaggio linfatico integrativo e protocolli post-operatori.",
+    "Bruxelas. Terapias de desintoxicação e equilíbrio corporal completo.": "Bruxelles. Terapie di disintossicazione e riequilibrio corporeo completo.",
+    "Zagreb. Protocolos exclusivos de estimulação e revitalização da pele.": "Zagabria. Protocolli esclusivi di stimolazione e rivitalizzazione della pelle.",
+    "Amsterdã. Programas personalizados de Hidrolinfa e desintoxicação iónica.": "Amsterdam. Programmi personalizzati di Hidrolinfa e disintossicazione ionica.",
+    "Roma e Milão. Tratamentos corporais esculpidos e terapias de relaxamento profundas.": "Roma e Milano. Trattamenti corpo modellanti e terapie di rilassamento profondo.",
+    "Berlim e Munique. Tecnologia de ponta para resultados estéticos de excelência.": "Berlino e Monaco. Tecnologia all'avanguardia per risultati estetici d'eccellenza.",
+    "Londres. Consultas personalizadas e acompanhamento dedicado de alta performance.": "Londra. Consulenze personalizzate e supporto dedicato ad alte prestazioni."
   }
 };
 
@@ -305,7 +495,7 @@ export function TranslationProvider({ children }: { children: React.ReactNode })
   // Load language preference from localStorage if available (client-side only)
   useEffect(() => {
     const saved = localStorage.getItem("language-pref") as Language;
-    if (saved && (saved === "pt" || saved === "en" || saved === "es")) {
+    if (saved && (saved === "pt" || saved === "en" || saved === "es" || saved === "fr" || saved === "it")) {
       setLanguageState(saved);
     }
   }, []);

@@ -30,6 +30,8 @@ export function PromoModal() {
     let locale = "pt-PT";
     if (language === "en") locale = "en-GB";
     if (language === "es") locale = "es-ES";
+    if (language === "fr") locale = "fr-FR";
+    if (language === "it") locale = "it-IT";
 
     const formatted = today.toLocaleDateString(locale, options);
     // Capitalize first letter
@@ -55,8 +57,10 @@ export function PromoModal() {
     const textPT = `Olá! Vi a oferta por tempo limitado no site e gostaria de agendar a vaga de hoje às ${time}!`;
     const textEN = `Hello! I saw the limited-time offer on the website and would like to book today's slot at ${time}!`;
     const textES = `¡Hola! ¡Vi la oferta por tiempo limitado en el sitio web y me gustaría reservar la plaza de hoy a las ${time}!`;
+    const textFR = `Bonjour! J'ai vu l'offre à durée limitée sur le site et j'aimerais réserver le créneau d'aujourd'hui à ${time}!`;
+    const textIT = `Ciao! Ho visto l'offerta a tempo limitato sul sito e vorrei prenotare la fascia oraria di oggi alle ${time}!`;
     
-    const message = language === "en" ? textEN : language === "es" ? textES : textPT;
+    const message = language === "en" ? textEN : language === "es" ? textES : language === "fr" ? textFR : language === "it" ? textIT : textPT;
     const whatsappUrl = `https://wa.me/351961551592?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     handleClose();

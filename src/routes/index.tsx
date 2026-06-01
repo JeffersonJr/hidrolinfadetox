@@ -12,11 +12,11 @@ import { PromoModal } from "@/components/site/PromoModal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Thatiana Cardoso · Estética & Bem-Estar em Portugal" },
+      { title: "Tatiana Penteado · Estética & Bem-Estar em Portugal" },
       {
         name: "description",
         content:
-          "Tratamentos de estética avançada e bem-estar em Portugal e Europa por Thatiana Cardoso: HIFU, drenagem linfática, ventosaterapia e mais.",
+          "Tratamentos de estética avançada e bem-estar em Portugal e Europa por Tatiana Penteado: HIFU, drenagem linfática, ventosaterapia e mais.",
       },
     ],
   }),
@@ -37,10 +37,10 @@ function HomePage() {
               {t("Lisboa · Caldas da Rainha · Europa")}
             </p>
             <h1 className="mt-6 font-serif text-5xl leading-[1.05] text-primary md:text-6xl lg:text-7xl">
-              <Translate>Beleza que nasce do cuidado e do equilíbrio.</Translate>
+              <Translate>O equilíbrio começa de dentro para fora</Translate>
             </h1>
             <p className="mt-7 max-w-md text-base leading-relaxed text-muted-foreground">
-              {t("Sou Thatiana Cardoso, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.")}
+              {t("Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.")}
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
@@ -58,7 +58,7 @@ function HomePage() {
             <div className="absolute -inset-4 -z-10 bg-gold-soft/30" />
             <img
               src={heroImg}
-              alt="Espaço de estética Thatiana Cardoso"
+              alt="Espaço de estética Tatiana Penteado"
               width={1600}
               height={1200}
               className="h-full w-full object-cover"
@@ -128,7 +128,7 @@ function HomePage() {
           <div className="md:col-span-2">
             <div className="relative">
               <div className="absolute -inset-4 -z-10 bg-gold-soft/30" />
-              <img src={portrait} alt="Thatiana Cardoso" loading="lazy" width={1080} height={1440} className="h-full w-full object-cover" />
+              <img src={portrait} alt="Tatiana Penteado" loading="lazy" width={1080} height={1440} className="h-full w-full object-cover" />
             </div>
           </div>
           <div className="md:col-span-3">

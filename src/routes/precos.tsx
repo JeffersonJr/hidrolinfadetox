@@ -6,8 +6,8 @@ import { ContactMenu } from "@/components/site/ContactMenu";
 export const Route = createFileRoute("/precos")({
   head: () => ({
     meta: [
-      { title: "Tabela de Preços · Thatiana Cardoso" },
-      { name: "description", content: "Tabela de preços de massagens, tratamentos faciais e packs do Espaço Thatiana Cardoso." },
+      { title: "Tabela de Preços · Tatiana Penteado" },
+      { name: "description", content: "Tabela de preços de massagens, tratamentos faciais e packs do Espaço Tatiana Penteado." },
     ],
   }),
   component: PricesPage,

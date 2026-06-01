@@ -24,6 +24,8 @@ export function SiteHeader() {
     pt: { name: "PT", flag: "https://flagcdn.com/w40/pt.png" },
     en: { name: "EN", flag: "https://flagcdn.com/w40/gb.png" },
     es: { name: "ES", flag: "https://flagcdn.com/w40/es.png" },
+    fr: { name: "FR", flag: "https://flagcdn.com/w40/fr.png" },
+    it: { name: "IT", flag: "https://flagcdn.com/w40/it.png" },
   };
 
   const selectLanguage = (lang: Language) => {
@@ -84,7 +86,7 @@ export function SiteHeader() {
                         alt={lang}
                         className="h-3 w-4.5 object-cover rounded-sm shadow-sm"
                       />
-                      <span>{lang === 'pt' ? 'Português' : lang === 'en' ? 'English (UK)' : 'Español'}</span>
+                      <span>{lang === 'pt' ? 'Português' : lang === 'en' ? 'English (UK)' : lang === 'es' ? 'Español' : lang === 'fr' ? 'Français' : 'Italiano'}</span>
                     </button>
                   ))}
                 </div>
@@ -120,7 +122,7 @@ export function SiteHeader() {
             {/* MOBILE LANGUAGE SELECTOR */}
             <div className="border-t border-border/50 pt-4 mt-2">
               <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-3">{t("Idioma") || "Idioma"}</p>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-2.5">
                 {(Object.keys(langNames) as Language[]).map((lang) => (
                   <button
                     key={lang}
@@ -135,7 +137,7 @@ export function SiteHeader() {
                       alt={lang}
                       className="h-3 w-4.5 object-cover rounded-sm shadow-sm"
                     />
-                    <span>{lang === 'pt' ? 'PT' : lang === 'en' ? 'EN' : 'ES'}</span>
+                    <span>{lang === 'pt' ? 'PT' : lang === 'en' ? 'EN' : lang === 'es' ? 'ES' : lang === 'fr' ? 'FR' : 'IT'}</span>
                   </button>
                 ))}
               </div>

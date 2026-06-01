@@ -7,8 +7,8 @@ import { useState } from "react";
 export const Route = createFileRoute("/contactos")({
   head: () => ({
     meta: [
-      { title: "Contactos · Thatiana Cardoso" },
-      { name: "description", content: "Marque a sua consulta com Thatiana Cardoso em Lisboa, Amadora e Caldas da Rainha." },
+      { title: "Contactos · Tatiana Penteado" },
+      { name: "description", content: "Marque a sua consulta com Tatiana Penteado em Lisboa, Amadora e Caldas da Rainha." },
     ],
   }),
   component: ContactPage,
