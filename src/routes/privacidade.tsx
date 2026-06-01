@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { ArrowLeft, Shield, Lock, Eye } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 
-export const Route = createFileRoute("/privacidade" as any)({
+export const Route = createFileRoute("/privacidade")({
   head: () => ({
     meta: [
       { title: "Política de Privacidade · Hidrolinfa Detox" },

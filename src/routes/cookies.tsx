@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { ArrowLeft, Cookie, Info, ToggleLeft } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 
-export const Route = createFileRoute("/cookies" as any)({
+export const Route = createFileRoute("/cookies")({
   head: () => ({
     meta: [
       { title: "Política de Cookies · Hidrolinfa Detox" },
