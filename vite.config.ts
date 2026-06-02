@@ -16,4 +16,18 @@ export default defineConfig({
       preset: "vercel"
     },
   },
+  vite: {
+    ssr: {
+      noExternal: [
+        '@floating-ui/dom',
+        '@floating-ui/core',
+        '@floating-ui/react-dom',
+        '@floating-ui/utils',
+        'react-remove-scroll-bar',
+        'react-style-singleton',
+        'react-remove-scroll',
+        /^@radix-ui\//
+      ]
+    }
+  }
 });

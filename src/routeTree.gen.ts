@@ -12,7 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicosRouteImport } from './routes/servicos'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as PrecosRouteImport } from './routes/precos'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ContactosRouteImport } from './routes/contactos'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicosSlugRouteImport } from './routes/servicos_.$slug'
@@ -32,9 +34,19 @@ const ServicosRoute = ServicosRouteImport.update({
   path: '/servicos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrecosRoute = PrecosRouteImport.update({
   id: '/precos',
   path: '/precos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactosRoute = ContactosRouteImport.update({
@@ -56,7 +68,9 @@ const ServicosSlugRoute = ServicosSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contactos': typeof ContactosRoute
+  '/cookies': typeof CookiesRoute
   '/precos': typeof PrecosRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -65,7 +79,9 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contactos': typeof ContactosRoute
+  '/cookies': typeof CookiesRoute
   '/precos': typeof PrecosRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -75,7 +91,9 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contactos': typeof ContactosRoute
+  '/cookies': typeof CookiesRoute
   '/precos': typeof PrecosRoute
+  '/privacidade': typeof PrivacidadeRoute
   '/servicos': typeof ServicosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
@@ -86,7 +104,9 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contactos'
+    | '/cookies'
     | '/precos'
+    | '/privacidade'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
@@ -95,7 +115,9 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/contactos'
+    | '/cookies'
     | '/precos'
+    | '/privacidade'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
@@ -104,7 +126,9 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/contactos'
+    | '/cookies'
     | '/precos'
+    | '/privacidade'
     | '/servicos'
     | '/sitemap.xml'
     | '/sobre'
@@ -114,7 +138,9 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactosRoute: typeof ContactosRoute
+  CookiesRoute: typeof CookiesRoute
   PrecosRoute: typeof PrecosRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
   ServicosRoute: typeof ServicosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SobreRoute: typeof SobreRoute
@@ -144,11 +170,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/precos': {
       id: '/precos'
       path: '/precos'
       fullPath: '/precos'
       preLoaderRoute: typeof PrecosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contactos': {
@@ -178,7 +218,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactosRoute: ContactosRoute,
+  CookiesRoute: CookiesRoute,
   PrecosRoute: PrecosRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
   ServicosRoute: ServicosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SobreRoute: SobreRoute,
