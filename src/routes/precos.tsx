@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ContactMenu } from "@/components/site/ContactMenu";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export const Route = createFileRoute("/precos")({
   head: () => ({
@@ -27,6 +28,16 @@ const massages = [
   { label: "Massagem com Velas Quentes", value: "75,00 €" },
   { label: "Ritual de Massagem", value: "85,00 €" },
   { label: "Massagem com Óleos Essenciais", value: "55,00 €" },
+];
+
+const integrativeTherapies = [
+  { label: "Consulta de Medicina Tradicional Chinesa MTC", value: "Sob Consulta" },
+  { label: "Sessão de Auriculoterapia", value: "Sob Consulta" },
+  { label: "Sessão de Cromopuntura", value: "Sob Consulta" },
+  { label: "Sessão de Reflexologia", value: "38,00 €" },
+  { label: "Ventosaterapia", value: "40,00 €" },
+  { label: "Bambuterapia", value: "Sob Consulta" },
+  { label: "Terapia de Pedras Quentes", value: "Sob Consulta" },
 ];
 
 const packs = [
@@ -73,6 +84,7 @@ function PriceRow({ label, value, id }: { label: string; value: string; id?: str
 }
 
 function PricesPage() {
+  const { t } = useTranslation();
   return (
     <Layout>
       <section className="container-narrow py-20 md:py-28">
@@ -98,6 +110,16 @@ function PricesPage() {
           </h3>
           <div className="mt-10 mx-auto max-w-3xl">
             {massages.map((m) => <PriceRow key={m.label} label={m.label} value={m.value} />)}
+          </div>
+
+          {/* TERAPIAS INTEGRATIVAS & MTC */}
+          <h3 className="mt-24 text-center font-serif text-2xl text-primary">
+            <span className="gold-divider align-middle" /> <span className="px-4 font-medium uppercase tracking-[0.3em] text-sm text-gold">Terapias Integrativas & MTC</span> <span className="gold-divider align-middle" />
+          </h3>
+          <div className="mt-10 mx-auto max-w-3xl">
+            {integrativeTherapies.map((it) => (
+              <PriceRow key={it.label} label={t(it.label)} value={it.value === "Sob Consulta" ? t("Sob Consulta") : it.value} />
+            ))}
           </div>
 
           {/* PACKS / PROGRAMAS */}

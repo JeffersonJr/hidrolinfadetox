@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import { X, Calendar, Clock, Sparkles, MessageCircle } from "lucide-react";
+import { X, Calendar, MapPin, Sparkles, MessageCircle, ArrowUpRight } from "lucide-react";
 import { useTranslation } from "../../hooks/useTranslation";
 
 export function PromoModal() {
   const [isOpen, setIsOpen] = useState(false);
   const { t, language } = useTranslation();
-  const [formattedDate, setFormattedDate] = useState("");
 
   useEffect(() => {
     // Check if the user has already dismissed the promo modal in this session
@@ -18,26 +17,6 @@ export function PromoModal() {
     }
   }, []);
 
-  useEffect(() => {
-    // Format today's date based on language
-    const today = new Date();
-    const options: Intl.DateTimeFormatOptions = {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-    };
-    
-    let locale = "pt-PT";
-    if (language === "en") locale = "en-GB";
-    if (language === "es") locale = "es-ES";
-    if (language === "fr") locale = "fr-FR";
-    if (language === "it") locale = "it-IT";
-
-    const formatted = today.toLocaleDateString(locale, options);
-    // Capitalize first letter
-    setFormattedDate(formatted.charAt(0).toUpperCase() + formatted.slice(1));
-  }, [language]);
-
   const handleClose = () => {
     setIsOpen(false);
     sessionStorage.setItem("promo-dismissed", "true");
@@ -45,26 +24,14 @@ export function PromoModal() {
 
   if (!isOpen) return null;
 
-  const slots = [
-    { time: "14:30", status: "available", label: t("Disponível") },
-    { time: "16:00", status: "last", label: t("Última Vaga") },
-    { time: "17:30", status: "available", label: t("Disponível") },
-    { time: "19:00", status: "last", label: t("Última Vaga") },
-  ];
-
-  const handleBookSlot = (time: string) => {
-    // Predefined WhatsApp message with the chosen time slot
-    const textPT = `Olá! Vi a oferta por tempo limitado no site e gostaria de agendar a vaga de hoje às ${time}!`;
-    const textEN = `Hello! I saw the limited-time offer on the website and would like to book today's slot at ${time}!`;
-    const textES = `¡Hola! ¡Vi la oferta por tiempo limitado en el sitio web y me gustaría reservar la plaza de hoy a las ${time}!`;
-    const textFR = `Bonjour! J'ai vu l'offre à durée limitée sur le site et j'aimerais réserver le créneau d'aujourd'hui à ${time}!`;
-    const textIT = `Ciao! Ho visto l'offerta a tempo limitato sul sito e vorrei prenotare la fascia oraria di oggi alle ${time}!`;
-    
-    const message = language === "en" ? textEN : language === "es" ? textES : language === "fr" ? textFR : language === "it" ? textIT : textPT;
-    const whatsappUrl = `https://wa.me/351961551592?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-    handleClose();
-  };
+  const treatwellUrl = "https://www.treatwell.pt/estabelecimento/espaco-humana-terapias-estetica-saude-bem-estar/";
+  const whatsappUrl = "https://wa.me/351961551592?text=" + encodeURIComponent(
+    language === "en" ? "Hello! I would like to get more information about Tatiana's appointments in Portugal on July 18-19." :
+    language === "es" ? "¡Hola! Me gustaría obtener más información sobre las citas de Tatiana en Portugal el 18 y 19 de julio." :
+    language === "fr" ? "Bonjour! Je souhaiterais obtenir plus d'informations sur les rendez-vous de Tatiana au Portugal les 18 et 19 juillet." :
+    language === "it" ? "Ciao! Vorrei maggiori informazioni sugli appuntamenti di Tatiana in Portogallo il 18 e 19 luglio." :
+    "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiana em Portugal nos dias 18 e 19 de Julho."
+  );
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -75,12 +42,12 @@ export function PromoModal() {
       />
       
       {/* MODAL CARD */}
-      <div className="relative w-full max-w-lg overflow-hidden border border-border bg-cream p-8 shadow-2xl animate-in zoom-in-95 slide-in-from-bottom-4 duration-300 z-50">
+      <div className="relative w-full max-w-lg max-h-[calc(100vh-2rem)] overflow-y-auto border border-border bg-cream p-6 sm:p-10 shadow-2xl animate-in zoom-in-95 slide-in-from-bottom-4 duration-300 z-50 rounded-sm">
         
-        {/* CLOSE BUTTON */}
+        {/* CLOSE BUTTON - Touch friendly */}
         <button
           onClick={handleClose}
-          className="absolute right-4 top-4 text-muted-foreground transition-colors hover:text-gold"
+          className="absolute right-4 top-4 text-muted-foreground transition-colors hover:text-gold p-2 -mr-2 -mt-2 focus:outline-none cursor-pointer"
           aria-label={t("Fechar") || "Fechar"}
         >
           <X className="h-5 w-5" />
@@ -89,70 +56,57 @@ export function PromoModal() {
         {/* PROMO BADGE */}
         <div className="inline-flex items-center gap-2 border border-gold/40 bg-gold-soft/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-gold">
           <Sparkles className="h-3 w-3" />
-          {t("Por Tempo Limitado!")}
+          {t("Agenda Especial")}
         </div>
 
         {/* HEADER */}
-        <h2 className="mt-5 font-serif text-3xl leading-tight text-primary md:text-4xl">
-          {t("Campanha Especial")} · <em className="text-gold">{t("Bem-Estar")}</em>
+        <h2 className="mt-5 font-serif text-3xl leading-tight text-primary sm:text-4xl">
+          {t("Tatiana Penteado em Portugal")}
         </h2>
         
-        <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-          {t("Garanta o seu momento de desintoxicação e equilíbrio com os nossos especialistas.")} {t("Aproveite o atendimento exclusivo de hoje com condições especiais de agendamento.")}
-        </p>
-
-        {/* DATE PICKER HEADER */}
-        <div className="mt-8 flex items-center gap-3 border-b border-border/60 pb-3">
-          <Calendar className="h-4.5 w-4.5 text-gold" strokeWidth={1.5} />
-          <span className="font-serif text-base text-primary font-medium">{formattedDate}</span>
-        </div>
-
-        {/* SLOTS LIST */}
-        <div className="mt-5 space-y-3.5">
-          <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">
-            {t("Horários Disponíveis para Hoje")}
-          </p>
-          
-          <div className="grid gap-3 sm:grid-cols-2">
-            {slots.map((s) => (
-              <button
-                key={s.time}
-                onClick={() => handleBookSlot(s.time)}
-                className="group flex items-center justify-between border border-border/80 bg-background/80 p-4 transition-all duration-300 hover:border-gold hover:bg-background hover:shadow-md text-left"
-              >
-                <div className="flex items-center gap-3">
-                  <Clock className="h-4 w-4 text-muted-foreground group-hover:text-gold transition-colors" strokeWidth={1.5} />
-                  <div>
-                    <p className="text-sm font-semibold text-primary">{s.time}</p>
-                    <p className="text-[10px] text-muted-foreground">{t("Hora") || "Hora"}</p>
-                  </div>
-                </div>
-                
-                <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider ${
-                  s.status === "available" 
-                    ? "bg-emerald-500/10 text-emerald-600 border border-emerald-500/20" 
-                    : "bg-amber-500/10 text-amber-600 border border-amber-500/20"
-                }`}>
-                  {s.label}
-                </span>
-              </button>
-            ))}
+        {/* DETAILS LIST */}
+        <div className="mt-6 space-y-3">
+          <div className="flex items-center gap-3">
+            <Calendar className="h-4.5 w-4.5 text-gold shrink-0" strokeWidth={1.5} />
+            <span className="font-serif text-lg text-primary font-medium">{t("18 e 19 de Julho")}</span>
+          </div>
+          <div className="flex items-start gap-3">
+            <MapPin className="h-4.5 w-4.5 text-gold shrink-0 mt-0.5" strokeWidth={1.5} />
+            <span className="text-sm text-muted-foreground">{t("Espaço Humana · Terapias, Estética, Saúde & Bem-Estar")}</span>
           </div>
         </div>
 
+        <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+          {t("Garanta a sua vaga para atendimentos exclusivos de estética avançada e terapias integrativas. Uma oportunidade única de realizar a sua avaliação e tratamento presencial.")}
+        </p>
+
         {/* MAIN CTA */}
         <div className="mt-8 flex flex-col gap-3">
-          <button
-            onClick={() => handleBookSlot("14:30")}
-            className="group flex w-full items-center justify-center gap-3 border border-primary bg-primary py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary"
+          <a
+            href={treatwellUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleClose}
+            className="group flex w-full items-center justify-center gap-2 border border-primary bg-primary py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary min-h-[44px] cursor-pointer"
           >
-            <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
-            {t("Reservar no WhatsApp")}
-          </button>
+            {t("Agendar no Treatwell")}
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" strokeWidth={1.5} />
+          </a>
           
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleClose}
+            className="group flex w-full items-center justify-center gap-2 border border-border bg-background py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition-all hover:border-gold hover:text-gold min-h-[44px] cursor-pointer"
+          >
+            <MessageCircle className="h-4 w-4 text-muted-foreground group-hover:text-gold" strokeWidth={1.5} />
+            {t("Esclarecer dúvidas por WhatsApp")}
+          </a>
+
           <button
             onClick={handleClose}
-            className="w-full text-center text-[10px] uppercase tracking-widest text-muted-foreground transition-colors hover:text-primary"
+            className="mt-2 w-full text-center text-[10px] uppercase tracking-widest text-muted-foreground transition-colors hover:text-primary py-2 focus:outline-none cursor-pointer"
           >
             {t("Continuar a navegar") || "Continuar a navegar"}
           </button>

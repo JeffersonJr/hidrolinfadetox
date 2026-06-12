@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { services } from "@/lib/services";
 import { Check } from "lucide-react";
 import { ContactMenu } from "@/components/site/ContactMenu";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export const Route = createFileRoute("/servicos")({
   head: () => ({
@@ -16,6 +17,7 @@ export const Route = createFileRoute("/servicos")({
 });
 
 function ServicesPage() {
+  const { t } = useTranslation();
   return (
     <Layout>
       <section className="container-narrow py-20 md:py-24">
@@ -82,6 +84,77 @@ function ServicesPage() {
             </div>
           </article>
         ))}
+      </section>
+
+      {/* TERAPIAS INTEGRATIVAS & MTC */}
+      <section className="bg-background py-24 md:py-32 border-t border-border/50">
+        <div className="container-narrow">
+          <SectionHeading
+            eyebrow={t("Terapias Integrativas")}
+            title={<>{t("Medicina Tradicional")} <em className="text-gold">{t("Chinesa & Bem-Estar")}</em></>}
+            description={t("Métodos integrativos e milenares para harmonizar mente e corpo, promovendo equilíbrio energético e saúde integral.")}
+          />
+          
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Medicina Tradicional Chinesa MTC",
+                desc: "Tratamento completo para harmonizar Mente, Corpo e equilíbrio energético através de princípios milenares.",
+                icon: "☯️"
+              },
+              {
+                title: "Auriculoterapia",
+                desc: "Terapia baseada na estimulação de pontos específicos na orelha, altamente especializada em ansiedade e emagrecimento.",
+                icon: "👂"
+              },
+              {
+                title: "Reflexologia",
+                desc: "Cuidados integrativos e alívio de tensões de todo o corpo através da massagem e estímulo de pontos podais precisos.",
+                icon: "👣"
+              },
+              {
+                title: "Cromopuntura",
+                desc: "Terapia através do equilíbrio das cores 🌈. Um tratamento não-invasivo indicado para todas as idades, com foco especial em crianças e idosos.",
+                icon: "🌈"
+              },
+              {
+                title: "Ventosaterapia",
+                desc: "Técnica ancestral que utiliza copos de vácuo para libertar a fáscia muscular, aliviar dores corporais e eliminar toxinas acumuladas.",
+                icon: "🔥"
+              },
+              {
+                title: "Bambuterapia",
+                desc: "Massagem corporal que combina manobras modeladoras e relaxantes utilizando hastes de bambu de diferentes tamanhos.",
+                icon: "🎍"
+              },
+              {
+                title: "Pedras Quentes",
+                desc: "Terapia geotermal profunda que utiliza pedras vulcânicas aquecidas para derreter o stress, aliviar tensões e promover relaxamento total.",
+                icon: "🪨"
+              }
+            ].map((therapy, i) => (
+              <div 
+                key={i} 
+                className="group relative flex flex-col items-start border border-border/60 bg-cream p-8 transition-all duration-300 hover:border-gold hover:shadow-lg hover:-translate-y-1"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-background border border-border/50 text-2xl shadow-sm transition-transform duration-300 group-hover:scale-110">
+                    {therapy.icon}
+                  </div>
+                  <h4 className="font-serif text-xl text-primary font-medium">{t(therapy.title)}</h4>
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{t(therapy.desc)}</p>
+                <div className="mt-6 pt-4 border-t border-border/40 w-full flex justify-between items-center">
+                  <ContactMenu 
+                    variant="link" 
+                    label={t("Agendar Consulta")} 
+                    className="p-0 text-gold text-xs uppercase tracking-widest font-semibold hover:text-primary transition-colors cursor-pointer" 
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* EVALUATION CTA */}

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { ArrowRight, Check, Sparkles, Leaf, HeartHandshake } from "lucide-react";
+import { ArrowRight, Check, Sparkles, Leaf, HeartHandshake, MapPin, Calendar, ArrowUpRight, MessageCircle } from "lucide-react";
 import heroImg from "@/assets/img hero.png";
 import portrait from "@/assets/portrait.png";
 import { services } from "@/lib/services";
@@ -81,6 +81,87 @@ function HomePage() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(p.text)}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* AGENDA ESPECIAL / DOBRA PORTUGAL */}
+      <section className="py-20 md:py-24 border-b border-border/50 relative overflow-hidden bg-background">
+        <div className="absolute top-0 right-0 -z-10 w-96 h-96 bg-gold-soft/10 rounded-full blur-3xl opacity-60" />
+        <div className="container-narrow">
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+            
+            {/* Lado Esquerdo - Chamada Principal e Data */}
+            <div className="lg:col-span-5 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 border border-gold/40 bg-gold-soft/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-gold w-fit">
+                <Sparkles className="h-3 w-3 animate-pulse" />
+                {t("Agenda Especial")}
+              </div>
+              <h2 className="mt-5 font-serif text-4xl leading-tight text-primary md:text-5xl">
+                {t("Tatiana Penteado em Portugal")}
+              </h2>
+              
+              <div className="mt-8 flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream border border-gold-soft/30 text-gold shrink-0">
+                    <Calendar className="h-5 w-5" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{t("Data e Período")}</p>
+                    <p className="font-serif text-xl font-medium text-primary mt-0.5">{t("18 e 19 de Julho")}</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream border border-gold-soft/30 text-gold shrink-0 mt-0.5">
+                    <MapPin className="h-5 w-5" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{t("Local dos Atendimentos")}</p>
+                    <p className="font-serif text-lg font-medium text-primary mt-0.5">
+                      {t("Espaço Humana · Terapias, Estética, Saúde & Bem-Estar")}
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">Lisboa, Portugal (Alvalade)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Lado Direito - Descrição e Ações */}
+            <div className="lg:col-span-7 flex flex-col justify-center border-t border-border/50 pt-8 lg:border-t-0 lg:border-l lg:border-border/50 lg:pt-0 lg:pl-12">
+              <p className="text-base leading-relaxed text-muted-foreground">
+                {t("Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.")}
+              </p>
+              
+              <p className="mt-4 text-sm font-medium text-primary font-serif italic">
+                {t("Inscrições e agendamentos online abertos diretamente através do aplicativo/site Treatwell.")}
+              </p>
+              
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a
+                  href="https://www.treatwell.pt/estabelecimento/espaco-humana-terapias-estetica-saude-bem-estar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary min-h-[44px] cursor-pointer"
+                >
+                  {t("Agendar no Treatwell")}
+                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" strokeWidth={1.5} />
+                </a>
+                
+                <a
+                  href={`https://wa.me/351961551592?text=${encodeURIComponent(
+                    "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiana em Portugal nos dias 18 e 19 de Julho."
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 border border-border px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition-all hover:border-gold hover:text-gold min-h-[44px] cursor-pointer bg-background/50"
+                >
+                  <MessageCircle className="h-4 w-4 text-muted-foreground group-hover:text-gold" strokeWidth={1.5} />
+                  {t("Tirar dúvidas")}
+                </a>
+              </div>
+            </div>
+            
+          </div>
         </div>
       </section>
 

@@ -3,6 +3,7 @@ import { Layout } from "@/components/site/Layout";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Check, GraduationCap, Award, Sparkles, Heart, Globe2, Quote } from "lucide-react";
 import portrait from "@/assets/portrait.png";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -59,6 +60,7 @@ const credentials = [
 ];
 
 function AboutPage() {
+  const { t } = useTranslation();
   return (
     <Layout>
       {/* Hero */}
@@ -99,6 +101,17 @@ function AboutPage() {
                 ministro workshops e formações em Portugal e diversos países da
                 Europa.
               </p>
+            </div>
+
+            {/* Destaque do Congresso */}
+            <div className="mt-8 border-l-2 border-gold bg-gold-soft/10 p-5 flex gap-4 items-start rounded-r-sm shadow-sm transition-all duration-300 hover:border-l-4">
+              <Award className="h-6 w-6 text-gold shrink-0 mt-0.5" strokeWidth={1.5} />
+              <div>
+                <p className="text-[10px] uppercase tracking-widest text-gold font-semibold">{t("Destaque e Credencial")}</p>
+                <p className="mt-1.5 font-serif text-lg leading-relaxed text-primary font-medium">
+                  {t("Participação no 1º Congresso de Medicina Integrativa Europa - Portugal")}
+                </p>
+              </div>
             </div>
 
             <div className="mt-12 grid gap-6 sm:grid-cols-2">
