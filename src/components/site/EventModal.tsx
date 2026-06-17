@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { X, Calendar, MapPin, Sparkles, MessageCircle, ArrowUpRight } from "lucide-react";
 import { useTranslation } from "../../hooks/useTranslation";
 
-export function PromoModal() {
+export function EventModal() {
   const [isOpen, setIsOpen] = useState(false);
   const { t, language } = useTranslation();
 
   useEffect(() => {
     // Check if the user has already dismissed the promo modal in this session
-    const isDismissed = sessionStorage.getItem("promo-dismissed");
+    const isDismissed = sessionStorage.getItem("event-dismissed");
     if (!isDismissed) {
       const timer = setTimeout(() => {
         setIsOpen(true);
@@ -19,18 +19,18 @@ export function PromoModal() {
 
   const handleClose = () => {
     setIsOpen(false);
-    sessionStorage.setItem("promo-dismissed", "true");
+    sessionStorage.setItem("event-dismissed", "true");
   };
 
   if (!isOpen) return null;
 
   const treatwellUrl = "https://www.treatwell.pt/estabelecimento/espaco-humana-terapias-estetica-saude-bem-estar/";
   const whatsappUrl = "https://wa.me/351961551592?text=" + encodeURIComponent(
-    language === "en" ? "Hello! I would like to get more information about Tatiana's appointments in Portugal on July 18-19." :
-    language === "es" ? "¡Hola! Me gustaría obtener más información sobre las citas de Tatiana en Portugal el 18 y 19 de julio." :
-    language === "fr" ? "Bonjour! Je souhaiterais obtenir plus d'informations sur les rendez-vous de Tatiana au Portugal les 18 et 19 juillet." :
-    language === "it" ? "Ciao! Vorrei maggiori informazioni sugli appuntamenti di Tatiana in Portogallo il 18 e 19 luglio." :
-    "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiana em Portugal nos dias 18 e 19 de Julho."
+    language === "en" ? "Hello! I would like to get more information about Tatiana's appointments in Italy on July 18-19." :
+    language === "es" ? "¡Hola! Me gustaría obtener más información sobre las citas de Tatiana en Italia el 18 y 19 de julio." :
+    language === "fr" ? "Bonjour! Je souhaiterais obtenir plus d'informations sur les rendez-vous de Tatiana en Italie les 18 et 19 juillet." :
+    language === "it" ? "Ciao! Vorrei maggiori informazioni sugli appuntamenti di Tatiana in Italia il 18 e 19 luglio." :
+    "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiana na Italia nos dias 18 e 19 de Julho."
   );
 
   return (
@@ -61,7 +61,7 @@ export function PromoModal() {
 
         {/* HEADER */}
         <h2 className="mt-5 font-serif text-3xl leading-tight text-primary sm:text-4xl">
-          {t("Tatiana Penteado em Portugal")}
+          {t("Tatiana Penteado na Italia")}
         </h2>
         
         {/* DETAILS LIST */}
@@ -72,7 +72,7 @@ export function PromoModal() {
           </div>
           <div className="flex items-start gap-3">
             <MapPin className="h-4.5 w-4.5 text-gold shrink-0 mt-0.5" strokeWidth={1.5} />
-            <span className="text-sm text-muted-foreground">{t("Espaço Humana · Terapias, Estética, Saúde & Bem-Estar")}</span>
+            <span className="text-sm text-muted-foreground">{t("Espaço Humana · Terapias, Estética, Saúde & Bem-Estar - Bologna Italia")}</span>
           </div>
         </div>
 

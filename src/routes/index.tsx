@@ -7,7 +7,7 @@ import portrait from "@/assets/portrait.png";
 import { services } from "@/lib/services";
 import { ContactMenu } from "@/components/site/ContactMenu";
 import { useTranslation, Translate } from "@/hooks/useTranslation";
-import { PromoModal } from "@/components/site/PromoModal";
+import { EventModal } from "@/components/site/EventModal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,7 +28,7 @@ function HomePage() {
 
   return (
     <Layout>
-      <PromoModal />
+      <EventModal />
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="container-narrow grid gap-14 py-20 md:grid-cols-2 md:gap-16 md:py-28">
@@ -97,7 +97,7 @@ function HomePage() {
                 {t("Agenda Especial")}
               </div>
               <h2 className="mt-5 font-serif text-4xl leading-tight text-primary md:text-5xl">
-                {t("Tatiana Penteado em Portugal")}
+                {t("Tatiana Penteado na Italia")}
               </h2>
               
               <div className="mt-8 flex flex-col gap-4">
@@ -118,9 +118,9 @@ function HomePage() {
                   <div>
                     <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{t("Local dos Atendimentos")}</p>
                     <p className="font-serif text-lg font-medium text-primary mt-0.5">
-                      {t("Espaço Humana · Terapias, Estética, Saúde & Bem-Estar")}
+                      {t("Espaço Humana · Terapias, Estética, Saúde & Bem-Estar - Bologna Italia")}
                     </p>
-                    <p className="text-xs text-muted-foreground mt-1">Lisboa, Portugal (Alvalade)</p>
+                    <p className="text-xs text-muted-foreground mt-1">Bologna, Italia</p>
                   </div>
                 </div>
               </div>
@@ -149,7 +149,7 @@ function HomePage() {
                 
                 <a
                   href={`https://wa.me/351961551592?text=${encodeURIComponent(
-                    "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiana em Portugal nos dias 18 e 19 de Julho."
+                    "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiana na Italia nos dias 18 e 19 de Julho."
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
