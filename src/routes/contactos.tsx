@@ -34,7 +34,7 @@ function ContactPage() {
               { icon: Phone, label: "Telefone Fixo", value: "+351 215 982 843", href: "tel:+351215982843" },
               { icon: Mail, label: "Email", value: "contato@hidrolinfadetox.com", href: "mailto:contato@hidrolinfadetox.com" },
               { icon: MapPin, label: "Localização", value: "Lisboa · Amadora · Caldas da Rainha" },
-              { icon: Instagram, label: "Instagram", value: "@thatianacardoso", href: "https://instagram.com" },
+              { icon: Instagram, label: "Instagram", value: "@tatiane.penteado19", href: "https://www.instagram.com/tatiane.penteado19/" },
             ].map((c, i) => (
               <div key={i} className="flex items-start gap-4 border-b border-border pb-6">
                 <c.icon className="mt-1 h-5 w-5 text-gold" strokeWidth={2} />
@@ -54,7 +54,7 @@ function ContactPage() {
             className="bg-cream p-8 md:p-10"
             onSubmit={(e) => { e.preventDefault(); setSent(true); }}
           >
-            <h3 className="font-serif text-3xl text-primary">Marcar consulta</h3>
+            <h3 className="font-serif text-3xl text-primary">Marcar uma avaliação.</h3>
             <p className="mt-2 text-sm text-muted-foreground">Preencha o formulário e entrarei em contacto consigo.</p>
 
             <div className="mt-8 space-y-5">

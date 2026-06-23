@@ -18,7 +18,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     "Preços": "Preços",
     "Contactos": "Contactos",
     "Agendar": "Agendar",
-    "Marcar consulta": "Marcar consulta",
+    "Marcar consulta": "Marcar uma avaliação.",
     "Falar connosco": "Falar connosco",
     "Formulário de contacto": "Formulário de contacto",
     "Telemóvel": "Telemóvel",
@@ -52,7 +52,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
 
     // About section
     "Uma trajectória dedicada à arte do cuidar.": "Uma trajectória dedicada à arte do cuidar.",
-    "Com formação em estética avançada e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "Com formação em estética avançada e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.",
+    "Com formação em estética avançada, medicina tradicional chinesa MTC. e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "Com formação em estética avançada, medicina tradicional chinesa MTC. e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.",
     "Formação contínua em estética avançada": "Formação contínua em estética avançada",
     "Atendimento em Lisboa, Amadora e Caldas da Rainha": "Atendimento em Lisboa, Amadora e Caldas da Rainha",
     "Workshops e formações para profissionais": "Workshops e formações para profissionais",
@@ -85,7 +85,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     // Europe Presence
     "Presença na Europa": "Presença na Europa",
     "Atendimento Internacional": "Atendimento Internacional",
-    "Levamos o melhor da estética avançada e bem-estar a várias cidades e países europeus. Conheça a nossa cobertura e agende a sua consulta.": "Levamos o melhor da estética avançada e bem-estar a várias cidades e países europeus. Conheça a nossa cobertura e agende a sua consulta.",
+    "levamos conhecimento com excelência e referência no que há de mais avançado nos cuidados, saúde e bem-estar. Agenda um horário conosco.": "levamos conhecimento com excelência e referência no que há de mais avançado nos cuidados, saúde e bem-estar. Agenda um horário conosco.",
     "Portugal": "Portugal",
     "França": "França",
     "Espanha": "Espanha",
@@ -185,7 +185,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
 
     // About section
     "Uma trajectória dedicada à arte do cuidar.": "A trajectory dedicated to the art of caring.",
-    "Com formação em estética avançada e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "With a background in advanced aesthetics and integrative therapies, I operate in Portugal and several European countries, delivering updated techniques and focused attention to each client.",
+    "Com formação em estética avançada, medicina tradicional chinesa MTC. e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "With a background in advanced aesthetics and integrative therapies, I operate in Portugal and several European countries, delivering updated techniques and focused attention to each client.",
     "Formação contínua em estética avançada": "Continuous training in advanced aesthetics",
     "Atendimento em Lisboa, Amadora e Caldas da Rainha": "Care in Lisbon, Amadora, and Caldas da Rainha",
     "Workshops e formações para profissionais": "Workshops and training for professionals",
@@ -218,7 +218,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     // Europe Presence
     "Presença na Europa": "Presence in Europe",
     "Atendimento Internacional": "International Service",
-    "Levamos o melhor da estética avançada e bem-estar a várias cidades e países europeus. Conheça a nossa cobertura e agende a sua consulta.": "We bring the best of advanced aesthetics and well-being to various European cities and countries. Meet our coverage and schedule your consultation.",
+    "levamos conhecimento com excelência e referência no que há de mais avançado nos cuidados, saúde e bem-estar. Agenda um horário conosco.": "We bring the best of advanced aesthetics and well-being to various European cities and countries. Meet our coverage and schedule your consultation.",
     "Portugal": "Portugal",
     "França": "France",
     "Espanha": "Spain",
@@ -318,7 +318,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
 
     // About section
     "Uma trajectória dedicada à arte do cuidar.": "Una trayectoria dedicada al arte de cuidar.",
-    "Com formação em estética avançada e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "Con formación en estética avanzada y terapias integrativas, actúo en Portugal y en diversos países de Europa, llevando técnicas actualizadas y una mirada atenta a cada cliente.",
+    "Com formação em estética avançada, medicina tradicional chinesa MTC. e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "Con formación en estética avanzada y terapias integrativas, actúo en Portugal y en diversos países de Europa, llevando técnicas actualizadas y una mirada atenta a cada cliente.",
     "Formação contínua em estética avançada": "Formación continua en estética avanzada",
     "Atendimento em Lisboa, Amadora e Caldas da Rainha": "Atención en Lisboa, Amadora y Caldas da Rainha",
     "Workshops e formações para profissionais": "Talleres y formaciones para profesionales",
@@ -351,7 +351,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     // Europe Presence
     "Presença na Europa": "Presencia en Europa",
     "Atendimento Internacional": "Atención Internacional",
-    "Levamos o melhor da estética avançada e bem-estar a várias cidades e países europeus. Conheça a nossa cobertura e agende a sua consulta.": "Llevamos lo mejor de la estética avanzada y el bienestar a varias ciudades y países europeos. Conozca nuestra cobertura y reserve su consulta.",
+    "levamos conhecimento com excelência e referência no que há de mais avançado nos cuidados, saúde e bem-estar. Agenda um horário conosco.": "Llevamos lo mejor de la estética avanzada y el bienestar a varias ciudades y países europeos. Conozca nuestra cobertura y reserve su consulta.",
     "Portugal": "Portugal",
     "França": "Francia",
     "Espanha": "España",
@@ -451,7 +451,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
 
     // About section
     "Uma trajectória dedicada à arte do cuidar.": "Un parcours dédié à l'art de prendre soin.",
-    "Com formação em estética avançada e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "Formée en esthétique avancée et en thérapies intégratives, j'exerce au Portugal et dans plusieurs pays d'Europe, apportant des techniques modernes et une attention particulière à chaque client.",
+    "Com formação em estética avançada, medicina tradicional chinesa MTC. e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "Formée en esthétique avancée et en thérapies intégratives, j'exerce au Portugal et dans plusieurs pays d'Europe, apportant des techniques modernes et une attention particulière à chaque client.",
     "Formação contínua em estética avançada": "Formation continue en esthétique avancée",
     "Atendimento em Lisboa, Amadora e Caldas da Rainha": "Prestation de services à Lisbonne, Amadora et Caldas da Rainha",
     "Workshops e formações para profissionais": "Ateliers et formations pour professionnels",
@@ -484,7 +484,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     // Europe Presence
     "Presença na Europa": "Présence en Europe",
     "Atendimento Internacional": "Service international",
-    "Levamos o melhor da estética avançada e bem-estar a várias cidades e países europeus. Conheça a nossa cobertura e agende a sua consulta.": "Nous apportons le meilleur de l'esthétique avancée et du bien-être dans plusieurs villes et pays européens. Découvrez notre couverture et prenez rendez-vous.",
+    "levamos conhecimento com excelência e referência no que há de mais avançado nos cuidados, saúde e bem-estar. Agenda um horário conosco.": "Nous apportons le meilleur de l'esthétique avancée et du bien-être dans plusieurs villes et pays européens. Découvrez notre couverture et prenez rendez-vous.",
     "Portugal": "Portugal",
     "França": "France",
     "Espanha": "Espagne",
@@ -584,7 +584,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
 
     // About section
     "Uma trajectória dedicada à arte do cuidar.": "Un percorso dedicato all'arte del prendersi cura.",
-    "Com formação em estética avançada e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "Con una formazione in estetica avanzata e terapie integrative, opero in Portogallo e in diversi paesi europei, offrendo tecniche aggiornate e un'attenzione personalizzata a ogni cliente.",
+    "Com formação em estética avançada, medicina tradicional chinesa MTC. e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.": "Con una formazione in estetica avanzata e terapie integrative, opero in Portogallo e in diversi paesi europei, offrendo tecniche aggiornate e un'attenzione personalizzata a ogni cliente.",
     "Formação contínua em estética avançada": "Formazione continua in estetica avanzata",
     "Atendimento em Lisboa, Amadora e Caldas da Rainha": "Servizio a Lisbona, Amadora e Caldas da Rainha",
     "Workshops e formações para profissionais": "Workshop e corsi di formazione per professionisti",
@@ -617,7 +617,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     // Europe Presence
     "Presença na Europa": "Presenza in Europa",
     "Atendimento Internacional": "Servizio internazionale",
-    "Levamos o melhor da estética avançada e bem-estar a várias cidades e países europeus. Conheça a nossa cobertura e agende a sua consulta.": "Portiamo il meglio dell'estetica avanzata e del benessere in varie città e paesi europei. Scopri la nostra copertura e prenota la tua consulenza.",
+    "levamos conhecimento com excelência e referência no que há de mais avançado nos cuidados, saúde e bem-estar. Agenda um horário conosco.": "Portiamo il meglio dell'estetica avanzata e del benessere in varie città e paesi europei. Scopri la nostra copertura e prenota la tua consulenza.",
     "Portugal": "Portogallo",
     "França": "Francia",
     "Espanha": "Spagna",

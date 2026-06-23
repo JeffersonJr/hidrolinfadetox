@@ -89,7 +89,7 @@ function HomePage() {
         <div className="absolute top-0 right-0 -z-10 w-96 h-96 bg-gold-soft/10 rounded-full blur-3xl opacity-60" />
         <div className="container-narrow">
           <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-            
+
             {/* Lado Esquerdo - Chamada Principal e Data */}
             <div className="lg:col-span-5 flex flex-col justify-center">
               <div className="inline-flex items-center gap-2 border border-gold/40 bg-gold-soft/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-gold w-fit">
@@ -99,7 +99,7 @@ function HomePage() {
               <h2 className="mt-5 font-serif text-4xl leading-tight text-primary md:text-5xl">
                 {t("Tatiana Penteado na Italia")}
               </h2>
-              
+
               <div className="mt-8 flex flex-col gap-4">
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream border border-gold-soft/30 text-gold shrink-0">
@@ -110,7 +110,7 @@ function HomePage() {
                     <p className="font-serif text-xl font-medium text-primary mt-0.5">{t("18 e 19 de Julho")}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream border border-gold-soft/30 text-gold shrink-0 mt-0.5">
                     <MapPin className="h-5 w-5" strokeWidth={1.5} />
@@ -125,17 +125,17 @@ function HomePage() {
                 </div>
               </div>
             </div>
-            
+
             {/* Lado Direito - Descrição e Ações */}
             <div className="lg:col-span-7 flex flex-col justify-center border-t border-border/50 pt-8 lg:border-t-0 lg:border-l lg:border-border/50 lg:pt-0 lg:pl-12">
               <p className="text-base leading-relaxed text-muted-foreground">
-                {t("Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.")}
+                {t("Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Terapeuta credenciada Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.")}
               </p>
-              
+
               <p className="mt-4 text-sm font-medium text-primary font-serif italic">
                 {t("Inscrições e agendamentos online abertos diretamente através do aplicativo/site Treatwell.")}
               </p>
-              
+
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
                   href="https://www.treatwell.pt/estabelecimento/espaco-humana-terapias-estetica-saude-bem-estar/"
@@ -146,7 +146,7 @@ function HomePage() {
                   {t("Agendar no Treatwell")}
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" strokeWidth={1.5} />
                 </a>
-                
+
                 <a
                   href={`https://wa.me/351961551592?text=${encodeURIComponent(
                     "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiana na Italia nos dias 18 e 19 de Julho."
@@ -160,7 +160,7 @@ function HomePage() {
                 </a>
               </div>
             </div>
-            
+
           </div>
         </div>
       </section>
@@ -218,11 +218,11 @@ function HomePage() {
               title={<><Translate>Uma trajectória dedicada à arte do cuidar.</Translate></>}
             />
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              {t("Com formação em estética avançada e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.")}
+              {t("Com formação em estética avançada, medicina tradicional chinesa MTC. e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.")}
             </p>
             <ul className="mt-8 space-y-3">
               {[
-                "Formação contínua em estética avançada",
+                "Formação contínua em estética avançada, medicina tradicional chinesa MTC. e terapias integrativas.",
                 "Atendimento em Lisboa, Amadora e Caldas da Rainha",
                 "Workshops e formações para profissionais",
                 "Protocolos personalizados e resultados visíveis",
@@ -239,7 +239,7 @@ function HomePage() {
 
             <div className="mt-12 grid grid-cols-2 gap-6 border-t border-border/50 pt-8 sm:grid-cols-3">
               {[
-                { n: "+10", l: "Anos de experiência" },
+                { n: "+30", l: "Anos de experiência" },
                 { n: "+1k", l: "Clientes satisfeitas" },
                 { n: "3", l: "Espaços de atendimento" },
               ].map((s, i) => (
@@ -259,9 +259,9 @@ function HomePage() {
           <SectionHeading
             eyebrow={t("Atendimento Internacional")}
             title={<>{t("Presença na")} <em className="text-gold">{t("Europa")}</em></>}
-            description={t("Levamos o melhor da estética avançada e bem-estar a várias cidades e países europeus. Conheça a nossa cobertura e agende a sua consulta.")}
+            description={t("Levamos conhecimento com excelência e referência no que há de mais avançado nos cuidados, saúde e bem-estar. Agenda um horário conosco.")}
           />
-          
+
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { name: "Portugal", flag: "https://flagcdn.com/w160/pt.png", desc: "Lisboa, Porto, Algarve e Caldas da Rainha. Tratamentos faciais e corporais com acompanhamento premium." },
@@ -274,16 +274,16 @@ function HomePage() {
               { name: "Alemanha", flag: "https://flagcdn.com/w160/de.png", desc: "Berlim e Munique. Tecnologia de ponta para resultados estéticos de excelência." },
               { name: "Reino Unido", flag: "https://flagcdn.com/w160/gb.png", desc: "Londres. Consultas personalizadas e acompanhamento dedicado de alta performance." }
             ].map((c) => (
-              <div 
-                key={c.name} 
+              <div
+                key={c.name}
                 className="group relative flex flex-col items-start border border-border/60 bg-cream p-6 transition-all duration-300 hover:border-gold hover:shadow-lg hover:-translate-y-1"
               >
                 <div className="flex items-center gap-4">
                   <div className="overflow-hidden rounded-md border border-border/40 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                    <img 
-                      src={c.flag} 
-                      alt={c.name} 
-                      className="h-10 w-15 object-cover" 
+                    <img
+                      src={c.flag}
+                      alt={c.name}
+                      className="h-10 w-15 object-cover"
                       loading="lazy"
                     />
                   </div>
@@ -375,7 +375,7 @@ function HomePage() {
                 <ContactMenu variant="link" label={t("Falar connosco")} />
               </div>
             </div>
-            
+
             <div className="mt-12 md:mt-0 md:w-2/3">
               <div className="grid gap-6">
                 {[

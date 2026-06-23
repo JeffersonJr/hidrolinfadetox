@@ -86,20 +86,23 @@ function AboutPage() {
             />
             <div className="mt-10 space-y-5 text-base leading-relaxed text-muted-foreground">
               <p>
-                Há mais de uma década dedico-me ao universo da estética e do
-                bem-estar, procurando sempre o equilíbrio entre técnica, ciência
-                e o toque humano que faz toda a diferença.
+                {t("Atuo na área da Estética desde 1994, dedicando mais de 30 anos ao cuidado, à autoestima e ao bem-estar das pessoas. Ao longo dessa trajetória, busquei constante aperfeiçoamento profissional, unindo conhecimento técnico, experiência prática e atendimento humanizado.")}
               </p>
               <p>
-                A minha prática combina tratamentos de estética avançada — como
-                HIFU facial e corporal, peelings e radiofrequência — com terapias
-                naturais e integrativas, criando protocolos exclusivos que
-                respeitam a individualidade de cada cliente.
+                {t("Minha formação abrange Estética, Massoterapia e Terapias Integrativas, sempre com o compromisso de oferecer tratamentos personalizados, respeitando a individualidade e as necessidades de cada cliente.")}
               </p>
               <p>
-                Atendo presencialmente em Lisboa, Amadora e Caldas da Rainha, e
-                ministro workshops e formações em Portugal e diversos países da
-                Europa.
+                {t("Acredito que a verdadeira beleza está no equilíbrio entre corpo, mente e bem-estar. Por isso, cada atendimento é realizado com atenção, carinho e profissionalismo, proporcionando uma experiência única de acolhimento e cuidado.")}
+              </p>
+              <p>
+                {t("Estou em constante atualização, incorporando novas técnicas e protocolos para oferecer resultados seguros, eficazes e alinhados às mais modernas tendências da estética.")}
+              </p>
+              <p className="font-medium text-primary">
+                {t("Mais do que tratamentos, ofereço cuidado, confiança e dedicação para que você se sinta bem consigo mesma todos os dias.")} ✨<br />
+                <span className="mt-2 block">{t("Desde 1994 transformando autoestima em bem-estar.")} 💖</span>
+              </p>
+              <p className="italic">
+                {t("Na prática da Estética desde 1994 e até o momento me proponho acompanhar de perto e sempre aberta para aprender mais. Qualificar-me com eficiência e eficácia.")}
               </p>
             </div>
 
@@ -116,12 +119,13 @@ function AboutPage() {
 
             <div className="mt-12 grid gap-6 sm:grid-cols-2">
               {[
-                "Especialista em HIFU Facial e Corporal",
-                "Drenagem linfática e modeladora",
-                "Ventosaterapia e terapias naturais",
-                "Remoção de tatuagem e micropigmentação",
-                "Peeling Hollywood e fotorejuvenescimento",
-                "Workshops e formações para profissionais",
+                "Protocolos personalizados",
+                "Radiofrequência",
+                "Mesoterapia",
+                "Fantacryo",
+                "Sculpt",
+                "HIFU",
+                "Peeling de Hollywood (fototerapia)",
               ].map((b) => (
                 <div key={b} className="flex items-start gap-3 text-sm">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.5} />
