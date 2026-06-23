@@ -48,34 +48,34 @@ export function ContactMenu({
         <ChevronDown className="h-3.5 w-3.5 opacity-60" strokeWidth={1.5} />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-60">
-        <DropdownMenuItem asChild className="group">
-          <a href={WA_HREF} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
+        <DropdownMenuItem className="group cursor-pointer" onSelect={() => window.open(WA_HREF, '_blank')}>
+          <div className="flex items-center gap-3 w-full">
             <MessageCircle className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
             <div className="flex flex-col">
               <span className="text-sm font-medium transition-colors group-focus:text-accent-foreground">WhatsApp</span>
               <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">{PHONE_DISPLAY}</span>
             </div>
-          </a>
+          </div>
         </DropdownMenuItem>
         
-        <DropdownMenuItem asChild className="group">
-          <a href={TEL_MOBILE_HREF} className="flex items-center gap-3">
+        <DropdownMenuItem className="group cursor-pointer" onSelect={() => window.location.href = TEL_MOBILE_HREF}>
+          <div className="flex items-center gap-3 w-full">
             <Phone className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
             <div className="flex flex-col">
               <span className="text-sm transition-colors group-focus:text-accent-foreground">Telemóvel</span>
               <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">{PHONE_MOBILE}</span>
             </div>
-          </a>
+          </div>
         </DropdownMenuItem>
 
-        <DropdownMenuItem asChild className="group">
-          <a href={TEL_FIXED_HREF} className="flex items-center gap-3">
+        <DropdownMenuItem className="group cursor-pointer" onSelect={() => window.location.href = TEL_FIXED_HREF}>
+          <div className="flex items-center gap-3 w-full">
             <Phone className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
             <div className="flex flex-col">
               <span className="text-sm transition-colors group-focus:text-accent-foreground">Telefone Fixo</span>
               <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">{PHONE_FIXED}</span>
             </div>
-          </a>
+          </div>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
