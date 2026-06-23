@@ -214,21 +214,29 @@ function HomePage() {
           </div>
           <div className="md:col-span-3">
             <SectionHeading
-              eyebrow={t("Sobre")}
-              title={<><Translate>Uma trajectória dedicada à arte do cuidar.</Translate></>}
+              eyebrow="Sobre"
+              title={<><Translate>Cuidar é a minha vocação.</Translate></>}
             />
-            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              {t("Com formação em estética avançada, medicina tradicional chinesa MTC. e terapias integrativas, atuo em Portugal e em diversos países da Europa, levando técnicas atualizadas e um olhar atento a cada cliente.")}
-            </p>
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+              <p>
+                {t("Atuo na área da Estética desde 1994, dedicando mais de 30 anos ao cuidado, à autoestima e ao bem-estar das pessoas.")}
+              </p>
+              <p>
+                {t("Minha formação abrange Estética, Massoterapia e Terapias Integrativas, com o compromisso de oferecer tratamentos personalizados e humanizados.")}
+              </p>
+            </div>
             <ul className="mt-8 space-y-3">
               {[
-                "Formação contínua em estética avançada, medicina tradicional chinesa MTC. e terapias integrativas.",
-                "Atendimento em Lisboa, Amadora e Caldas da Rainha",
-                "Workshops e formações para profissionais",
-                "Protocolos personalizados e resultados visíveis",
+                "Protocolos personalizados",
+                "Radiofrequência",
+                "Mesoterapia",
+                "Fantacryo",
+                "Sculpt",
+                "HIFU",
+                "Peeling de Hollywood (fototerapia)",
               ].map((b) => (
                 <li key={b} className="flex items-start gap-3 text-sm text-foreground">
-                  <Check className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5} />
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.5} />
                   {t(b)}
                 </li>
               ))}
