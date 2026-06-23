@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { ArrowRight, Check, Sparkles, Leaf, HeartHandshake, MapPin, Calendar, ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, MapPin, Instagram, Facebook, GraduationCap, Users, Sparkles, Calendar, MessageCircle, Leaf, HeartHandshake } from "lucide-react";
 import heroImg from "@/assets/img hero.png";
 import portrait from "@/assets/portrait.png";
 import { services } from "@/lib/services";
@@ -225,22 +225,33 @@ function HomePage() {
                 {t("Minha formação abrange Estética, Massoterapia e Terapias Integrativas, com o compromisso de oferecer tratamentos personalizados e humanizados.")}
               </p>
             </div>
-            <ul className="mt-8 space-y-3">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
-                "Protocolos personalizados",
-                "Radiofrequência",
-                "Mesoterapia",
-                "Fantacryo",
-                "Sculpt",
-                "HIFU",
-                "Peeling de Hollywood (fototerapia)",
-              ].map((b) => (
-                <li key={b} className="flex items-start gap-3 text-sm text-foreground">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.5} />
-                  {t(b)}
-                </li>
+                { 
+                  i: GraduationCap, 
+                  t: "Formação contínua em estética avançada, medicina tradicional chinesa (MTC) e terapias integrativas." 
+                },
+                { 
+                  i: MapPin, 
+                  t: "Atendimento presencial em Lisboa, Amadora e Caldas da Rainha." 
+                },
+                { 
+                  i: Users, 
+                  t: "Ministração de workshops e formações para profissionais da área." 
+                },
+                { 
+                  i: Sparkles, 
+                  t: "Protocolos personalizados com foco em resultados visíveis e bem-estar." 
+                },
+              ].map((item, idx) => (
+                <div key={idx} className="flex flex-col gap-2 rounded-sm border border-gold-soft/30 bg-background/50 p-4 transition-colors hover:border-gold/60">
+                  <item.i className="h-5 w-5 text-gold" strokeWidth={1.5} />
+                  <p className="text-sm leading-relaxed text-foreground">
+                    {t(item.t)}
+                  </p>
+                </div>
               ))}
-            </ul>
+            </div>
             <Link to="/sobre" className="mt-10 inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-primary hover:text-gold">
               {t("Conhecer a minha história")} <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
             </Link>
