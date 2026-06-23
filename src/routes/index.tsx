@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Tratamentos de estética avançada e bem-estar em Portugal e Europa por Tatiana Penteado: HIFU, drenagem linfática, ventosaterapia e mais.",
+          "Tratamentos de terapias integrativas, bem-estar e estética avançada em Portugal e Europa por Tatiana Penteado: drenagem linfática, ventosaterapia, HIFU e mais.",
       },
     ],
   }),
@@ -40,7 +40,7 @@ function HomePage() {
               <Translate>O equilíbrio começa de dentro para fora</Translate>
             </h1>
             <p className="mt-7 max-w-md text-base leading-relaxed text-muted-foreground">
-              {t("Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.")}
+              {t("Sou Tatiana Penteado, especialista em terapias integrativas e estética avançada. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.")}
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
@@ -71,9 +71,9 @@ function HomePage() {
       <section className="border-y border-border bg-cream py-16">
         <div className="container-narrow grid gap-10 md:grid-cols-3">
           {[
-            { icon: Sparkles, title: "Estética avançada", text: "Tecnologia de ponta com protocolos personalizados." },
             { icon: Leaf, title: "Terapias naturais", text: "Métodos integrativos para corpo e mente." },
             { icon: HeartHandshake, title: "Atendimento humano", text: "Acompanhamento atento em cada sessão." },
+            { icon: Sparkles, title: "Estética avançada", text: "Tecnologia de ponta com protocolos personalizados." },
           ].map((p) => (
             <div key={p.title} className="flex flex-col items-start">
               <p.icon className="h-6 w-6 text-gold" strokeWidth={1.25} />
@@ -129,7 +129,7 @@ function HomePage() {
             {/* Lado Direito - Descrição e Ações */}
             <div className="lg:col-span-7 flex flex-col justify-center border-t border-border/50 pt-8 lg:border-t-0 lg:border-l lg:border-border/50 lg:pt-0 lg:pl-12">
               <p className="text-base leading-relaxed text-muted-foreground">
-                {t("Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Terapeuta credenciada Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.")}
+                {t("Aproveite esta oportunidade única para realizar o seu atendimento personalizado de terapias integrativas e estética avançada com a Terapeuta credenciada Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.")}
               </p>
 
               <p className="mt-4 text-sm font-medium text-primary font-serif italic">
@@ -219,29 +219,29 @@ function HomePage() {
             />
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
-                {t("Atuo na área da Estética desde 1994, dedicando mais de 30 anos ao cuidado, à autoestima e ao bem-estar das pessoas.")}
+                {t("Atuo na área das Terapias Integrativas e da Estética desde 1994, dedicando mais de 30 anos ao cuidado, à autoestima e ao bem-estar das pessoas.")}
               </p>
               <p>
-                {t("Minha formação abrange Estética, Massoterapia e Terapias Integrativas, com o compromisso de oferecer tratamentos personalizados e humanizados.")}
+                {t("Minha formação abrange Terapias Integrativas, Medicina Tradicional Chinesa e Estética Avançada, com o compromisso de oferecer tratamentos personalizados e humanizados.")}
               </p>
             </div>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
                 { 
                   i: GraduationCap, 
-                  t: "Formação contínua em estética avançada, medicina tradicional chinesa (MTC) e terapias integrativas." 
+                  t: "Formação contínua em terapias integrativas, medicina tradicional chinesa (MTC) e estética avançada." 
                 },
                 { 
-                  i: MapPin, 
-                  t: "Atendimento presencial em Lisboa, Amadora e Caldas da Rainha." 
+                  i: Leaf, 
+                  t: "Protocolos naturais com foco em resultados visíveis, saúde e bem-estar profundo." 
                 },
                 { 
                   i: Users, 
                   t: "Ministração de workshops e formações para profissionais da área." 
                 },
                 { 
-                  i: Sparkles, 
-                  t: "Protocolos personalizados com foco em resultados visíveis e bem-estar." 
+                  i: MapPin, 
+                  t: "Atendimento presencial em Lisboa, Amadora e Caldas da Rainha." 
                 },
               ].map((item, idx) => (
                 <div key={idx} className="flex flex-col gap-2 rounded-sm border border-gold-soft/30 bg-background/50 p-4 transition-colors hover:border-gold/60">

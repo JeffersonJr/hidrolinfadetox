@@ -17,26 +17,6 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "hifu",
-    title: "HIFU Facial e Corporal",
-    short: "Lifting não-invasivo com ultrassom focalizado.",
-    description: "Tecnologia de ultrassom microfocalizado que estimula o colagénio em camadas profundas, devolvendo firmeza ao rosto, pescoço e corpo, sem cirurgia e sem tempo de recuperação.",
-    longDescription: [
-      "O HIFU (High Intensity Focused Ultrasound) representa o mais alto padrão em rejuvenescimento não cirúrgico. Ao direcionar energia térmica de forma extremamente precisa para a fáscia muscular (SMAS) e para a derme profunda, este tratamento cria micropontos de coagulação que desencadeiam a resposta natural de cicatrização do próprio corpo.",
-      "Este processo contínuo atua de dentro para fora, estimulando uma produção maciça de novo colagénio e elastina ao longo das semanas seguintes à sessão. O resultado final é um efeito lifting visível, contornos muito mais definidos e uma pele estruturalmente mais firme e jovem, sem necessitar de cortes, agulhas ou qualquer período de repouso."
-    ],
-    indications: ["Flacidez facial e corporal", "Perda de definição no contorno da mandíbula", "Rugas e linhas finas de expressão", "Papada / Duplo queixo"],
-    duration: "60 a 90 min",
-    sessionsRecommendation: "1 a 3 sessões (anuais)",
-    image: hifu,
-    benefits: [
-      "Trata flacidez leve a moderada",
-      "Melhora contornos faciais",
-      "Reduz papada e linhas de expressão",
-      "Resultados progressivos e naturais",
-    ],
-  },
-  {
     slug: "drenagem-linfatica",
     title: "Drenagem Linfática",
     short: "Estimula a circulação e a eliminação de toxinas.",
@@ -74,6 +54,26 @@ export const services: Service[] = [
       "Reduz tensões e contracturas",
       "Auxilia na eliminação de toxinas",
       "Promove relaxamento profundo",
+    ],
+  },
+  {
+    slug: "hifu",
+    title: "HIFU Facial e Corporal",
+    short: "Lifting não-invasivo com ultrassom focalizado.",
+    description: "Tecnologia de ultrassom microfocalizado que estimula o colagénio em camadas profundas, devolvendo firmeza ao rosto, pescoço e corpo, sem cirurgia e sem tempo de recuperação.",
+    longDescription: [
+      "O HIFU (High Intensity Focused Ultrasound) representa o mais alto padrão em rejuvenescimento não cirúrgico. Ao direcionar energia térmica de forma extremamente precisa para a fáscia muscular (SMAS) e para a derme profunda, este tratamento cria micropontos de coagulação que desencadeiam a resposta natural de cicatrização do próprio corpo.",
+      "Este processo contínuo atua de dentro para fora, estimulando uma produção maciça de novo colagénio e elastina ao longo das semanas seguintes à sessão. O resultado final é um efeito lifting visível, contornos muito mais definidos e uma pele estruturalmente mais firme e jovem, sem necessitar de cortes, agulhas ou qualquer período de repouso."
+    ],
+    indications: ["Flacidez facial e corporal", "Perda de definição no contorno da mandíbula", "Rugas e linhas finas de expressão", "Papada / Duplo queixo"],
+    duration: "60 a 90 min",
+    sessionsRecommendation: "1 a 3 sessões (anuais)",
+    image: hifu,
+    benefits: [
+      "Trata flacidez leve a moderada",
+      "Melhora contornos faciais",
+      "Reduz papada e linhas de expressão",
+      "Resultados progressivos e naturais",
     ],
   },
 ];

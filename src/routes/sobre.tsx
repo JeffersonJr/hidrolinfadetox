@@ -9,7 +9,7 @@ export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
       { title: "Sobre · Tatiana Penteado" },
-      { name: "description", content: "Conheça Tatiana Penteado — especialista em estética avançada e terapias integrativas em Portugal e Europa." },
+      { name: "description", content: "Conheça Tatiana Penteado — especialista em terapias integrativas e estética avançada em Portugal e Europa." },
     ],
   }),
   component: AboutPage,
@@ -19,7 +19,7 @@ const timeline = [
   {
     year: "2010",
     title: "Os primeiros passos",
-    text: "Início da formação em estética e cosmetologia, com foco em protocolos faciais e corporais clássicos.",
+    text: "Início da formação em terapias integrativas, massoterapia e estética, com foco no cuidado humanizado.",
   },
   {
     year: "2013",
@@ -56,7 +56,7 @@ const values = [
 
 const credentials = [
   { icon: GraduationCap, title: "Formação contínua", text: "Cursos avançados em centros de referência no Brasil, Portugal e Europa." },
-  { icon: Award, title: "Certificações técnicas", text: "Especialista certificada em HIFU, radiofrequência e protocolos integrativos." },
+  { icon: Award, title: "Certificações técnicas", text: "Especialista em terapias integrativas, medicina tradicional chinesa e tecnologias de estética avançada." },
 ];
 
 function AboutPage() {
@@ -82,27 +82,27 @@ function AboutPage() {
             <SectionHeading
               eyebrow="Sobre mim"
               title={<>Cuidar é a minha <em className="text-gold">vocação</em>.</>}
-              description="Profissional de estética avançada com atuação em Portugal e Europa, dedico-me a tratamentos que aliam tecnologia, conhecimento e sensibilidade."
+              description="Profissional de terapias integrativas e estética avançada com atuação em Portugal e Europa, dedico-me a tratamentos que aliam conhecimento, técnicas naturais e tecnologia."
             />
             <div className="mt-10 space-y-5 text-base leading-relaxed text-muted-foreground">
               <p>
-                {t("Atuo na área da Estética desde 1994, dedicando mais de 30 anos ao cuidado, à autoestima e ao bem-estar das pessoas. Ao longo dessa trajetória, busquei constante aperfeiçoamento profissional, unindo conhecimento técnico, experiência prática e atendimento humanizado.")}
+                {t("Atuo na área das Terapias Integrativas e da Estética desde 1994, dedicando mais de 30 anos ao cuidado, à autoestima e ao bem-estar das pessoas. Ao longo dessa trajetória, busquei constante aperfeiçoamento profissional, unindo conhecimento técnico, experiência prática e atendimento humanizado.")}
               </p>
               <p>
-                {t("Minha formação abrange Estética, Massoterapia e Terapias Integrativas, sempre com o compromisso de oferecer tratamentos personalizados, respeitando a individualidade e as necessidades de cada cliente.")}
+                {t("Minha formação abrange Terapias Integrativas, Massoterapia e Estética, sempre com o compromisso de oferecer tratamentos personalizados, respeitando a individualidade e as necessidades de cada cliente.")}
               </p>
               <p>
                 {t("Acredito que a verdadeira beleza está no equilíbrio entre corpo, mente e bem-estar. Por isso, cada atendimento é realizado com atenção, carinho e profissionalismo, proporcionando uma experiência única de acolhimento e cuidado.")}
               </p>
               <p>
-                {t("Estou em constante atualização, incorporando novas técnicas e protocolos para oferecer resultados seguros, eficazes e alinhados às mais modernas tendências da estética.")}
+                {t("Estou em constante atualização, incorporando novas técnicas e protocolos para oferecer resultados seguros, eficazes e alinhados às mais modernas tendências em terapias naturais e estéticas.")}
               </p>
               <p className="font-medium text-primary">
                 {t("Mais do que tratamentos, ofereço cuidado, confiança e dedicação para que você se sinta bem consigo mesma todos os dias.")} ✨<br />
                 <span className="mt-2 block">{t("Desde 1994 transformando autoestima em bem-estar.")} 💖</span>
               </p>
               <p className="italic">
-                {t("Na prática da Estética desde 1994 e até o momento me proponho acompanhar de perto e sempre aberta para aprender mais. Qualificar-me com eficiência e eficácia.")}
+                {t("Na prática das Terapias Integrativas e Estética desde 1994 e até o momento me proponho acompanhar de perto e sempre aberta para aprender mais. Qualificar-me com eficiência e eficácia.")}
               </p>
             </div>
 
@@ -120,12 +120,11 @@ function AboutPage() {
             <div className="mt-12 grid gap-6 sm:grid-cols-2">
               {[
                 "Protocolos personalizados",
-                "Radiofrequência",
-                "Mesoterapia",
-                "Fantacryo",
-                "Sculpt",
+                "Terapias Integrativas",
+                "Drenagem Linfática",
+                "Ventosaterapia",
                 "HIFU",
-                "Peeling de Hollywood (fototerapia)",
+                "Radiofrequência",
               ].map((b) => (
                 <div key={b} className="flex items-start gap-3 text-sm">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold" strokeWidth={1.5} />
@@ -163,7 +162,7 @@ function AboutPage() {
         <SectionHeading
           eyebrow="Trajectória"
           title={<>Uma carreira construída com <em className="text-gold">propósito</em>.</>}
-          description="Mais de uma década dedicada ao estudo, à prática e ao aperfeiçoamento contínuo das mais modernas técnicas de estética e bem-estar."
+          description="Mais de uma década dedicada ao estudo, à prática e ao aperfeiçoamento contínuo das mais modernas técnicas de terapias integrativas, saúde e bem-estar."
         />
 
         <div className="mt-20 relative">
@@ -193,8 +192,8 @@ function AboutPage() {
         <div className="container-narrow text-center">
           <Quote className="mx-auto h-8 w-8 text-gold" strokeWidth={1.25} />
           <p className="mx-auto mt-8 max-w-3xl font-serif text-3xl leading-snug md:text-4xl">
-            “Acredito que a verdadeira estética está no equilíbrio entre cuidar de quem se é
-            por dentro e revelar a melhor versão por fora.”
+            “Acredito que a verdadeira beleza está no equilíbrio entre cuidar de quem se é
+            por dentro através de terapias naturais e revelar a melhor versão por fora.”
           </p>
           <p className="mt-8 text-[24px] uppercase tracking-[0.4em] text-secondary">Tatiana Penteado</p>
         </div>
@@ -222,7 +221,7 @@ function AboutPage() {
             ))}
             <div className="grid gap-3 pt-2 text-sm text-foreground">
               {[
-                "Membro ativo da comunidade de estética avançada em Portugal",
+                "Membro ativo das comunidades de terapias integrativas e estética em Portugal",
                 "Atendimentos personalizados em clínica própria e parceiras",
                 "Workshops para profissionais em Portugal, Espanha, França e Itália",
                 "Acompanhamento pós-protocolo e plano de manutenção individual",
