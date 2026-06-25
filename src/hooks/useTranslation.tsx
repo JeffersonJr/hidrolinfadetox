@@ -32,7 +32,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     // Home Page Hero
     "Lisboa · Caldas da Rainha · Europa": "Lisboa · Caldas da Rainha · Europa",
     "O equilíbrio começa de dentro para fora": "O equilíbrio começa de dentro para fora",
-    "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.",
+    "Sou Tatiane Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Sou Tatiane Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.",
     "Conheça os tratamentos": "Conheça os tratamentos",
 
     // Home Page Pillars
@@ -105,11 +105,11 @@ const localDictionary: Record<Language, Record<string, string>> = {
     "Berlim e Munique. Tecnologia de ponta para resultados estéticos de excelência.": "Berlim e Munique. Tecnologia de ponta para resultados estéticos de excelência.",
     "Londres. Consultas personalizadas e acompanhamento dedicado de alta performance.": "Londres. Consultas personalizadas e acompanhamento dedicado de alta performance.",
     "Agenda Especial": "Agenda Especial",
-    "Tatiana Penteado na Italia": "Tatiana Penteado na Italia",
+    "Tatiane Penteado na Italia": "Tatiane Penteado na Italia",
     "18 e 19 de Julho": "18 e 19 de Julho",
     "Espaço Humana · Terapias, Estética, Saúde & Bem-Estar - Bologna Italia": "Espaço Humana · Terapias, Estética, Saúde & Bem-Estar - Bologna Italia",
     "Garanta a sua vaga para atendimentos exclusivos de estética avançada e terapias integrativas. Uma oportunidade única de realizar a sua avaliação e tratamento presencial.": "Garanta a sua vaga para atendimentos exclusivos de estética avançada e terapias integrativas. Uma oportunidade única de realizar a sua avaliação e tratamento presencial.",
-    "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.": "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.",
+    "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiane Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.": "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiane Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.",
     "Inscrições e agendamentos online abertos diretamente através do aplicativo/site Treatwell.": "Inscrições e agendamentos online abertos diretamente através do aplicativo/site Treatwell.",
     "Agendar no Treatwell": "Agendar no Treatwell",
     "Esclarecer dúvidas por WhatsApp": "Esclarecer dúvidas por WhatsApp",
@@ -165,7 +165,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     // Home Page Hero
     "Lisboa · Caldas da Rainha · Europa": "Lisbon · Caldas da Rainha · Europe",
     "O equilíbrio começa de dentro para fora": "Balance begins from the inside out",
-    "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "I am Tatiana Penteado, a specialist in advanced aesthetics and integrative therapies. A space dedicated to revealing your best version, with exclusive protocols and personalized care.",
+    "Sou Tatiane Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "I am Tatiane Penteado, a specialist in advanced aesthetics and integrative therapies. A space dedicated to revealing your best version, with exclusive protocols and personalized care.",
     "Conheça os tratamentos": "Discover Treatments",
 
     // Home Page Pillars
@@ -238,11 +238,11 @@ const localDictionary: Record<Language, Record<string, string>> = {
     "Berlim e Munique. Tecnologia de ponta para resultados estéticos de excelência.": "Berlin and Munich. State-of-the-art technology for outstanding aesthetic results.",
     "Londres. Consultas personalizadas e acompanhamento dedicado de alta performance.": "London. Personalized consultations and high-performance dedicated support.",
     "Agenda Especial": "Special Agenda",
-    "Tatiana Penteado na Italia": "Tatiana Penteado in Portugal",
+    "Tatiane Penteado na Italia": "Tatiane Penteado in Portugal",
     "18 e 19 de Julho": "July 18th & 19th",
     "Espaço Humana · Terapias, Estética, Saúde & Bem-Estar - Bologna Italia": "Espaço Humana · Therapies, Aesthetics, Health & Well-being",
     "Garanta a sua vaga para atendimentos exclusivos de estética avançada e terapias integrativas. Uma oportunidade única de realizar a sua avaliação e tratamento presencial.": "Secure your slot for exclusive sessions in advanced aesthetics and integrative therapies. A unique opportunity for an in-person assessment and treatment.",
-    "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.": "Take advantage of this unique opportunity for a personalized and advanced aesthetic treatment with Dr. Tatiana Penteado. In-person slots are highly limited to guarantee premium follow-up and exceptional results.",
+    "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiane Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.": "Take advantage of this unique opportunity for a personalized and advanced aesthetic treatment with Dr. Tatiane Penteado. In-person slots are highly limited to guarantee premium follow-up and exceptional results.",
     "Inscrições e agendamentos online abertos diretamente através do aplicativo/site Treatwell.": "Online registration and booking are open directly on the Treatwell app/website.",
     "Agendar no Treatwell": "Book on Treatwell",
     "Esclarecer dúvidas por WhatsApp": "Ask questions on WhatsApp",
@@ -298,7 +298,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     // Home Page Hero
     "Lisboa · Caldas da Rainha · Europa": "Lisboa · Caldas da Rainha · Europa",
     "O equilíbrio começa de dentro para fora": "El equilibrio comienza de adentro hacia afuera",
-    "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Soy Tatiana Penteado, especialista en estética avanzada y terapias integrativas. Un espacio dedicado a revelar tu mejor versión, con protocolos exclusivos y atención personalizada.",
+    "Sou Tatiane Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Soy Tatiane Penteado, especialista en estética avanzada y terapias integrativas. Un espacio dedicado a revelar tu mejor versión, con protocolos exclusivos y atención personalizada.",
     "Conheça os tratamentos": "Conoce los tratamientos",
 
     // Home Page Pillars
@@ -371,11 +371,11 @@ const localDictionary: Record<Language, Record<string, string>> = {
     "Berlim e Munique. Tecnologia de ponta para resultados estéticos de excelência.": "Berlín y Múnich. Tecnología de punta para resultados estéticos de excelencia.",
     "Londres. Consultas personalizadas e acompanhamento dedicado de alta performance.": "Londres. Consultas personalizadas y acompañamiento dedicado de alto rendimiento.",
     "Agenda Especial": "Agenda Especial",
-    "Tatiana Penteado na Italia": "Tatiana Penteado en Portugal",
+    "Tatiane Penteado na Italia": "Tatiane Penteado en Portugal",
     "18 e 19 de Julho": "18 y 19 de Julio",
     "Espaço Humana · Terapias, Estética, Saúde & Bem-Estar - Bologna Italia": "Espaço Humana · Terapias, Estética, Salud & Bienestar",
     "Garanta a sua vaga para atendimentos exclusivos de estética avançada e terapias integrativas. Uma oportunidade única de realizar a sua avaliação e tratamento presencial.": "Asegure su plaza para sesiones exclusivas de estética avanzada e terapias integrativas. Una oportunidad única para una evaluación y tratamiento presencial.",
-    "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.": "Aprovech esta oportunidad única para un tratamiento estético avanzado y personalizado con la Dra. Tatiana Penteado. Las plazas presenciales son muy limitadas para garantizar el mejor seguimiento y resultados excepcionales.",
+    "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiane Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.": "Aprovech esta oportunidad única para un tratamiento estético avanzado y personalizado con la Dra. Tatiane Penteado. Las plazas presenciales son muy limitadas para garantizar el mejor seguimiento y resultados excepcionales.",
     "Inscrições e agendamentos online abertos diretamente através do aplicativo/site Treatwell.": "Inscripciones y reservas en línea abiertas directamente a través de la aplicación/web de Treatwell.",
     "Agendar no Treatwell": "Reservar en Treatwell",
     "Esclarecer dúvidas por WhatsApp": "Aclarar dudas por WhatsApp",
@@ -431,7 +431,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     // Home Page Hero
     "Lisboa · Caldas da Rainha · Europa": "Lisbonne · Caldas da Rainha · Europe",
     "O equilíbrio começa de dentro para fora": "L'équilibre commence de l'intérieur vers l'extérieur",
-    "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Je suis Tatiana Penteado, spécialiste en esthétique avancée et thérapies intégratives. Un espace dédié à révéler votre meilleure version, avec des protocoles exclusifs et un accueil personnalisé.",
+    "Sou Tatiane Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Je suis Tatiane Penteado, spécialiste en esthétique avancée et thérapies intégratives. Un espace dédié à révéler votre meilleure version, avec des protocoles exclusifs et un accueil personnalisé.",
     "Conheça os tratamentos": "Découvrez les traitements",
 
     // Home Page Pillars
@@ -504,11 +504,11 @@ const localDictionary: Record<Language, Record<string, string>> = {
     "Berlim e Munique. Tecnologia de ponta para resultados estéticos de excelência.": "Berlin et Munich. Technologie de pointe pour des résultats esthétiques d'excellence.",
     "Londres. Consultas personalizadas e acompanhamento dedicado de alta performance.": "Londres. Consultations personnalisées et suivi dédié de haute performance.",
     "Agenda Especial": "Agenda Spécial",
-    "Tatiana Penteado na Italia": "Tatiana Penteado au Portugal",
+    "Tatiane Penteado na Italia": "Tatiane Penteado au Portugal",
     "18 e 19 de Julho": "18 et 19 Juillet",
     "Espaço Humana · Terapias, Estética, Saúde & Bem-Estar - Bologna Italia": "Espaço Humana · Thérapies, Esthétique, Santé & Bien-être",
     "Garanta a sua vaga para atendimentos exclusivos de estética avançada e terapias integrativas. Uma oportunidade única de realizar a sua avaliação e tratamento presencial.": "Garantissez votre place pour des séances exclusives d'esthétique avancée et de thérapies intégratives. Une opportunité unique pour une évaluation et un soin en personne.",
-    "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.": "Profitez de cette occasion unique pour un soin esthétique avancé et personnalisé avec la Dre Tatiana Penteado. Les places en personne sont très limitées pour garantir le meilleur suivi et des résultats exceptionnels.",
+    "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiane Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.": "Profitez de cette occasion unique pour un soin esthétique avancé et personnalisé avec la Dre Tatiane Penteado. Les places en personne sont très limitées pour garantir le meilleur suivi et des résultats exceptionnels.",
     "Inscrições e agendamentos online abertos diretamente através do aplicativo/site Treatwell.": "Inscriptions et rendez-vous en ligne ouverts directement via l'application/le site Treatwell.",
     "Agendar no Treatwell": "Réserver sur Treatwell",
     "Esclarecer dúvidas por WhatsApp": "Poser des questions sur WhatsApp",
@@ -564,7 +564,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     // Home Page Hero
     "Lisboa · Caldas da Rainha · Europa": "Lisbona · Caldas da Rainha · Europa",
     "O equilíbrio começa de dentro para fora": "L'equilibrio inizia dall'interno verso l'esterno",
-    "Sou Tatiana Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Sono Tatiana Penteado, specialista in estetica avanzata e terapie integrative. Uno spazio dedicato a rivelare la tua versione migliore, con protocolli esclusivi e attenzione personalizzata.",
+    "Sou Tatiane Penteado, especialista em estética avançada e terapias integrativas. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.": "Sono Tatiane Penteado, specialista in estetica avanzata e terapie integrative. Uno spazio dedicato a rivelare la tua versione migliore, con protocolli esclusivi e attenzione personalizzata.",
     "Conheça os tratamentos": "Scopri i trattamenti",
 
     // Home Page Pillars
@@ -637,11 +637,11 @@ const localDictionary: Record<Language, Record<string, string>> = {
     "Berlim e Munique. Tecnologia de ponta para resultados estéticos de excelência.": "Berlino e Monaco. Tecnologia all'avanguardia per risultati estetici d'eccellenza.",
     "Londres. Consultas personalizadas e acompanhamento dedicado de alta performance.": "Londra. Consulenze personalizzate e supporto dedicato ad alte prestazioni.",
     "Agenda Especial": "Agenda Speciale",
-    "Tatiana Penteado na Italia": "Tatiana Penteado in Portogallo",
+    "Tatiane Penteado na Italia": "Tatiane Penteado in Portogallo",
     "18 e 19 de Julho": "18 e 19 Luglio",
     "Espaço Humana · Terapias, Estética, Saúde & Bem-Estar - Bologna Italia": "Espaço Humana · Terapie, Estetica, Salute & Benessere",
     "Garanta a sua vaga para atendimentos exclusivos de estética avançada e terapias integrativas. Uma oportunidade única de realizar a sua avaliação e tratamento presencial.": "Assicurati il tuo posto per sessioni esclusive di estetica avanzata e terapie integrative. Un'opportunità unica per una valutazione e un trattamento in presenza.",
-    "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.": "Approfitta di questa opportunità unica per un trattamento estetico avanzato e personalizzato con la dott.ssa Tatiana Penteado. I posti in presenza sono molto limitati per garantire il miglior supporto e risultati eccezionali.",
+    "Aproveite esta oportunidade única para realizar o seu atendimento personalizado e de estética avançada com a Dra. Tatiane Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.": "Approfitta di questa opportunità unica per un trattamento estetico avanzato e personalizzato con la dott.ssa Tatiane Penteado. I posti in presenza sono molto limitati per garantire il miglior supporto e risultati eccezionali.",
     "Inscrições e agendamentos online abertos diretamente através do aplicativo/site Treatwell.": "Iscrizioni e prenotazioni online aperte direttamente tramite l'applicazione/sito Treatwell.",
     "Agendar no Treatwell": "Prenota su Treatwell",
     "Esclarecer dúvidas por WhatsApp": "Chiarire dubbi su WhatsApp",

@@ -26,11 +26,11 @@ export function EventModal() {
 
   const treatwellUrl = "https://www.treatwell.pt/estabelecimento/espaco-humana-terapias-estetica-saude-bem-estar/";
   const whatsappUrl = "https://wa.me/351961551592?text=" + encodeURIComponent(
-    language === "en" ? "Hello! I would like to get more information about Tatiana's appointments in Italy on July 18-19." :
-    language === "es" ? "¡Hola! Me gustaría obtener más información sobre las citas de Tatiana en Italia el 18 y 19 de julio." :
-    language === "fr" ? "Bonjour! Je souhaiterais obtenir plus d'informations sur les rendez-vous de Tatiana en Italie les 18 et 19 juillet." :
-    language === "it" ? "Ciao! Vorrei maggiori informazioni sugli appuntamenti di Tatiana in Italia il 18 e 19 luglio." :
-    "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiana na Italia nos dias 18 e 19 de Julho."
+    language === "en" ? "Hello! I would like to get more information about Tatiane's appointments in Italy on July 18-19." :
+    language === "es" ? "¡Hola! Me gustaría obtener más información sobre las citas de Tatiane en Italia el 18 y 19 de julio." :
+    language === "fr" ? "Bonjour! Je souhaiterais obtenir plus d'informations sur les rendez-vous de Tatiane en Italie les 18 et 19 juillet." :
+    language === "it" ? "Ciao! Vorrei maggiori informazioni sugli appuntamenti di Tatiane in Italia il 18 e 19 luglio." :
+    "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiane na Italia nos dias 18 e 19 de Julho."
   );
 
   return (
@@ -61,7 +61,7 @@ export function EventModal() {
 
         {/* HEADER */}
         <h2 className="mt-5 font-serif text-3xl leading-tight text-primary sm:text-4xl">
-          {t("Tatiana Penteado na Italia")}
+          {t("Tatiane Penteado na Italia")}
         </h2>
         
         {/* DETAILS LIST */}

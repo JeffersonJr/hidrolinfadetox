@@ -7,8 +7,8 @@ import { useTranslation } from "@/hooks/useTranslation";
 export const Route = createFileRoute("/precos")({
   head: () => ({
     meta: [
-      { title: "Tabela de Preços · Tatiana Penteado" },
-      { name: "description", content: "Tabela de preços de massagens, tratamentos faciais e packs do Espaço Tatiana Penteado." },
+      { title: "Tabela de Preços · Tatiane Penteado" },
+      { name: "description", content: "Tabela de preços de massagens, tratamentos faciais e packs do Espaço Tatiane Penteado." },
     ],
   }),
   component: PricesPage,

@@ -12,8 +12,8 @@ const nav = [
   { to: "/contactos", label: "Contactos" },
 ] as const;
 
-import logoHorizontal from "../../assets/logo-hidrolinfa.svg";
-import logoHorizontalWhite from "../../assets/logo-hidrolinfa.svg";
+import logoHorizontal from "../../assets/logohidrolinfa.svg";
+import logoHorizontalWhite from "../../assets/logohidrolinfa.svg";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);

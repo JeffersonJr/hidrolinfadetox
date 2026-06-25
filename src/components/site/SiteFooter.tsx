@@ -2,8 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { Phone, MessageCircle, Mail, MapPin, Instagram } from "lucide-react";
 import { useTranslation } from "../../hooks/useTranslation";
 
-import logoVertical from "../../assets/logo-hidrolinfa.svg";
-import logoVerticalWhite from "../../assets/logo-hidrolinfa.svg";
+import logoVertical from "../../assets/logohidrolinfa.svg";
+import logoVerticalWhite from "../../assets/logohidrolinfa.svg";
 
 export function SiteFooter() {
   const { t } = useTranslation();

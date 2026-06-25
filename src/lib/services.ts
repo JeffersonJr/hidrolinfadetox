@@ -2,8 +2,8 @@ import hifu from "@/assets/treatment-hifu.jpg";
 import drainage from "@/assets/treatment-drainage.jpg";
 import cupping from "@/assets/treatment-cupping.jpg";
 // Placeholders for new services
-import acupuncture from "@/assets/treatment-cupping.jpg"; // fallback
-import osteopathy from "@/assets/treatment-drainage.jpg"; // fallback
+import acupuncture from "@/assets/treatment-acupuncture.png";
+import osteopathy from "@/assets/treatment-osteopathy.png";
 import massage from "@/assets/treatment-massage.jpg"; // specific image
 
 export type Service = {

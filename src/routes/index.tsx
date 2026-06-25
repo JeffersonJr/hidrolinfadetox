@@ -14,11 +14,11 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Tatiana Penteado · Estética & Bem-Estar em Portugal" },
+      { title: "Tatiane Penteado · Estética & Bem-Estar em Portugal" },
       {
         name: "description",
         content:
-          "Tratamentos de terapias integrativas, bem-estar e estética avançada em Portugal e Europa por Tatiana Penteado: drenagem linfática, ventosaterapia, HIFU e mais.",
+          "Tratamentos de terapias integrativas, bem-estar e estética avançada em Portugal e Europa por Tatiane Penteado: drenagem linfática, ventosaterapia, HIFU e mais.",
       },
     ],
   }),
@@ -43,7 +43,7 @@ function HomePage() {
               <Translate>O equilíbrio começa de dentro para fora</Translate>
             </h1>
             <p className="mt-7 max-w-md text-base leading-relaxed text-muted-foreground">
-              {t("Sou Tatiana Penteado, especialista em terapias integrativas e estética avançada. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.")}
+              {t("Sou Tatiane Penteado, especialista em terapias integrativas e estética avançada. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.")}
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <ContactMenu variant="primary" label={t("Agendar")} />
@@ -70,7 +70,7 @@ function HomePage() {
             <div className="absolute -inset-4 -z-10 bg-gold-soft/30" />
             <img
               src={heroImg}
-              alt="Espaço de estética Tatiana Penteado"
+              alt="Espaço de estética Tatiane Penteado"
               width={1600}
               height={1200}
               className="h-full w-full object-cover"
@@ -143,7 +143,7 @@ function HomePage() {
                 {t("Agenda Especial")}
               </div>
               <h2 className="mt-5 font-serif text-4xl leading-tight text-primary md:text-5xl">
-                {t("Tatiana Penteado na Italia")}
+                {t("Tatiane Penteado na Italia")}
               </h2>
 
               <div className="mt-8 flex flex-col gap-4">
@@ -175,7 +175,7 @@ function HomePage() {
             {/* Lado Direito - Descrição e Ações */}
             <div className="lg:col-span-7 flex flex-col justify-center border-t border-border/50 pt-8 lg:border-t-0 lg:border-l lg:border-border/50 lg:pt-0 lg:pl-12">
               <p className="text-base leading-relaxed text-muted-foreground">
-                {t("Aproveite esta oportunidade única para realizar o seu atendimento personalizado de terapias integrativas e estética avançada com a Terapeuta credenciada Tatiana Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.")}
+                {t("Aproveite esta oportunidade única para realizar o seu atendimento personalizado de terapias integrativas e estética avançada com a Terapeuta credenciada Tatiane Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.")}
               </p>
 
               <p className="mt-4 text-sm font-medium text-primary font-serif italic">
@@ -195,7 +195,7 @@ function HomePage() {
 
                 <a
                   href={`https://wa.me/351961551592?text=${encodeURIComponent(
-                    "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiana na Italia nos dias 18 e 19 de Julho."
+                    "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiane na Italia nos dias 18 e 19 de Julho."
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -255,7 +255,7 @@ function HomePage() {
           <div className="md:col-span-2">
             <div className="relative">
               <div className="absolute -inset-4 -z-10 bg-gold-soft/30" />
-              <img src={portrait} alt="Tatiana Penteado" loading="lazy" width={1080} height={1440} className="h-full w-full object-cover" />
+              <img src={portrait} alt="Tatiane Penteado" loading="lazy" width={1080} height={1440} className="h-full w-full object-cover" />
             </div>
           </div>
           <div className="md:col-span-3">

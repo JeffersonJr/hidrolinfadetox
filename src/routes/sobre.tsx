@@ -8,8 +8,8 @@ import { useTranslation } from "@/hooks/useTranslation";
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre · Tatiana Penteado" },
-      { name: "description", content: "Conheça Tatiana Penteado — especialista em terapias integrativas e estética avançada em Portugal e Europa." },
+      { title: "Sobre · Tatiane Penteado" },
+      { name: "description", content: "Conheça Tatiane Penteado — especialista em terapias integrativas e estética avançada em Portugal e Europa." },
     ],
   }),
   component: AboutPage,
@@ -43,7 +43,7 @@ const timeline = [
   },
   {
     year: "Hoje",
-    title: "Método Tatiana Penteado",
+    title: "Método Tatiane Penteado",
     text: "Protocolos exclusivos que unem ciência, sensibilidade e resultados visíveis em cada cliente.",
   },
 ];
@@ -71,7 +71,7 @@ function AboutPage() {
               <div className="absolute -inset-4 -z-10 bg-gold-soft/30" />
               <img
                 src={portrait}
-                alt="Tatiana Penteado"
+                alt="Tatiane Penteado"
                 width={1080}
                 height={1440}
                 className="h-full w-full object-cover"
@@ -195,7 +195,7 @@ function AboutPage() {
             “Acredito que a verdadeira beleza está no equilíbrio entre cuidar de quem se é
             por dentro através de terapias naturais e revelar a melhor versão por fora.”
           </p>
-          <p className="mt-8 text-[24px] uppercase tracking-[0.4em] text-secondary">Tatiana Penteado</p>
+          <p className="mt-8 text-[24px] uppercase tracking-[0.4em] text-secondary">Tatiane Penteado</p>
         </div>
       </section>
 
