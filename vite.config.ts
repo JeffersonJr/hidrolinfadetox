@@ -17,6 +17,9 @@ export default defineConfig({
     },
   },
   vite: {
+    server: {
+      host: "127.0.0.1"
+    },
     ssr: {
       noExternal: [
         '@floating-ui/dom',

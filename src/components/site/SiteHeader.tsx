@@ -12,8 +12,8 @@ const nav = [
   { to: "/contactos", label: "Contactos" },
 ] as const;
 
-import logoHorizontal from "../../assets/logo-1.svg";
-import logoHorizontalWhite from "../../assets/logo-3.svg";
+import logoHorizontal from "../../assets/logo-hidrolinfa.svg";
+import logoHorizontalWhite from "../../assets/logo-hidrolinfa.svg";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -36,9 +36,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container-narrow flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center" onClick={() => { setOpen(false); setLangOpen(false); }}>
-          <img src={logoHorizontal} alt="Hidrolinfa Detox" className="h-12 w-auto dark:hidden" />
-          <img src={logoHorizontalWhite} alt="Hidrolinfa Detox" className="hidden h-12 w-auto dark:block" />
+        <Link to="/" className="flex flex-col items-center justify-center gap-2 py-2" onClick={() => { setOpen(false); setLangOpen(false); }}>
+          <div className="flex flex-col items-center">
+            {/* Logotipo da Hidrolinfa */}
+            <img src={logoHorizontal} alt="Hidrolinfa Detox" className="h-10 w-auto dark:hidden" />
+            <img src={logoHorizontalWhite} alt="Hidrolinfa Detox" className="hidden h-10 w-auto dark:block" />
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex">
@@ -143,11 +146,11 @@ export function SiteHeader() {
               </div>
             </div>
 
-            <a href="https://wa.me/351961551592" target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center gap-2 text-sm text-gold">
-              <MessageCircle className="h-4 w-4" strokeWidth={1.5} /> WhatsApp +351 961 551 592
+            <a href="https://wa.me/351915943309" target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center gap-2 text-sm text-gold">
+              <MessageCircle className="h-4 w-4" strokeWidth={1.5} /> {t("WhatsApp Comercial")} +351 915 943 309
             </a>
-            <a href="tel:+351915943309" className="flex items-center gap-2 text-sm text-gold">
-              <Phone className="h-4 w-4" strokeWidth={1.5} /> {t("Telemóvel")} +351 915 943 309
+            <a href="https://wa.me/351961551592" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gold">
+              <MessageCircle className="h-4 w-4" strokeWidth={1.5} /> {t("WhatsApp Secundário")} +351 961 551 592
             </a>
             <a href="tel:+351215982843" className="flex items-center gap-2 text-sm text-gold">
               <Phone className="h-4 w-4" strokeWidth={1.5} /> {t("Fixo")} +351 215 982 843

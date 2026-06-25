@@ -86,23 +86,23 @@ function AboutPage() {
             />
             <div className="mt-10 space-y-5 text-base leading-relaxed text-muted-foreground">
               <p>
-                {t("Atuo na área das Terapias Integrativas e da Estética desde 1994, dedicando mais de 30 anos ao cuidado, à autoestima e ao bem-estar das pessoas. Ao longo dessa trajetória, busquei constante aperfeiçoamento profissional, unindo conhecimento técnico, experiência prática e atendimento humanizado.")}
+                {t("Acredito profundamente que a verdadeira saúde e a vitalidade de cada pessoa começam no seu interior. É com base nesta convicção que tenho dedicado mais de 30 anos da minha vida profissional ao estudo e à prática das Terapias Integrativas, da Medicina Tradicional Chinesa (MTC) e da Osteopatia.")}
               </p>
               <p>
-                {t("Minha formação abrange Terapias Integrativas, Massoterapia e Estética, sempre com o compromisso de oferecer tratamentos personalizados, respeitando a individualidade e as necessidades de cada cliente.")}
+                {t("A minha abordagem assenta num princípio fundamental: o nosso corpo funciona como um todo. Quando promovemos o reequilíbrio energético, estrutural e fisiológico, estamos a tratar a raiz dos problemas e não apenas os seus sintomas. Esta visão 'de dentro para fora' garante resultados muito mais profundos e duradouros na saúde de cada cliente.")}
               </p>
               <p>
-                {t("Acredito que a verdadeira beleza está no equilíbrio entre corpo, mente e bem-estar. Por isso, cada atendimento é realizado com atenção, carinho e profissionalismo, proporcionando uma experiência única de acolhimento e cuidado.")}
+                {t("Neste contexto, a estética avançada — embora parte essencial dos meus protocolos — surge como a consequência natural e visível de um organismo curado e em harmonia. Uma pele radiante e um corpo modelado são reflexos de um metabolismo desintoxicado e de uma mente em equilíbrio.")}
               </p>
               <p>
-                {t("Estou em constante atualização, incorporando novas técnicas e protocolos para oferecer resultados seguros, eficazes e alinhados às mais modernas tendências em terapias naturais e estéticas.")}
+                {t("Através de um atendimento altamente personalizado e humano, procuro aliar as mais valiosas técnicas naturais milenares à tecnologia de ponta para proporcionar uma experiência transformadora, promovendo a autoestima e o bem-estar sustentável.")}
               </p>
               <p className="font-medium text-primary">
-                {t("Mais do que tratamentos, ofereço cuidado, confiança e dedicação para que você se sinta bem consigo mesma todos os dias.")} ✨<br />
-                <span className="mt-2 block">{t("Desde 1994 transformando autoestima em bem-estar.")} 💖</span>
+                {t("Mais do que tratamentos, ofereço um espaço de cura, confiança e dedicação integral para que se sinta bem consigo mesma todos os dias.")} ✨<br />
+                <span className="mt-2 block">{t("Desde 1994 a transformar saúde interior em beleza exterior.")} 💖</span>
               </p>
               <p className="italic">
-                {t("Na prática das Terapias Integrativas e Estética desde 1994 e até o momento me proponho acompanhar de perto e sempre aberta para aprender mais. Qualificar-me com eficiência e eficácia.")}
+                {t("Sigo em constante aperfeiçoamento, sempre aberta para aprender mais, de forma a qualificar-me com eficiência, eficácia e, acima de tudo, com sensibilidade humana.")}
               </p>
             </div>
 

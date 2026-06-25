@@ -2,8 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { Phone, MessageCircle, Mail, MapPin, Instagram } from "lucide-react";
 import { useTranslation } from "../../hooks/useTranslation";
 
-import logoVertical from "../../assets/logo.svg";
-import logoVerticalWhite from "../../assets/logo.svg";
+import logoVertical from "../../assets/logo-hidrolinfa.svg";
+import logoVerticalWhite from "../../assets/logo-hidrolinfa.svg";
 
 export function SiteFooter() {
   const { t } = useTranslation();
@@ -36,20 +36,23 @@ export function SiteFooter() {
           <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-2">
               <MessageCircle className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/>
-              <a href="https://wa.me/351961551592" target="_blank" rel="noopener noreferrer" className="hover:text-gold">
-                +351 961 551 592 (WhatsApp)
+              <a href="https://wa.me/351915943309" target="_blank" rel="noopener noreferrer" className="hover:text-gold flex flex-col">
+                <span>+351 915 943 309</span>
+                <span className="text-[10px] uppercase text-muted-foreground">{t("WhatsApp Comercial")}</span>
+              </a>
+            </li>
+            <li className="flex items-start gap-2">
+              <MessageCircle className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/>
+              <a href="https://wa.me/351961551592" target="_blank" rel="noopener noreferrer" className="hover:text-gold flex flex-col">
+                <span>+351 961 551 592</span>
+                <span className="text-[10px] uppercase text-muted-foreground">{t("WhatsApp Secundário")}</span>
               </a>
             </li>
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/>
-              <a href="tel:+351915943309" className="hover:text-gold">
-                +351 915 943 309
-              </a>
-            </li>
-            <li className="flex items-start gap-2">
-              <Phone className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/>
-              <a href="tel:+351215982843" className="hover:text-gold">
-                +351 215 982 843
+              <a href="tel:+351215982843" className="hover:text-gold flex flex-col">
+                <span>+351 215 982 843</span>
+                <span className="text-[10px] uppercase text-muted-foreground">{t("Telefone Fixo")}</span>
               </a>
             </li>
             <li className="flex items-start gap-2">
@@ -62,7 +65,9 @@ export function SiteFooter() {
             </li>
             <li className="flex items-start gap-2">
               <Instagram className="mt-0.5 h-4 w-4 text-gold" strokeWidth={1.5}/>
-              <span>@thatianacardoso</span>
+              <a href="https://www.instagram.com/tatiane.penteado19/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                @tatiane.penteado19
+              </a>
             </li>
           </ul>
         </div>

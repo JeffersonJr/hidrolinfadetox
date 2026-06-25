@@ -1,13 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { ArrowRight, ArrowUpRight, Check, MapPin, Instagram, Facebook, GraduationCap, Users, Sparkles, Calendar, MessageCircle, Leaf, HeartHandshake } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, MapPin, Instagram, Facebook, GraduationCap, Users, Sparkles, Calendar, MessageCircle, Leaf, HeartHandshake, Award } from "lucide-react";
 import heroImg from "@/assets/img hero.png";
 import portrait from "@/assets/portrait.png";
 import { services } from "@/lib/services";
 import { ContactMenu } from "@/components/site/ContactMenu";
+import benefitsImg from "@/assets/logo.svg"; // PLACEHOLDER: Mudar para Group 140.svg quando o colocar na pasta
 import { useTranslation, Translate } from "@/hooks/useTranslation";
 import { EventModal } from "@/components/site/EventModal";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -29,6 +31,7 @@ function HomePage() {
   return (
     <Layout>
       <EventModal />
+
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="container-narrow grid gap-14 py-20 md:grid-cols-2 md:gap-16 md:py-28">
@@ -43,14 +46,23 @@ function HomePage() {
               {t("Sou Tatiana Penteado, especialista em terapias integrativas e estética avançada. Um espaço dedicado a revelar a sua melhor versão, com protocolos exclusivos e atendimento personalizado.")}
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
+              <ContactMenu variant="primary" label={t("Agendar")} />
+              <a 
+                href="https://wa.me/351915943309?text=Gostaria%20de%20saber%20mais%20sobre%20a%20venda%20da%20máquina%20Hidrolinfa" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group inline-flex items-center gap-3 border border-gold bg-gold-soft/10 px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-gold transition-all hover:bg-gold hover:text-primary-foreground"
+              >
+                <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
+                {t("Comprar Máquina Hidrolinfa")}
+              </a>
               <Link
                 to="/servicos"
-                className="group inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary"
+                className="group inline-flex items-center gap-3 border border-border px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-foreground transition-all hover:border-gold hover:text-gold"
               >
-                {t("Conheça os tratamentos")}
+                {t("Serviços")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} />
               </Link>
-              <ContactMenu variant="link" label={t("Marcar consulta")} />
             </div>
           </div>
 
@@ -81,6 +93,40 @@ function HomePage() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(p.text)}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* GALERIA DA TRAJETÓRIA PROFISSIONAL */}
+      <section className="py-20 md:py-24 bg-background border-y border-border/50">
+        <div className="container-narrow px-6 md:px-16">
+           <SectionHeading
+             eyebrow={t("Trajetória Profissional")}
+             align="center"
+             title={<><Translate>Momentos de </Translate><em className="text-gold"><Translate>Excelência</Translate></em></>}
+             description={t("Registos de encontros, formações e congressos que enriquecem a nossa prática, como a participação ao lado do Dr. Peter Mendel.")}
+           />
+           <div className="mt-16 relative">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                    <CarouselItem key={i} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/4">
+                      <div className="aspect-square bg-muted/50 border border-border/60 flex flex-col items-center justify-center text-center p-4 transition-colors hover:border-gold/60 cursor-pointer">
+                         <Award className="h-6 w-6 text-gold mb-2 opacity-50" />
+                         <p className="text-[10px] uppercase text-muted-foreground">{t("Foto da Trajetória")} {i}</p>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden md:flex -left-12 border-border/60 text-muted-foreground hover:bg-gold hover:text-primary-foreground hover:border-gold transition-colors h-10 w-10" />
+                <CarouselNext className="hidden md:flex -right-12 border-border/60 text-muted-foreground hover:bg-gold hover:text-primary-foreground hover:border-gold transition-colors h-10 w-10" />
+              </Carousel>
+           </div>
         </div>
       </section>
 
@@ -219,25 +265,25 @@ function HomePage() {
             />
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
-                {t("Atuo na área das Terapias Integrativas e da Estética desde 1994, dedicando mais de 30 anos ao cuidado, à autoestima e ao bem-estar das pessoas.")}
+                {t("A verdadeira saúde e vitalidade começam no nosso interior. É com esta convicção que dedico o meu trabalho às Terapias Integrativas, à Medicina Tradicional Chinesa (MTC) e à Osteopatia, promovendo um profundo reequilíbrio do organismo de dentro para fora.")}
               </p>
               <p>
-                {t("Minha formação abrange Terapias Integrativas, Medicina Tradicional Chinesa e Estética Avançada, com o compromisso de oferecer tratamentos personalizados e humanizados.")}
+                {t("A beleza exterior e a estética avançada surgem assim não como o foco único, mas como a consequência natural e visível de um corpo curado, desintoxicado e em plena harmonia. Cada protocolo que desenvolvo respeita a individualidade biológica, garantindo resultados sustentáveis e transformadores.")}
               </p>
             </div>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
                 { 
                   i: GraduationCap, 
-                  t: "Formação contínua em terapias integrativas, medicina tradicional chinesa (MTC) e estética avançada." 
+                  t: "Forte base em Terapias Integrativas, MTC e Osteopatia como pilares do bem-estar." 
                 },
                 { 
                   i: Leaf, 
-                  t: "Protocolos naturais com foco em resultados visíveis, saúde e bem-estar profundo." 
+                  t: "Abordagem holística: a estética avançada como reflexo da saúde interior." 
                 },
                 { 
                   i: Users, 
-                  t: "Ministração de workshops e formações para profissionais da área." 
+                  t: "Atendimento humano, focado na raiz das queixas e não apenas nos sintomas visíveis." 
                 },
                 { 
                   i: MapPin, 
@@ -271,6 +317,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* PRESENÇA NA EUROPA (FLAGS) */}
       <section className="bg-background py-24 md:py-32 border-b border-border/50">
@@ -340,7 +387,8 @@ function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* TESTIMONIALS (Oculto temporariamente) */}
+      {/*
       <section className="py-24 md:py-32">
         <div className="container-narrow">
           <SectionHeading
@@ -377,6 +425,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* FAQ */}
       <section className="bg-cream py-24 md:py-32 border-y border-border/50">
@@ -439,9 +488,15 @@ function HomePage() {
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <ContactMenu variant="primary" label={t("Marcar consulta")} />
-              <Link to="/contactos" className="inline-flex items-center gap-3 border border-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition-all hover:bg-primary hover:text-primary-foreground">
-                {t("Formulário de contacto")}
-              </Link>
+              <a 
+                href="https://wa.me/351915943309?text=Gostaria%20de%20saber%20mais%20sobre%20a%20venda%20da%20máquina%20Hidrolinfa" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-3 border border-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition-all hover:bg-primary hover:text-primary-foreground"
+              >
+                <MessageCircle className="h-4 w-4" strokeWidth={1.5} />
+                {t("Comprar Máquina Hidrolinfa")}
+              </a>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Cookie, X } from "lucide-react";
 import { useTranslation } from "../../hooks/useTranslation";
 
-export function CookieConsent() {
+export function SiteConsent() {
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation();
 

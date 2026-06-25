@@ -1,0 +1,73 @@
+$ vite build
+vite v7.3.3 building client environment for production...
+transforming...
+Found 1 warning while optimizing generated CSS:
+
+[2m│   initial-value: 0;[22m
+[2m│ }[22m
+[2m│[22m @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+[2m┆[22m        [33m[2m^--[22m @import rules must precede all rules aside from @charset and @layer statements[39m
+[2m┆[22m
+[2m│ :root {[22m
+[2m│   --radius: 0.25rem;[22m
+
+✓ 2005 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/client/assets/fav-BSMqGzHY.png                   5.89 kB
+dist/client/assets/logo-1-fOmJZ6vQ.svg               56.38 kB │ gzip:  20.94 kB
+dist/client/assets/logo-3-D1toFZqh.svg               56.38 kB │ gzip:  20.94 kB
+dist/client/assets/logo-C4kiugEY.svg                 59.11 kB │ gzip:  21.07 kB
+dist/client/assets/treatment-hifu-CBlkHMhY.jpg       79.72 kB
+dist/client/assets/treatment-drainage-DU49hpQI.jpg   80.83 kB
+dist/client/assets/treatment-cupping-Fg9bnMyd.jpg   116.93 kB
+dist/client/assets/img hero-DdAT-Mr2.png            983.84 kB
+dist/client/assets/portrait-mSZjpngs.png            997.31 kB
+dist/client/assets/styles-sXCtaxYk.css               88.21 kB │ gzip:  14.29 kB
+dist/client/assets/arrow-left-Dharf1Zg.js             0.17 kB │ gzip:   0.16 kB
+dist/client/assets/portrait-DlpV_aQo.js               0.54 kB │ gzip:   0.31 kB
+dist/client/assets/contactos-CChuF9Zy.js              3.73 kB │ gzip:   1.58 kB
+dist/client/assets/servicos_._slug-C_jIYk3H.js        5.90 kB │ gzip:   1.93 kB
+dist/client/assets/servicos-Cbb3nuom.js               6.89 kB │ gzip:   2.55 kB
+dist/client/assets/cookies-DLWpS-ng.js                7.39 kB │ gzip:   2.03 kB
+dist/client/assets/precos-g4HRxdZv.js                 7.52 kB │ gzip:   2.24 kB
+dist/client/assets/privacidade-CVq3u6lB.js            8.86 kB │ gzip:   2.44 kB
+dist/client/assets/sobre-B5rzJs_3.js                  9.98 kB │ gzip:   3.49 kB
+dist/client/assets/index-Gspl5m2L.js                 23.69 kB │ gzip:   6.57 kB
+dist/client/assets/SectionHeading-CMGCUPkn.js       121.61 kB │ gzip:  38.88 kB
+dist/client/assets/index-BreFBsFO.js                420.55 kB │ gzip: 127.58 kB
+✓ built in 1m 17s
+vite v7.3.3 building ssr environment for production...
+transforming...
+Found 1 warning while optimizing generated CSS:
+
+[2m│   initial-value: 0;[22m
+[2m│ }[22m
+[2m│[22m @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+[2m┆[22m        [33m[2m^--[22m @import rules must precede all rules aside from @charset and @layer statements[39m
+[2m┆[22m
+[2m│ :root {[22m
+[2m│   --radius: 0.25rem;[22m
+
+"createRequestHandler", "defineHandlerCallback", "transformPipeableStreamWithRouter" and "transformReadableStreamWithRouter" are imported from external module "@tanstack/router-core/ssr/server" but never used in "node_modules/@tanstack/start-server-core/dist/esm/index.js".
+"RawStream" is imported from external module "@tanstack/router-core" but never used in "node_modules/@tanstack/start-client-core/dist/esm/index.js".
+"hydrate" and "json" are imported from external module "@tanstack/router-core/ssr/client" but never used in "node_modules/@tanstack/start-client-core/dist/esm/index.js".
+✓ 133 modules transformed.
+rendering chunks...
+dist/server/assets/portrait-DaIz0bOB.js                              0.08 kB
+dist/server/assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js    0.14 kB
+dist/server/assets/start-D4mdwD77.js                                 1.98 kB
+dist/server/assets/_tanstack-start-manifest_v-CQTdpiH8.js            2.33 kB
+dist/server/server.js                                                3.85 kB
+dist/server/assets/contactos--2hIS-xM.js                             5.32 kB
+dist/server/assets/servicos_._slug-DFGHyFAI.js                       8.05 kB
+dist/server/assets/cookies-B5YtjV83.js                               8.91 kB
+dist/server/assets/servicos-CsaP2a_3.js                              9.34 kB
+dist/server/assets/precos-Brx52aA-.js                               10.33 kB
+dist/server/assets/privacidade-trT_Xlgh.js                          10.53 kB
+dist/server/assets/sobre-B9YPav7V.js                                11.59 kB
+dist/server/assets/index-CD3gbJtz.js                                30.99 kB
+dist/server/assets/server-B_bhS71y.js                               38.80 kB
+dist/server/assets/router-Dorn_pzP.js                               83.90 kB
+dist/server/assets/SectionHeading-BZcnbqSa.js                      208.39 kB
+✓ built in 520ms
