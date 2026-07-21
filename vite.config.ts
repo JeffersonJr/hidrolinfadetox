@@ -11,6 +11,7 @@ export default defineConfig({
     tanstackStart({
       server: {
         entry: "server",
+        // @ts-expect-error - passed to Nitro but may not be in TanStack Start types
         preset: "vercel",
       },
     }),
