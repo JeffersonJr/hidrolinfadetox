@@ -48,32 +48,62 @@ export function ContactMenu({
         <ChevronDown className="h-3.5 w-3.5 opacity-60" strokeWidth={1.5} />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-60">
-        <DropdownMenuItem className="group cursor-pointer" onSelect={() => window.open(WA_HREF, '_blank')}>
+        <DropdownMenuItem
+          className="group cursor-pointer"
+          onSelect={() => window.open(WA_HREF, "_blank")}
+        >
           <div className="flex items-center gap-3 w-full">
-            <MessageCircle className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
+            <MessageCircle
+              className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground"
+              strokeWidth={1.5}
+            />
             <div className="flex flex-col">
-              <span className="text-sm font-medium transition-colors group-focus:text-accent-foreground">WhatsApp</span>
-              <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">{PHONE_DISPLAY}</span>
-            </div>
-          </div>
-        </DropdownMenuItem>
-        
-        <DropdownMenuItem className="group cursor-pointer" onSelect={() => window.location.href = TEL_MOBILE_HREF}>
-          <div className="flex items-center gap-3 w-full">
-            <Phone className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
-            <div className="flex flex-col">
-              <span className="text-sm transition-colors group-focus:text-accent-foreground">Telemóvel</span>
-              <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">{PHONE_MOBILE}</span>
+              <span className="text-sm font-medium transition-colors group-focus:text-accent-foreground">
+                WhatsApp
+              </span>
+              <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">
+                {PHONE_DISPLAY}
+              </span>
             </div>
           </div>
         </DropdownMenuItem>
 
-        <DropdownMenuItem className="group cursor-pointer" onSelect={() => window.location.href = TEL_FIXED_HREF}>
+        <DropdownMenuItem
+          className="group cursor-pointer"
+          onSelect={() => (window.location.href = TEL_MOBILE_HREF)}
+        >
           <div className="flex items-center gap-3 w-full">
-            <Phone className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground" strokeWidth={1.5} />
+            <Phone
+              className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground"
+              strokeWidth={1.5}
+            />
             <div className="flex flex-col">
-              <span className="text-sm transition-colors group-focus:text-accent-foreground">Telefone Fixo</span>
-              <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">{PHONE_FIXED}</span>
+              <span className="text-sm transition-colors group-focus:text-accent-foreground">
+                Telemóvel
+              </span>
+              <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">
+                {PHONE_MOBILE}
+              </span>
+            </div>
+          </div>
+        </DropdownMenuItem>
+
+        <DropdownMenuItem
+          className="group cursor-pointer"
+          onSelect={() => (window.location.href = TEL_FIXED_HREF)}
+        >
+          <div className="flex items-center gap-3 w-full">
+            <Phone
+              className="h-4 w-4 text-gold transition-colors group-focus:text-accent-foreground"
+              strokeWidth={1.5}
+            />
+            <div className="flex flex-col">
+              <span className="text-sm transition-colors group-focus:text-accent-foreground">
+                Telefone Fixo
+              </span>
+              <span className="text-[11px] text-muted-foreground transition-colors group-focus:text-accent-foreground/80">
+                {PHONE_FIXED}
+              </span>
             </div>
           </div>
         </DropdownMenuItem>

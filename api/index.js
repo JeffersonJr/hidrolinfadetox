@@ -1,15 +1,15 @@
-import server from '../dist/server/server.js';
-import { Readable } from 'node:stream';
+import server from "../dist/server/server.js";
+import { Readable } from "node:stream";
 
 export default async function handler(req, res) {
   // Construct the full URL for the Web Request
-  const protocol = req.headers['x-forwarded-proto'] || 'http';
-  const host = req.headers['x-forwarded-host'] || req.headers.host;
+  const protocol = req.headers["x-forwarded-proto"] || "http";
+  const host = req.headers["x-forwarded-host"] || req.headers.host;
   const fullUrl = `${protocol}://${host}${req.url}`;
 
   // Create Web Request body (Node 18+ Request supports iterables/streams)
   let body = undefined;
-  if (req.method !== 'GET' && req.method !== 'HEAD') {
+  if (req.method !== "GET" && req.method !== "HEAD") {
     // Collect the body from the incoming request
     const buffers = [];
     for await (const chunk of req) {
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
 
   // Pipe the Web Response body back to Vercel
   if (webResponse.body) {
-    if (typeof webResponse.body.getReader === 'function') {
+    if (typeof webResponse.body.getReader === "function") {
       const reader = webResponse.body.getReader();
       while (true) {
         const { done, value } = await reader.read();
