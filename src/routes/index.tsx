@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const { t } = useTranslation();
-  const imagensMomentosObj = import.meta.glob('@/assets/momentos/*.{png,jpg,jpeg,webp,avif}', { eager: true, query: '?url', import: 'default' });
+  const imagensMomentosObj = import.meta.glob('../assets/momentos/*.{png,jpg,jpeg,webp,avif}', { eager: true, query: '?url', import: 'default' });
   const imagensMomentos = Object.values(imagensMomentosObj) as string[];
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
