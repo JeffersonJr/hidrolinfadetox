@@ -1,14 +1,15 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/site/Layout";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { ArrowRight, ArrowUpRight, Check, MapPin, Instagram, Facebook, GraduationCap, Users, Sparkles, Calendar, MessageCircle, Leaf, HeartHandshake, Award } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, MapPin, Instagram, Facebook, GraduationCap, Users, Sparkles, Calendar, MessageCircle, Leaf, HeartHandshake, Award, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import heroImg from "@/assets/img hero.png";
 import portrait from "@/assets/portrait.png";
 import { services } from "@/lib/services";
 import { ContactMenu } from "@/components/site/ContactMenu";
 import benefitsImg from "@/assets/logo.svg"; // PLACEHOLDER: Mudar para Group 140.svg quando o colocar na pasta
 import { useTranslation, Translate } from "@/hooks/useTranslation";
-import { EventModal } from "@/components/site/EventModal";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 export const Route = createFileRoute("/")({
@@ -27,11 +28,12 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const { t } = useTranslation();
+  const imagensMomentosObj = import.meta.glob('@/assets/momentos/*.{png,jpg,jpeg,webp,avif}', { eager: true, query: '?url', import: 'default' });
+  const imagensMomentos = Object.values(imagensMomentosObj) as string[];
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   return (
     <Layout>
-      <EventModal />
-
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="container-narrow grid gap-14 py-20 md:grid-cols-2 md:gap-16 md:py-28">
@@ -114,11 +116,20 @@ function HomePage() {
                 className="w-full"
               >
                 <CarouselContent className="-ml-2 md:-ml-4">
-                  {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                  {imagensMomentos.length > 0 ? imagensMomentos.map((imgUrl, i) => (
+                    <CarouselItem key={i} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/4">
+                      <div 
+                        className="aspect-square bg-muted/50 border border-border/60 flex flex-col items-center justify-center overflow-hidden transition-colors hover:border-gold/60 cursor-pointer"
+                        onClick={() => setLightboxIndex(i)}
+                      >
+                         <img src={imgUrl} alt={`Momento de Excelência ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    </CarouselItem>
+                  )) : [1, 2, 3, 4].map((i) => (
                     <CarouselItem key={i} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/4">
                       <div className="aspect-square bg-muted/50 border border-border/60 flex flex-col items-center justify-center text-center p-4 transition-colors hover:border-gold/60 cursor-pointer">
                          <Award className="h-6 w-6 text-gold mb-2 opacity-50" />
-                         <p className="text-[10px] uppercase text-muted-foreground">{t("Foto da Trajetória")} {i}</p>
+                         <p className="text-[10px] uppercase text-muted-foreground">{t("Adicione fotos na pasta")} src/assets/momentos</p>
                       </div>
                     </CarouselItem>
                   ))}
@@ -130,86 +141,54 @@ function HomePage() {
         </div>
       </section>
 
-      {/* AGENDA ESPECIAL / DOBRA PORTUGAL */}
-      <section className="py-20 md:py-24 border-b border-border/50 relative overflow-hidden bg-background">
-        <div className="absolute top-0 right-0 -z-10 w-96 h-96 bg-gold-soft/10 rounded-full blur-3xl opacity-60" />
-        <div className="container-narrow">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+      {/* LIGHTBOX */}
+      <Dialog open={lightboxIndex !== null} onOpenChange={(open) => !open && setLightboxIndex(null)}>
+        <DialogContent className="max-w-[90vw] md:max-w-5xl max-h-[90vh] p-4 bg-background/95 backdrop-blur-sm border-border/50 shadow-2xl flex items-center justify-center sm:rounded-xl">
+          {lightboxIndex !== null && (
+            <div className="relative w-full h-full flex flex-col items-center justify-center outline-none">
+              <div className="relative flex items-center justify-center w-full">
+                <img 
+                  src={imagensMomentos[lightboxIndex]} 
+                  alt={`Momento de Excelência ${lightboxIndex + 1}`} 
+                  className="max-w-full max-h-[75vh] object-contain rounded-md"
+                />
+                
+                {imagensMomentos.length > 1 && (
+                  <>
+                    <button
+                      className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-6 flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-background border border-border/50 text-foreground shadow-sm transition-colors hover:bg-gold hover:text-primary-foreground hover:border-gold"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setLightboxIndex(prev => prev !== null ? (prev === 0 ? imagensMomentos.length - 1 : prev - 1) : null);
+                      }}
+                    >
+                      <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+                    </button>
 
-            {/* Lado Esquerdo - Chamada Principal e Data */}
-            <div className="lg:col-span-5 flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2 border border-gold/40 bg-gold-soft/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-gold w-fit">
-                <Sparkles className="h-3 w-3 animate-pulse" />
-                {t("Agenda Especial")}
+                    <button
+                      className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-6 flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-background border border-border/50 text-foreground shadow-sm transition-colors hover:bg-gold hover:text-primary-foreground hover:border-gold"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setLightboxIndex(prev => prev !== null ? (prev === imagensMomentos.length - 1 ? 0 : prev + 1) : null);
+                      }}
+                    >
+                      <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+                    </button>
+                  </>
+                )}
               </div>
-              <h2 className="mt-5 font-serif text-4xl leading-tight text-primary md:text-5xl">
-                {t("Tatiane Penteado na Italia")}
-              </h2>
 
-              <div className="mt-8 flex flex-col gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream border border-gold-soft/30 text-gold shrink-0">
-                    <Calendar className="h-5 w-5" strokeWidth={1.5} />
-                  </div>
-                  <div>
-                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{t("Data e Período")}</p>
-                    <p className="font-serif text-xl font-medium text-primary mt-0.5">{t("18 e 19 de Julho")}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cream border border-gold-soft/30 text-gold shrink-0 mt-0.5">
-                    <MapPin className="h-5 w-5" strokeWidth={1.5} />
-                  </div>
-                  <div>
-                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground">{t("Local dos Atendimentos")}</p>
-                    <p className="font-serif text-lg font-medium text-primary mt-0.5">
-                      {t("Espaço Humana · Terapias, Estética, Saúde & Bem-Estar - Bologna Italia")}
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">Bologna, Italia</p>
-                  </div>
-                </div>
-              </div>
+              <button
+                className="mt-6 flex items-center gap-2 rounded-full border border-border/50 bg-background/50 px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-foreground shadow-sm backdrop-blur-sm transition-colors hover:bg-gold hover:text-primary-foreground hover:border-gold"
+                onClick={() => setLightboxIndex(null)}
+              >
+                <X className="h-4 w-4" />
+                {t("Fechar")}
+              </button>
             </div>
-
-            {/* Lado Direito - Descrição e Ações */}
-            <div className="lg:col-span-7 flex flex-col justify-center border-t border-border/50 pt-8 lg:border-t-0 lg:border-l lg:border-border/50 lg:pt-0 lg:pl-12">
-              <p className="text-base leading-relaxed text-muted-foreground">
-                {t("Aproveite esta oportunidade única para realizar o seu atendimento personalizado de terapias integrativas e estética avançada com a Terapeuta credenciada Tatiane Penteado. Vagas presenciais limitadas para garantir o máximo acompanhamento e resultados excecionais.")}
-              </p>
-
-              <p className="mt-4 text-sm font-medium text-primary font-serif italic">
-                {t("Inscrições e agendamentos online abertos diretamente através do aplicativo/site Treatwell.")}
-              </p>
-
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  href="https://www.treatwell.pt/estabelecimento/espaco-humana-terapias-estetica-saude-bem-estar/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary min-h-[44px] cursor-pointer"
-                >
-                  {t("Agendar no Treatwell")}
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" strokeWidth={1.5} />
-                </a>
-
-                <a
-                  href={`https://wa.me/351961551592?text=${encodeURIComponent(
-                    "Olá! Gostaria de obter mais informações sobre os atendimentos da Tatiane na Italia nos dias 18 e 19 de Julho."
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 border border-border px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition-all hover:border-gold hover:text-gold min-h-[44px] cursor-pointer bg-background/50"
-                >
-                  <MessageCircle className="h-4 w-4 text-muted-foreground group-hover:text-gold" strokeWidth={1.5} />
-                  {t("Tirar dúvidas")}
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* SERVICES */}
       <section className="py-24 md:py-32">
