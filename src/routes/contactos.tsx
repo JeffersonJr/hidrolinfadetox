@@ -13,8 +13,7 @@ import {
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { submitContact } from "@/server/contact";
-import 'react-phone-number-input/style.css';
-import PhoneInput from 'react-phone-number-input';
+import { PhoneInput } from "@/components/ui/phone-input";
 
 export const Route = createFileRoute("/contactos")({
   head: () => ({
@@ -38,9 +37,10 @@ function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setIsSubmitting(true);
     setError("");
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     const data = {
       name: formData.get("name") as string,
       email: formData.get("email") as string,
@@ -51,7 +51,8 @@ function ContactPage() {
     try {
       await submitContact({ data });
       setSent(true);
-      e.currentTarget.reset();
+      form.reset();
+      setPhone("");
     } catch (err: any) {
       console.error(err);
       setError("Ocorreu um erro ao enviar. Verifique sua conexão e tente novamente.");
@@ -177,7 +178,6 @@ function ContactPage() {
                   placeholder="Insira o seu telefone"
                   value={phone}
                   onChange={setPhone}
-                  className="mt-2 w-full border-b border-border bg-transparent py-3 text-sm font-medium text-foreground outline-none focus-within:border-gold [&_.PhoneInputInput]:bg-transparent [&_.PhoneInputInput]:outline-none [&_.PhoneInputInput]:border-none"
                   required
                 />
               </div>
