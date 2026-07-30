@@ -8,8 +8,11 @@ import {
   MapPin,
   Instagram,
   Send,
+  Loader2,
 } from "lucide-react";
 import { useState } from "react";
+import { siteConfig } from "@/config/site";
+import { submitContact } from "@/server/contact";
 
 export const Route = createFileRoute("/contactos")({
   head: () => ({
@@ -27,6 +30,33 @@ export const Route = createFileRoute("/contactos")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError("");
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      message: formData.get("message") as string,
+    };
+
+    try {
+      await submitContact({ data });
+      setSent(true);
+      e.currentTarget.reset();
+    } catch (err: any) {
+      console.error(err);
+      setError("Ocorreu um erro ao enviar. Verifique sua conexão e tente novamente.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <Layout>
       <section className="container-narrow py-20 md:py-28">
@@ -47,37 +77,37 @@ function ContactPage() {
               {
                 icon: MessageCircle,
                 label: "WhatsApp",
-                value: "+351 961 551 592",
-                href: "https://wa.me/351961551592",
+                value: siteConfig.contact.whatsapp,
+                href: `https://wa.me/${siteConfig.contact.whatsapp.replace(/\D/g, '')}`,
               },
               {
                 icon: Phone,
                 label: "Telemóvel",
-                value: "+351 915 943 309",
-                href: "tel:+351915943309",
+                value: siteConfig.contact.phone,
+                href: `tel:${siteConfig.contact.phone.replace(/\D/g, '')}`,
               },
               {
                 icon: Phone,
                 label: "Telefone Fixo",
-                value: "+351 215 982 843",
-                href: "tel:+351215982843",
+                value: siteConfig.contact.landline,
+                href: `tel:${siteConfig.contact.landline.replace(/\D/g, '')}`,
               },
               {
                 icon: Mail,
                 label: "Email",
-                value: "contato@hidrolinfadetox.com",
-                href: "mailto:contato@hidrolinfadetox.com",
+                value: siteConfig.contact.email,
+                href: `mailto:${siteConfig.contact.email}`,
               },
               {
                 icon: MapPin,
                 label: "Localização",
-                value: "Lisboa · Amadora · Caldas da Rainha",
+                value: siteConfig.contact.address,
               },
               {
                 icon: Instagram,
                 label: "Instagram",
-                value: "@tatiane.penteado19",
-                href: "https://www.instagram.com/tatiane.penteado19/",
+                value: siteConfig.contact.instagram,
+                href: siteConfig.contact.instagramUrl,
               },
             ].map((c, i) => (
               <div
@@ -108,10 +138,7 @@ function ContactPage() {
 
           <form
             className="bg-cream p-8 md:p-10"
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-            }}
+            onSubmit={handleSubmit}
           >
             <h3 className="font-serif text-3xl text-primary">
               Marcar uma avaliação.
@@ -153,12 +180,24 @@ function ContactPage() {
               </div>
             </div>
 
+            {error && (
+              <p className="mt-4 text-sm text-red-500 font-medium">
+                {error}
+              </p>
+            )}
+
             <button
               type="submit"
-              className="mt-10 inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary"
+              disabled={isSubmitting}
+              className="mt-10 inline-flex items-center gap-3 border border-primary bg-primary px-7 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary-foreground transition-all hover:bg-transparent hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {sent ? "Mensagem enviada" : "Enviar mensagem"}{" "}
-              <Send className="h-4 w-4" strokeWidth={1.5} />
+              {isSubmitting ? (
+                <>Enviando... <Loader2 className="h-4 w-4 animate-spin" /></>
+              ) : sent ? (
+                "Mensagem enviada"
+              ) : (
+                <>Enviar mensagem <Send className="h-4 w-4" strokeWidth={1.5} /></>
+              )}
             </button>
             {sent && (
               <p className="mt-4 text-xs text-gold">
