@@ -13,6 +13,8 @@ import {
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { submitContact } from "@/server/contact";
+import 'react-phone-number-input/style.css';
+import PhoneInput from 'react-phone-number-input';
 
 export const Route = createFileRoute("/contactos")({
   head: () => ({
@@ -32,6 +34,7 @@ function ContactPage() {
   const [sent, setSent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [phone, setPhone] = useState<string | undefined>("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -41,7 +44,7 @@ function ContactPage() {
     const data = {
       name: formData.get("name") as string,
       email: formData.get("email") as string,
-      phone: formData.get("phone") as string,
+      phone: phone || "",
       message: formData.get("message") as string,
     };
 
@@ -151,7 +154,6 @@ function ContactPage() {
               {[
                 { name: "name", label: "Nome", type: "text" },
                 { name: "email", label: "Email", type: "email" },
-                { name: "phone", label: "Telefone", type: "tel" },
               ].map((f) => (
                 <div key={f.name}>
                   <label className="block text-[10px] font-medium uppercase tracking-[0.3em] text-gold">
@@ -166,6 +168,19 @@ function ContactPage() {
                   />
                 </div>
               ))}
+              <div>
+                <label className="block text-[10px] font-medium uppercase tracking-[0.3em] text-gold">
+                  Telefone
+                </label>
+                <PhoneInput
+                  defaultCountry="PT"
+                  placeholder="Insira o seu telefone"
+                  value={phone}
+                  onChange={setPhone}
+                  className="mt-2 w-full border-b border-border bg-transparent py-3 text-sm font-medium text-foreground outline-none focus-within:border-gold [&_.PhoneInputInput]:bg-transparent [&_.PhoneInputInput]:outline-none [&_.PhoneInputInput]:border-none"
+                  required
+                />
+              </div>
               <div>
                 <label className="block text-[10px] font-medium uppercase tracking-[0.3em] text-gold">
                   Mensagem
