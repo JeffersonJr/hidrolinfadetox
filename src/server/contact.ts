@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 import { siteConfig } from '@/config/site';
 
 export const submitContact = createServerFn({ method: 'POST' })
-  .validator((data: { name: string; email: string; phone: string; message: string }) => data)
+  .inputValidator((data: { name: string; email: string; phone: string; message: string }) => data)
   .handler(async ({ data }) => {
     if (!process.env.SMTP_PASS) {
       throw new Error("SMTP_PASS variable is not defined");
