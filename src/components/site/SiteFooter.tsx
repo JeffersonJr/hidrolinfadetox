@@ -137,10 +137,23 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border">
         <div className="container-narrow flex flex-col items-center justify-between gap-4 py-6 text-xs text-muted-foreground md:flex-row">
-          <p>
-            © {new Date().getFullYear()} Hidrolinfa Detox.{" "}
-            {t("Todos os direitos reservados.")}
-          </p>
+          <div className="flex flex-col items-center gap-1 md:items-start">
+            <p>
+              © {new Date().getFullYear()} Hidrolinfa Detox.{" "}
+              {t("Todos os direitos reservados.")}
+            </p>
+            <p>
+              {t("Desenvolvido por")}{" "}
+              <a
+                href="https://evolves.site"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold transition-colors"
+              >
+                Evolves Tecnologia
+              </a>
+            </p>
+          </div>
 
           <div className="flex flex-wrap gap-4 md:gap-6">
             <Link

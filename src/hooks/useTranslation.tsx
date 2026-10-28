@@ -29,6 +29,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     Fixo: "Fixo",
     "Direitos Reservados": "Direitos Reservados",
     "Todos os direitos reservados.": "Todos os direitos reservados.",
+    "Desenvolvido por": "Desenvolvido por",
     "Agende a sua consulta": "Agende a sua consulta",
     "Comece hoje a sua jornada de bem-estar.":
       "Comece hoje a sua jornada de bem-estar.",
@@ -207,6 +208,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     Fixo: "Landline",
     "Direitos Reservados": "Rights Reserved",
     "Todos os direitos reservados.": "All rights reserved.",
+    "Desenvolvido por": "Developed by",
     "Agende a sua consulta": "Schedule Your Consultation",
     "Comece hoje a sua jornada de bem-estar.":
       "Start your well-being journey today.",
@@ -385,6 +387,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     Fixo: "Teléfono Fijo",
     "Direitos Reservados": "Derechos Reservados",
     "Todos os direitos reservados.": "Todos los derechos reservados.",
+    "Desenvolvido por": "Desarrollado por",
     "Agende a sua consulta": "Reserve su consulta",
     "Comece hoje a sua jornada de bem-estar.":
       "Comience hoy su viaje de bienestar.",
@@ -563,6 +566,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     Fixo: "Téléphone fixe",
     "Direitos Reservados": "Droits réservés",
     "Todos os direitos reservados.": "Tous droits réservés.",
+    "Desenvolvido por": "Développé par",
     "Agende a sua consulta": "Prenez votre rendez-vous",
     "Comece hoje a sua jornada de bem-estar.":
       "Commencez dès aujourd'hui votre parcours de bien-être.",
@@ -741,6 +745,7 @@ const localDictionary: Record<Language, Record<string, string>> = {
     Fixo: "Telefono fisso",
     "Direitos Reservados": "Diritti riservati",
     "Todos os direitos reservados.": "Tutti i diritti riservati.",
+    "Desenvolvido por": "Sviluppato da",
     "Agende a sua consulta": "Prenota la tua consulenza",
     "Comece hoje a sua jornada de bem-estar.":
       "Inizia oggi il tuo viaggio nel benessere.",
